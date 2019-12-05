@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+.l-content {
+  width: 700px;
+  height: 568px;
+  margin: 0 auto;
+}
+
+.l-header {
+  height: 50px;
+  text-align: center;
+  color: #333333;
+  padding: 8px 24px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.l-profile {
+  height: 156px;
+  background-image: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?1326854);
+  text-align: center;
+  padding: 72px 16px 24px;
+}
+
+.user-name {
+  height: 48px;
+  width: 220px;
+  margin: 0 0 0 8px;
+  padding: 10px 16px 8px;
+}
+
+.user-description {
+  width: 668px;
+  height: 216px;
+}
+
+.setting-profile {
+  height: 362px;
+  text-align: center;
+  padding: 40px 16px;
+}
+
+.submit_btn {
+  background-color: #ea352D;
+  color: #ffffff;
+  width: 668px;
+  height: 50px;
+  margin: 16px 0 0;
+  font-size: 14px;
+}
+
+.submit_btn:hover {
+  cursor: pointer;
+}
