@@ -1,110 +1,118 @@
-# DB設計
+# DB設計 
 
 
-## usersテーブル
+## usersテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|first_name|String|null: false|
-|last_name|String|null: false|
-|first_name_kana|String|null: false|
-|last_name_kana|String|null: false|
-|nickname|String|null: false|
-|email|String|null: false, unique: true|
-|image|String|null: false|
-|adress|String|null: false|
-|building|String|null: true|
-|phone_number|integer|null: false, unique: true|
-|password|String|null: false|
-|birthday|integer|null: false|
+|Column|Type|Options| 
+|------|----|-------| 
+|first_name|String|null: false| 
+|last_name|String|null: false| 
+|first_name_kana|String|null: false| 
+|last_name_kana|String|null: false| 
+|nickname|String|null: false| 
+|email|String|null: false, unique: true| 
+|image|String|null: false| 
+|phone_number|integer|null: true, unique: true| 
+|password|String|null: false| 
+|birthday|integer|null: false| 
 
-### Association
-- has_many :items
-- has_many :comments
-
-
-## commentテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|text|text|
-|user_id|integer|null: false, forein_key: true|
-|item_id|integer|null: false, forein_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
+### Association 
+- has_many :items 
+- has_many :comments 
+- has_many :addresses
 
 
-## itemsテーブル
+## commentsテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, forein_key: true|
-|items_categories|references|null: false, foreign_key: true|
-|items_brands|references|null: false, foreign_key: true|
-|size|String|null: false|
-|status|integer|null: false|
-|derivery_fee_id|integer|null: false, forein_key: true|
-|derivery_method_id|integer|null: false, forein_key: true|
-|price|integer|null: false|
-|derivery_estimated_id|integer|null: false, forein_key: true|
-|description|text|null: false|
+|Column|Type|Options| 
+|------|----|-------| 
+|text|text| 
+|user_id|integer|null: false, forein_key: true| 
+|item_id|integer|null: false, forein_key: true| 
+
+### Association 
+- belongs_to :user 
+- belongs_to :item 
 
 
-### Association
-- has_many :images
-- has_many :comments
-- has_many :categories through: :items_categories
-- has_many :brands through: :items_brands
-- belongs_to :status
-- belongs_to :derivery_fee
-- belongs_to :derivery_estimated
-- belongs_to :derivery_method
+## itemsテーブル 
 
+|Column|Type|Options| 
+|------|----|-------| 
+|user_id|integer|null: false, forein_key: true| 
+|size|String|null: false| 
+|status|integer|null: false| 
+|derivery_fee|integer|null: false| 
+|derivery_method|integer|null: false| 
+|price|integer|null: false| 
+|derivery_estimated|integer|null: false| 
+|description|text|null: false| 
+|category_id|integer|null: false, forein_key: true| 
+|brand_id|text|null: false, forein_key: true|
 
-## items_categoriesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, forein_key: true|
-|category_id|integer|null: false, forein_key: true|
-
-### Association
-- belongs_to :item
+### Association 
+- has_many :images 
+- has_many :comments 
 - belongs_to :category
-
-
-## items_brandsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, forein_key: true|
-|brand_id|integer|null: false, forein_key: true|
-
-### Association
-- belongs_to :item
 - belongs_to :brand
 
 
-## imageテーブル
+## categoriesテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|item_id|reference|null: false, forein_key: true|
+|Column|Type|Options| 
+|------|----|-------| 
+|item_id|integer|null: false, forein_key: true| 
+|name|String|null: false| 
 
-### Association
-- belongs_to :item
+### Association 
+- has_many :items
 
 
-## creditテーブル
+## brandsテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|number|integer|null: false, unique: true|
-|effective_date|integer|null: false|
-|security_code|integer|null: false|
-|user_id|reference|null: false, forein_key: true|
+|Column|Type|Options| 
+|------|----|-------| 
+|item_id|integer|null: false, forein_key: true| 
+|name|String|null: false| 
 
-### Association
-- belongs_to :user
+### Association 
+- has_many :items
+
+
+## imagesテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|item_id|reference|null: false, forein_key: true| 
+|url|String|null: false| 
+
+### Association 
+- belongs_to :item 
+
+
+## creditsテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|number|integer|null: false, unique: true| 
+|effective_date|integer|null: false| 
+|security_code|integer|null: false| 
+|user_id|reference|null: false, forein_key: true| 
+
+### Association 
+- belongs_to :user 
+
+
+## addressesテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|prefecture|String|null: false| 
+|city|String|null: false| 
+|house_number|integer|null: false| 
+|zip_code|integer|null: false| 
+|building|String|null: true| 
+|user_id|reference|null: false, forein_key: true| 
+
+### Association 
+- belongs_to :user  
