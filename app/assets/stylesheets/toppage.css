@@ -1,0 +1,172 @@
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  background-color: rgb(239, 239, 239);
+  display: block;
+
+  
+}
+
+.main-top{
+
+  width: 100%;
+}
+
+.advertisemens{
+  width: 1440px;
+  height: 390px;
+}
+
+.scroll-advertisement{
+  background-size: cover;
+}
+
+
+.nav{
+  padding: 50px 0px 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.popularity-category{
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+
+}
+
+.categories{
+  display: inline-block;
+  
+}
+
+.button{
+  color: black;
+  background-color: rgb(239, 239, 239);
+  cursor: pointer;
+  /* display: inline-block; */
+  margin: 10px 0 0 10px ;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  
+  
+}
+
+
+
+.items-holders{
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 100px;
+  
+  
+}
+
+.category-name{
+  position: relative;
+  margin-bottom: 16px;
+}
+
+
+
+h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* .item-title-women{
+
+} */
+.item-title-men{
+  margin-top: 80px;
+}
+.item-title-appliance{
+  margin-top: 80px;
+}
+.item-title-toy{
+  margin-top: 80px;
+}
+/* .item-title-chanel{
+
+} */
+
+.item-title-louisvuitton{
+  margin-top: 80px;
+}
+
+.item-title-supreme{
+  margin-top: 80px;
+}
+
+.item-title-nike{
+  margin-top: 80px;
+}
+
+
+
+.see-more{
+  display: inline-block;
+  position: absolute;
+  color: rgb(0, 149, 238);
+  font-weight: 600;
+  right: 0px;
+  bottom: 0px;
+
+}
+
+/* .holder{
+  background-color: rgba(209, 209, 209, 0.842);
+} */
+
+
+
+.images{
+  
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 100%;
+  
+}
+
+.image{
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 20%;
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0px 0px 20px rgb(rgb(0, 0, 0),0.3);
+  
+}
+
+.product{
+  width: 188px;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgba(rgb(0, 0, 0),0.3);
+}
+
+.product:hover{
+  border: solid 1px rgb(0, 149, 238);
+}
+
+.product-image{
+  
+  width: 188px;
+  box-sizing: border-box;
+  
+  
+
+}
