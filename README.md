@@ -12,8 +12,6 @@
 |nickname|String|null: false| 
 |email|String|null: false, unique: true| 
 |image|String|null: false| 
-|adress|String|null: false| 
-|building|String|null: true| 
 |phone_number|integer|null: false, unique: true| 
 |password|String|null: false| 
 |birthday|integer|null: false| 
@@ -121,4 +119,4 @@
 |user_id|reference|null: false, forein_key: true| 
 
 ### Association 
-- belongs_to :user 
+- belongs_to :user  
