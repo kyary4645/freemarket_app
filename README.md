@@ -12,8 +12,6 @@
 |nickname|String|null: false|
 |email|String|null: false, unique: true|
 |image|String|null: false|
-|adress|String|null: false|
-|building|String|null: true|
 |phone_number|integer|null: false, unique: true|
 |password|String|null: false|
 |birthday|integer|null: false|
@@ -21,6 +19,7 @@
 ### Association
 - has_many :items
 - has_many :comments
+- belongs_to :address
 
 
 ## commentテーブル
@@ -105,6 +104,19 @@
 |effective_date|integer|null: false|
 |security_code|integer|null: false|
 |user_id|reference|null: false, forein_key: true|
+
+### Association
+- belongs_to :user
+
+
+## addressテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|adress|String|null: false|
+|building|String|null: true|
+|user_id|String|null: true, forein_key: true|
+|bui|String|null: true|
 
 ### Association
 - belongs_to :user

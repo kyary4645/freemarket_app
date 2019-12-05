@@ -1,0 +1,29 @@
+.wrapper-sign_up
+  .wrapper-sign_up__header
+    %a{href: "#"}
+      = image_tag "fmarket_logo_red.svg", class: "wrapper-sign_up__header__logo"
+  .form
+    .form__logo
+      新規会員登録
+    .form__btn
+      .form__btn__list
+        %a.form__btn__list__email{href: "#"}
+          = icon('far', 'envelope')
+          %h3 メールアドレスで登録する
+        %a.form__btn__list__facebook{href: "#"}
+          = icon('fab', 'facebook-square')
+          %h3 Facebookで登録する
+        %a.form__btn__list__google{href: "#"}
+          = icon('fab', 'google')
+          %h3 Googleで登録する
+  .terms
+    .terms__link
+      .link
+        = link_to "プライバシーポリシー", "#", class: "privacy-policy"
+        = link_to "メルカリ利用規約", "#", class: "service"
+        = link_to "特定商取引に関する表記", "#", class: "business"
+      .logo 
+        .logo__footer
+          %a{href: "#"}
+            = image_tag "logo_gray.svg", class: "logo__footer__link"
+        %h3 © Mercari, Inc.
