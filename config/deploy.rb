@@ -36,7 +36,6 @@ set :default_env, {
   AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
   AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
-set :linked_files, %w{ config/master.key }
 
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
