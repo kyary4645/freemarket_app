@@ -7,7 +7,7 @@ ul{
 }
 
 body{
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(245, 245, 245);
   display: block;
 
   
@@ -49,7 +49,7 @@ body{
 
 .button{
   color: black;
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(245, 245, 245);
   cursor: pointer;
   /* display: inline-block; */
   margin: 10px 0 0 10px ;
@@ -147,26 +147,77 @@ h3{
   padding: 10px;
   width: 20%;
   background-color: rgb(239, 239, 239);
-  box-shadow: 0px 0px 20px rgb(rgb(0, 0, 0),0.3);
+  /* box-shadow: 0px 0px 20px rgb(rgb(0, 0, 0),0.3); */
   
 }
 
 .product{
   width: 188px;
-  height: 100%;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px rgba(rgb(0, 0, 0),0.3);
+  height: 252px;
+
 }
 
 .product:hover{
+  
   border: solid 1px rgb(0, 149, 238);
 }
 
 .product-image{
-  
+  display:block;
+  position: absolute;
   width: 188px;
+  height: 252px;
   box-sizing: border-box;
-  
-  
 
 }
+
+.product-card{
+  width: 188px;
+  height: 252px;
+  position: relative;
+}
+
+
+.product-price{
+  align-items: center;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.4);
+  border-radius: 0 14px 14px 0;
+  position: absolute;
+  color: #fff;
+  height: 28px;
+  font-size: 17px;
+  bottom: 72px;
+  padding: 0 12px;
+  letter-spacing: .02em;
+
+}
+
+
+
+
+.product-image-size{
+  width: 188px;
+  height: 188px;
+}
+
+
+.product-description{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 188px;
+  height: 64px;
+  background-color: #fff;
+  color: #222;
+  box-sizing: border-box;
+  padding: 0 12px;
+  word-break: break-word;
+  font-size: 14px;
+  white-space: normal;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  bottom: 4px;
+  
+}
+
