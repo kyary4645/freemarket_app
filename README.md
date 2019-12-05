@@ -107,8 +107,8 @@
 
 |Column|Type|Options| 
 |------|----|-------| 
-|Prefecture|String|null: false| 
-|City|String|null: false| 
+|prefecture|String|null: false| 
+|city|String|null: false| 
 |house_number|integer|null: false| 
 |zip_code|integer|null: false| 
 |building|String|null: true| 
