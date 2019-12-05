@@ -113,10 +113,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|adress|String|null: false|
+|address|String|null: false|
 |building|String|null: true|
 |user_id|String|null: true, forein_key: true|
-|bui|String|null: true|
+|zip_code|integer|null: true|
 
 ### Association
 - belongs_to :user
