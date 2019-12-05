@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  min-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* ----------------------------- */
+              /* top */
+/* ----------------------------- */
+#headerbg {
+  min-width: auto;
+}
+
+header {
+  height: 100px;
+  background-color:pink;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 8px 0 0;
+  background-color: #f5f5f5;
+}
+
+#freemarket_string {
+  width: 134px;
+  height: 36px;
+  margin-right: 45px;
+}
+.search_form {
+  width: 841px;
+  height: 40px;
+  padding: 0 50px 0 10px;
+  position: relative;
+}
+
+.search_btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 40px;
+  padding: 0;
+}
+
+.search_category {
+  padding: 0 10px 0 0;
+  height: 36px;
+  line-height: 36px;
+}
+
+.search_brand {
+  padding: 0 0 0 10px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top_navi > ul {
+  display: flex;
+}
+.top_navi {
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  margin: 8px 0 0;
+}
+
+.top_navi a {
+  color: #333333;
+}
+
+.top_lists a {
+  color: #333333;
+}
+
+.top_list {
+  padding: 0 14px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.reference {
+  display: flex;
+}
+
+/* ----------------------------- */
+        /* 出品アイコン*/
+/* ----------------------------- */
+
+.red_circle {
+  background-color: red;
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+  position: relative;
+}
+
+#Exhibit {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1;
+}
+
+.Exhibit {
+  position: absolute;
+  top: 30px;
+  left: 63px;
+  color: white;
+}
+
+.fa-camera {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  color: white;
+}
+
+/* ----------------------------- */
+              /* AD */
+/* ----------------------------- */
+
+#freemarket {
+  width: 68px;
+  height: 68px;
+}
+
+.AD_message1 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.AD_message2 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+#smartphone {
+  width: 300px;
+  height: 260px;
+}
+
+.AD {
+  background-image: url(https://web-jp-assets.mercdn.net/_next/static/images/download_app_bg-b57d6f1a32f2aebd89cf6f43bc2e4b39.jpg);
+}
+
+aside {
+  display: flex;
+  height: 260px;
+  margin: 0 auto;
+}
+
+/* ----------------------------- */
+          /* footer */
+/* ----------------------------- */
+
+footer {
+  background-color: #222222;
+}
+
+.footer_navi {
+  display: flex;
+  height: 296px;
+  margin: 0 auto;
+}
+
+.description {
+  margin: 18px 0 0;
+  padding: 0 40px 0 0;
+  color: #ffffff;
+}
+
+.description_list a {
+  color: #ffffff;
+}
+
+
+.fa-twitter, .fa-facebook-square {
+  color: #ffffff;
+  margin: 30px 20px 0 0;
+}
+
+.footer_bottom {
+  height: 31px;
+  margin: 30px auto 20px;
+  box-sizing: border-box;
+}
+
+#footer_icon {
+  width: 124px;
+  height: 31px;
+  color: #ffffff;
+}
+
+.copy_right {
+  height: 12px;
+  color: #ffffff;
+  line-height: 12px;
+  width: 765px;
+  padding: 0 0 0 15px;
+}
+
+
+
+
+
+
+
+
+
