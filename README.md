@@ -21,9 +21,10 @@
 ### Association 
 - has_many :items 
 - has_many :comments 
+- has_many :addresses
 
 
-## commentテーブル 
+## commentsテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
@@ -87,7 +88,7 @@
 - belongs_to :brand 
 
 
-## imageテーブル 
+## imagesテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
@@ -97,13 +98,26 @@
 - belongs_to :item 
 
 
-## creditテーブル 
+## creditsテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
 |number|integer|null: false, unique: true| 
 |effective_date|integer|null: false| 
 |security_code|integer|null: false| 
+|user_id|reference|null: false, forein_key: true| 
+
+### Association 
+- belongs_to :user 
+
+
+## addressesテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|address|String|null: false| 
+|building|String|null: false| 
+|zip_code|integer|null: false| 
 |user_id|reference|null: false, forein_key: true| 
 
 ### Association 
