@@ -50,15 +50,11 @@
 |category_id|integer|null: false, forein_key: true| 
 |brand_id|text|null: false, forein_key: true|
 
-
-
-
 ### Association 
 - has_many :images 
 - has_many :comments 
 - belongs_to :category
 - belongs_to :brand
-
 
 
 ## categoriesテーブル 
