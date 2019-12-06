@@ -3,16 +3,17 @@
     = link_to '#' do
       %figure
         = image_tag "//static.mercdn.net/images/member_photo_noimage_thumb.png", size: '48x48'
-      %h2.mypage-content__user-name.bold
-        -# = current_user.nickname
+      %h2.mypage-content__user-name
+        name
       .mypage-content__status
         .mypage-content__reviews
-          評価&nbsp
-          %span.mypage-content__reviews.bold<>
+          評価
+          %span.mypage-content__reviews
+            999999999
         .mypage-content__sell
           出品数
-          %span.mypage-content__sell.bold<>
-            -# = current_user.products.length
+          %span.mypage-content__sell
+            100000000
   %section.mypage-content__main-tab-container
     %ul.mypage-content__tabs
       %li.mypage-content__tab.mypage-content__tab--active
