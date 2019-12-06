@@ -1,0 +1,199 @@
+.mypage-container{
+  padding: 50px 180px;
+}
+.mypage-main-containe{
+  background-color: #f5f5f5;
+}
+.mypage-content{
+    width: 720px;
+    float: right;
+    &__user-icon{
+      position: relative;
+      height: 155px;
+      padding: 20px;
+      background-image: url(background137.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      a {
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        top: 25%;
+        left: 0;
+        right: 0;
+        color: #333;
+      }
+      figure {
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+    }
+    &__user-name{
+      margin-top: 8px 0 0;
+      font-size: 14px;
+    }
+    &__status{
+      margin-top: 8px;
+      font-size: 0;
+      div{
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 16px;
+      }
+      span{
+        margin-left: 8px;
+        font-size: 16px;
+      }
+    }
+    &__main-tab-container{
+      margin: 0;
+      background: #fff;
+    }
+    &__tabs{
+      border: 0;
+      background: #eee;
+      font-size: 0;
+      a{
+        position: relative;
+        display: block;
+        color: #333;
+        font-size: 16px;
+        line-height: 72px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    &__tab{
+      width: 50%;
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      &--active{
+        background: #fff;
+        a{
+          border-top: 2px solid #ea352d;
+        }
+      }
+    }
+    &__item-list{
+      display: none;
+      border: 0;
+      &--active{
+        display: block;
+      }
+      li{
+        position: relative;
+        border-bottom: 1px solid #eee;
+        &:last-child {
+          border: 0;
+        }
+      }
+      img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+      }
+    }
+    &__item-link{
+      display: block;
+      min-height: 80px;
+      padding: 16px;
+      color: #333;
+      text-decoration: none;
+      figure{
+        position: relative;
+        overflow: hidden;
+        float: left;
+        width: 48px;
+        height: 48px;
+      }
+      time{
+        display: inline-block;
+        color: #888;
+        .fa-clock{
+          margin-right: 8px;
+          font-size: 16px;
+          vertical-align: middle;
+        }
+        span{
+          vertical-align: middle;
+        }
+      }
+      .fa-chevron-right{
+        position: absolute;
+        top: 40%;
+        right: 16px;
+      }
+    }
+    &__item-link:hover{
+      background-color: lightgray;
+    }
+    &__item-body{
+      margin: 0 40px 0 68px;
+    }
+    &__item-text{
+      overflow: hidden;
+      display: block;
+      height: 4.4em;
+      text-overflow: ellipsis;
+      line-height: 1.5;
+    }
+    &__go-list{
+      padding: 16px;
+      a{
+        display: block;
+        height: 56px;
+        margin: 0 auto;
+        background: #eee;
+        color: #333;
+        line-height: 56px;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+    &__item-not-found{
+      padding: 160px 0 60px;
+      background: image-url('logo-gray-icon.svg');
+      background-repeat: no-repeat;
+      background-position: center 40px;
+      background-size: 78px 85px;
+      text-align: center;
+      font-size: 16px;
+      color: #ccc;
+    }
+    &__secondary-tab-container{
+      margin-top: 40px;
+      background: #fff;
+    }
+    &__tab-head{
+      padding: 0 4%;
+      background: #fafafa;
+      font-size: 16px;
+      line-height: 72px;
+    }
+    &__item-status{
+      display: inline-block;
+      margin: 8px 0 0 0;
+      padding: 5px 6px;
+      border-radius: 2px;
+      font-size: 12px;
+      color: #fff;
+      &--done{
+        background: #888;
+      }
+    }
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
