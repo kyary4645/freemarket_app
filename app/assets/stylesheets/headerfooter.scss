@@ -93,12 +93,17 @@ header {
   color: #333333;
 }
 
+.top_lists a {
+  color: #333333;
+}
+
 .top_navi a:hover {
   color: rgb(93, 238, 248);
 }
 
-.top_lists a {
-  color: #333333;
+.description_list a {
+  color: #ffffff;
+  font-size: 12px;
 }
 
 .top_lists a:hover {
@@ -210,10 +215,6 @@ aside {
   color: #ffffff;
 }
 
-.description_list a {
-  color: #ffffff;
-  font-size: 12px;
-}
 
 .description_list {
   margin: 16px 0 0;
