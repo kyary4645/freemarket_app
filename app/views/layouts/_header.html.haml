@@ -1,0 +1,37 @@
+%header
+    #headerbg
+      .header-top
+        = link_to "#" do
+          = image_tag id: "freemarket_string", alt: "freemarket", src: "SVG/fmarket_logo_red.svg"
+        %form{action: "#"}
+          %input.search_form{placeholder: "何をお探しですか？", type: "text"}/
+          %button.search_btn
+            %i.fas.fa-search
+            = link_to "#" do
+      %nav.top_navi
+        %ul.refarence
+          %li.search_category
+            %i.fas.fa-list-ul
+            = link_to "#" do 
+              カテゴリーから探す
+          %li.search_brand
+            %i.fas.fa-tags
+            = link_to "#" do 
+              ブランドから探す
+        %ul.top_lists
+          %li.top_list
+            %i.far.fa-heart
+            = link_to "#" do
+              いいね！一覧
+          %li.top_list
+            %i.far.fa-bell
+            = link_to "#" do 
+              お知らせ
+          %li.top_list
+            %i.fas.fa-check
+            = link_to "#" do
+              やることリスト
+          %li.top_list
+            %i.fas.fa-user-circle
+            = link_to "#" do
+              マイページ
