@@ -1,0 +1,206 @@
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+body{
+  background-color: rgb(245, 245, 245);
+  display: block;
+
+  
+}
+
+.main-top{
+
+  width: 100%;
+}
+
+.advertisemens{
+  width: 1440px;
+  height: 390px;
+}
+
+.scroll-advertisement{
+  background-size: cover;
+}
+
+
+.nav{
+  padding: 50px 0px 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.popularity-category{
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+
+}
+
+.categories{
+  display: inline-block;
+  
+}
+
+.button{
+  color: black;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  margin: 10px 0 0 10px ;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  
+  
+}
+
+
+
+.items-holders{
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 100px;
+  
+  
+}
+
+.item-title{
+  position: relative;
+  margin-bottom: 16px;
+  &-men{
+    margin-top: 80px;
+  }
+  &-appliance{
+    margin-top: 80px;
+  }
+  &-toy{
+    margin-top: 80px;
+  }
+  &-louisvuitton{
+    margin-top: 80px;
+  }
+  &-supreme{
+    margin-top: 80px;
+  }
+  &-nike{
+    margin-top: 80px;
+  }
+}
+
+
+
+.see-more{
+  display: inline-block;
+  position: absolute;
+  color: rgb(0, 149, 238);
+  font-weight: 600;
+  right: 0px;
+  bottom: 0px;
+
+}
+
+
+.images{
+  
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 100%;
+  
+}
+
+.image{
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 20%;
+  
+  
+}
+
+.product{
+  width: 188px;
+  height: 252px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+
+}
+
+
+
+.product-image{
+  display:block;
+  position: absolute;
+  width: 188px;
+  height: 252px;
+  box-sizing: content-box;
+  
+}
+
+.product-image:hover{
+  border: solid 1px rgb(0, 149, 238);
+}
+
+.product-card{
+  width: 188px;
+  height: 252px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,.18);
+}
+
+
+.product-price{
+  align-items: center;
+  box-sizing: border-box;
+  background: rgba(0,0,0,.4);
+  border-radius: 0 14px 14px 0;
+  position: absolute;
+  color: #fff;
+  height: 28px;
+  font-size: 17px;
+  bottom: 72px;
+  padding: 0 12px;
+  letter-spacing: .02em;
+
+}
+
+
+
+
+.product-image-size{
+  width: 188px;
+  height: 188px;
+}
+
+
+.product-description{
+  display: inline-block;
+  width: 188px;
+  height: 64px;
+  background-color: #fff;
+  color: #222;
+  box-sizing: border-box;
+  padding: 0 12px;
+  word-break: break-word;
+  font-size: 14px;
+  white-space: normal;
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  
+}
