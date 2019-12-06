@@ -79,33 +79,27 @@ body{
   
 }
 
-.category-name{
+.item-title{
   position: relative;
   margin-bottom: 16px;
-}
-
-
-
-.item-title-men{
-  margin-top: 80px;
-}
-.item-title-appliance{
-  margin-top: 80px;
-}
-.item-title-toy{
-  margin-top: 80px;
-}
-
-.item-title-louisvuitton{
-  margin-top: 80px;
-}
-
-.item-title-supreme{
-  margin-top: 80px;
-}
-
-.item-title-nike{
-  margin-top: 80px;
+  &-men{
+    margin-top: 80px;
+  }
+  &-appliance{
+    margin-top: 80px;
+  }
+  &-toy{
+    margin-top: 80px;
+  }
+  &-louisvuitton{
+    margin-top: 80px;
+  }
+  &-supreme{
+    margin-top: 80px;
+  }
+  &-nike{
+    margin-top: 80px;
+  }
 }
 
 
