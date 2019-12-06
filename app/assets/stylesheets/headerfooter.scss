@@ -89,6 +89,11 @@ header {
   margin: 8px 0 0;
 }
 
+.description_list a {
+  color: #ffffff;
+  font-size: 12px;
+}
+
 .top_navi a {
   color: #333333;
 }
@@ -99,11 +104,6 @@ header {
 
 .top_navi a:hover {
   color: rgb(93, 238, 248);
-}
-
-.description_list a {
-  color: #ffffff;
-  font-size: 12px;
 }
 
 .top_lists a:hover {
