@@ -27,8 +27,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|
-|user_id|integer|null: false, forein_key: true|
-|item_id|integer|null: false, forein_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -39,15 +39,15 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, forein_key: true|
+|user_id|reference|null: false, foreign_key: true|
 |items_categories|references|null: false, foreign_key: true|
 |items_brands|references|null: false, foreign_key: true|
-|size|String|null: false|
-|status|integer|null: false|
+|size|String|null: true|
+|status|String|null: false|
 |derivery_fee_id|integer|null: false, forein_key: true|
-|derivery_method_id|integer|null: false, forein_key: true|
+|derivery_method_id|integer|null: false, foreign_key: true|
 |price|integer|null: false|
-|derivery_estimated_id|integer|null: false, forein_key: true|
+|derivery_estimated_id|integer|null: false, foreign_key: true|
 |description|text|null: false|
 
 
@@ -66,8 +66,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|item_id|integer|null: false, forein_key: true|
-|category_id|integer|null: false, forein_key: true|
+|item_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -90,7 +90,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|item_id|reference|null: false, forein_key: true|
+|item_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -103,7 +103,7 @@
 |number|integer|null: false, unique: true|
 |effective_date|integer|null: false|
 |security_code|integer|null: false|
-|user_id|reference|null: false, forein_key: true|
+|user_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -115,7 +115,7 @@
 |------|----|-------|
 |address|String|null: false|
 |building|String|null: true|
-|user_id|String|null: true, forein_key: true|
+|user_id|String|null: true, foreign_key: true|
 |zip_code|integer|null: true|
 
 ### Association

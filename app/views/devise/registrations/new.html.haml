@@ -1,21 +1,31 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.wrapper-registration
+  = render "header"
+
+  .form
+    .form__top
+      会員情報入力
+    .form__bottom
+      .form__bottom__text-box
+        .nickname-box
+          .nickname-box__topic
+            ニックネーム
+            %h6 必須
+          .nickname-box__field
+            %input{name: "nickname", placeholder: "ニックネーム", type: "name", class: "nickname"}
+        .email-box
+          .email-box__topic
+            email
+            %h6 必須
+          .email-box__field
+            %input{name: "email", placeholder: "メールアドレス", type: "email", class: "email"}
+        .password-box
+          .password-box__topic
+            パスワード
+            %h6 必須
+          .password-box__field
+            %input{name: "password", placeholder: "パスワード", type: "password", class: "password"}
+        
+      .form__bottom__btn
+
+
+  = render "layouts/sign_up/sign_up_footer"

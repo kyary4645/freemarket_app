@@ -1,0 +1,194 @@
+.wrapper-login {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  .form {
+    width: 456px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    &__top {
+      padding: 40px 64px;
+      h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+      }
+      .new-create {
+        height: 50px;
+        width: 328px;
+        background-color: #0099e8;
+        font-size: 14px;
+        line-height: 50px;
+        color: #ffffff;
+        display: flex;
+        text-decoration: none;
+        margin-top: 8px;
+        h3 {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+    &__bottom {
+      height: 587px;
+      border-top: 1px solid #eeeeee;
+      &__btn {
+        padding: 32px 64px;
+        &__list {
+          height: 116px;
+          .facebook {
+            height: 50px;
+            width: 328px;
+            background-color: #385185;
+            font-size: 14px;
+            text-align: center;
+            line-height: 50px;
+            color: #ffffff;
+            margin-bottom: 16px;
+            display: flex;
+            text-decoration: none;
+            .fa-facebook-square {
+              font-size: 30px;
+              line-height: 50px;
+              margin: 0 60px 0 20px;
+            }
+          }
+          .google {
+            box-sizing: border-box;
+            height: 50px;
+            width: 328px;
+            border: 1px solid #979797;
+            font-size: 14px;
+            text-align: center;
+            line-height: 50px;
+            display: flex;
+            text-decoration: none;
+            color: #000000;
+            .fa-google {
+              font-size: 20px;
+              line-height: 50px;
+              margin: 0 73px 0 20px;
+            }
+          }
+        }
+      }
+      &__text-box {
+        width: 330px;
+        padding: 24px 64px 32px;
+        .email {
+          padding: 10px 16px 8px;
+          width: 293px;
+          border-radius: 5px;
+          outline: 0;
+          border: 1px solid #cccccc;
+          font-size: 14px;
+          height: 28px;
+          &:focus {
+            border: 1px solid #0099e8;
+          }
+        }
+        .password {
+          padding: 10px 16px 8px;
+          width: 293px;
+          border-radius: 5px;
+          outline: 0;
+          margin: 24px 0 0;
+          border: 1px solid #cccccc;
+          font-size: 14px;
+          height: 28px;
+          &:focus {
+            border: 1px solid #0099e8;
+          }
+        }
+        .authentic-check {
+          height: 78px;
+          width: 304px;
+          background-color: #f9f9f9;
+          margin: 24px 0 0;
+        }
+        .login-btn {
+          color: #ffffff;
+          padding: 15px 0;
+          width: 328px;
+          height: 50px;
+          background-color: #ea352d;
+          font-size: 14px;
+          margin: 24px 0 0;
+          outline: 0;
+          transition-duration: 1s;
+          &:hover {
+            background-color: #e62017;
+            transition-duration: 1s;
+          }
+        }
+        .password-forgot {
+          margin: 40px 0 0;
+          display: inline-block;
+          text-decoration: none;
+          font-size: 14px;
+          color: #51b9ef;
+          &:hover {
+            border-bottom: 1px solid #51b9ef;
+            color: lighten(#4db8ef, 10%);
+          }
+        }
+      }
+    }
+  }
+  .terms {
+    height: 220px;
+    margin: 40px 0 0;
+    text-align: center;
+    &__link {
+      margin: 0 auto;
+      width: 456px;
+      .link {
+        width: 386px;
+        margin: 0 auto;
+        display: flex;
+        height: 20px;
+        a {
+          text-decoration: none;
+          color: #3a3a3a;
+          font-size: 12px;
+        }
+        .privacy-policy:hover {
+          border-bottom: 1px solid #3a3a3a;
+          color: #777777;
+        }
+        .service {
+          margin-left: 12px;
+          &:hover {
+            border-bottom: 1px solid #3a3a3a;
+            color: #777777;
+          }
+        }
+        .business {
+          margin-left: 20px;
+          &:hover {
+            border-bottom: 1px solid #3a3a3a;
+            color: #777777;
+          }
+        }
+        
+      }
+      .logo {
+        margin-top: 35px;
+        &__footer {
+          &__link {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+          }
+          img:hover {
+            opacity: 0.7;
+          }
+        }
+        h3 {
+          font-size: 12px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}

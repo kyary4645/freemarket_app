@@ -1,0 +1,17 @@
+.wrapper-sign_up
+  = render "layouts/sign_up/sign_up_header"
+  .form
+    .form__logo
+      新規会員登録
+    .form__btn
+      .form__btn__list
+        %a.form__btn__list__email{href: "#"}
+          = icon('far', 'envelope')
+          %h3 メールアドレスで登録する
+        %a.form__btn__list__facebook{href: "#"}
+          = icon('fab', 'facebook-square')
+          %h3 Facebookで登録する
+        %a.form__btn__list__google{href: "#"}
+          = icon('fab', 'google')
+          %h3 Googleで登録する
+  = render "layouts/sign_up/sign_up_footer"
