@@ -38,13 +38,6 @@ select {
   width: 150px;
 }
 
-.input-information > .required {
-  background-color: #ea352D;
-  color: #ffffff;
-  width: 40px;
-  display: inline-block;
-}
-
 .required {
   background-color: #ea352D;
   color: #ffffff;
@@ -53,6 +46,14 @@ select {
   margin-left: 10px;
   border-radius: 5px;
 }
+
+.input-information > .required {
+  background-color: #ea352D;
+  color: #ffffff;
+  width: 40px;
+  display: inline-block;
+}
+
 .card-logo {
   margin: 8px 8px 20px 0;
 }
