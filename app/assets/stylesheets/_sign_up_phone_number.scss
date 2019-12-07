@@ -1,0 +1,294 @@
+.wrapper-phone-number {
+  background-color: #f8f8f8;
+  .registrations-header {
+    height: 128px;
+    &__contents {
+      display: flex;
+      justify-content: space-between;
+      height: 70px;
+      width: 770px;
+      margin: auto;
+      padding: 40px 0;
+      &__logo {
+        margin: auto 0;
+        width: 200px;
+        height: 60px; 
+      }
+      img:hover {
+        opacity: 0.7;
+      }
+      .header-right {
+        height: 80px;
+        .list-movement {
+          display: flex;
+          height: 32px;
+          position: relative;
+          z-index: 10;
+          margin: auto 0;
+          color: #9b9b9b;
+          .user-info {
+            margin-right: 40px;
+            width: 60px;
+            height: 32px;
+            color: #ea352d;
+            .text {
+              text-align: center;
+              font-size: 12px;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
+            .dot {
+              display: inline-block;
+              height: 12px;
+              width: 12px;
+              margin: 0 auto;
+              border-radius: 50%;
+              background-color: #ea352d;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .phone-number-info {
+            margin-right: 40px;
+            width: 72px;
+            height: 32px;
+            color: #ea352d;
+            .text {
+              text-align: center;
+              font-size: 12px;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
+            .dot {
+              margin-top: 10px;
+              display: inline-block;
+              height: 12px;
+              width: 12px;
+              margin: 0 auto;
+              border-radius: 50%;
+              background-color: #ea352d;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .address-info {
+            margin-right: 40px;
+            width: 96px;
+            height: 32px;
+            .text {
+              text-align: center;
+              font-size: 12px;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
+            .dot {
+              margin-top: 10px;
+              display: inline-block;
+              height: 12px;
+              width: 12px;
+              margin: 0 auto;
+              border-radius: 50%;
+              background-color: #cccccc;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .payment-info {
+            margin-right: 40px;
+            width: 60px;
+            height: 32px;
+            .text {
+              text-align: center;
+              font-size: 12px;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
+            .dot {
+              margin-top: 10px;
+              display: inline-block;
+              height: 12px;
+              width: 12px;
+              margin: 0 auto;
+              border-radius: 50%;
+              background-color: #cccccc;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .complite {
+            width: 60px;
+            height: 32px;
+            .text {
+              text-align: center;
+              font-size: 12px;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
+            .dot {
+              margin-top: 10px;
+              display: inline-block;
+              height: 12px;
+              width: 12px;
+              margin: 0 auto;
+              border-radius: 50%;
+              background-color: #cccccc;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+        .list-movement-border {
+          height: 2px;
+          width: 450px;
+          background-color: #cccccc;
+          position: relative;
+          bottom: 4px;
+          left: 29px;
+        }      
+      }
+    }
+  }
+  .form {
+    width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    &__top {
+      padding: 32px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &__bottom {
+      border-top: 1px solid #f5f5f5;
+      padding: 40px 40px 64px;
+      &__text-box {
+        width: 343px;
+        margin: 0 auto;
+        &__phone-number {
+          .label {
+            font-weight: bold;
+            font-size: 14px;
+          }
+          .box {
+            margin-top: 8px;
+            .phone {
+              width: 307px;
+              height: 26px;
+              padding: 10px 16px 8px;
+              border-radius: 4px;
+              border: 1px solid #cccccc;
+              outline: 0;
+              &:focus {
+                border: 1px solid #0099e8;
+              }
+            }
+          }
+        }
+        &__identification {
+          font-size: 13.5px;
+          margin-top: 8px;
+          color: #585858;
+        }
+        &__send-btn {
+          display: block;
+          margin-top: 32px;
+          height: 50px;
+          width: 343px;
+          background-color: #ea352d;
+          text-align: center;
+          line-height: 50px;
+          text-decoration: none;
+          transition-duration: 0.8s;
+          &:hover {
+            background-color: #e62017;
+            transition-duration: 0.8s;
+          }
+          h3 {
+            color: #ffffff;
+            font-size: 14px;
+          }
+        }
+        &__caution {
+          margin-top: 8px;
+          font-size: 14px;
+          color: #333333;
+        }
+        &__confirmation-reason {
+          margin-top: 32px;
+          text-align: right;
+          font-size: 14px;
+          a {
+            text-decoration: none;
+            color: #51b9ef;
+            h3 {
+              display: inline;
+              font-weight: 500;
+            }
+            &:hover {
+              color: lighten(#4db8ef, 10%);
+              h3 {
+                border-bottom: 1px solid #51b9ef;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .terms {
+    height: 220px;
+    margin: 40px 0 0;
+    text-align: center;
+    &__link {
+      margin: 0 auto;
+      width: 456px;
+      .link {
+        width: 386px;
+        margin: 0 auto;
+        display: flex;
+        height: 20px;
+        a {
+          text-decoration: none;
+          color: #3a3a3a;
+          font-size: 12px;
+        }
+        .privacy-policy:hover {
+          border-bottom: 1px solid #3a3a3a;
+          color: #777777;
+        }
+        .service {
+          margin-left: 12px;
+          &:hover {
+            border-bottom: 1px solid #3a3a3a;
+            color: #777777;
+          }
+        }
+        .business {
+          margin-left: 20px;
+          &:hover {
+            border-bottom: 1px solid #3a3a3a;
+            color: #777777;
+          }
+        }
+        
+      }
+      .logo {
+        margin-top: 35px;
+        &__footer {
+          &__link {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+          }
+          img:hover {
+            opacity: 0.7;
+          }
+        }
+        h3 {
+          font-size: 12px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
