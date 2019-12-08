@@ -8,6 +8,7 @@
         .form__bottom__center__text
           %h3 ありがとうございます。
           %h3 会員登録が完了しました。
-        %a.form__bottom__center__start-btn{href: "#"}
-          %h3 メルカリをはじめる
+        = link_to "#", style: "text-decoration: none;" do
+          %button.form__bottom__center__start-btn{type: "submit"}
+            %h3 メルカリをはじめる
   = render "sign_up_footer"

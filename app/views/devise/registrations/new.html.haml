@@ -243,8 +243,9 @@
               利用規約
             に
           %p 同意したものとみなします
-        %a.next-page-btn{href: "#"}
-          %h3 次へ進む
+        = link_to "#", style: "text-decoration: none;" do
+          %button.next-page-btn{type: "submit"}
+            %h3 次へ進む
         .about-personal-information
           = link_to "#" do
             %h3 本人情報の登録について
