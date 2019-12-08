@@ -1,0 +1,169 @@
+.item-detail
+  .item-detail-contents
+    %h1.item-detail-name リドム　黒スキニー
+    .item-detail-main.clearfix
+      .item-detail-photo
+        = image_tag 'm62329875568_1.jpg', alt: '商品紹介', height: '270px', width: '220px', class: 'item-detail-photo-main'
+        .item-detail-photo-sub
+          = image_tag 'm62329875568_1.jpg', alt: '商品紹介', height: '80px', width: '70px', class: 'item-detail-photo-sub'
+          = image_tag 'm62329875568_2.jpg', alt: '商品紹介', height: '80px', width: '70px', class: 'item-detail-photo-sub'
+      %table.item-detail-table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              = link_to "沢尻エリカ", "#", class: "item-detail-username"
+              %div
+                %span.item-detail-evaluation
+                  = icon('fas', 'laugh', class: 'laugh')
+                  10
+                %span.item-detail-evaluation
+                  = icon('fas', 'meh', class: 'meh')
+                  10
+                %span.item-detail-evaluation
+                  = icon('fas', 'frown', class: 'frown')
+                  10
+          %tr
+            %th カテゴリー
+            %td
+              = link_to "メンズ", "#", class:  "item-detail-category"
+              = link_to "#", class: "item-detail-category" do
+                = icon('fas', 'angle-right')
+                パンツ
+              = link_to "#", class: "item-detail-category" do
+                = icon('fas', 'angle-right')
+                デニム/ジーンズ
+          %tr
+            %th ブランド
+            %td
+              = link_to "リドム", "#"
+          %tr
+            %th 商品のサイズ
+            %td M
+          %tr
+            %th 商品の状態
+            %td 目立った傷や汚れなし
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+          %tr
+            %th 配送元地域
+            %td
+              = link_to "大阪府", "#"
+          %tr
+            %th 発送日の目安
+            %td 2~3日で発送
+    .item-detail-price-box
+      %span.item-detail-price ¥10,000
+      %span.item-detail-tax （税込）
+      %span.item-detail-postage 送料込み
+    = link_to "購入画面に進む", '#', class: "item-buy-btn"
+    .item-detail-description
+      %p.item-detail-description__sentence
+        ここで買いましたがサイズが合わなかったので安くお売りします。
+        
+        サイズはMです。
+    .item-detail-button.clearfix
+      .item-detail-button-left
+        %button.item-detail-button-left__like.item-button
+          = icon('far', 'heart', class: 'heart')
+          %span いいね!
+          %span 0
+        = link_to "#", class: "item-detail-button-left__report item-button" do
+          = icon('far', 'flag')
+          %span 不適切な商品の報告
+      .item-detail-button-right
+        = link_to '#' do
+          = icon('fas', 'lock')
+          あんしん・あんぜんへの取り組み
+  .item-detail-message
+    .message-comments
+      %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      = text_area_tag class: 'form-comment'
+      = submit_tag 'コメントする', class: 'form-submit'
+  %ul.item-links.clearfix
+    %li.item-link-pre
+      = link_to "#", class: "item-link" do
+        = icon('fas', 'angle-left', class: 'angle')
+        %span 前のページ
+    %li.item-link-next
+      = link_to "#", class: "item-link" do
+        %span 次のページ
+        = icon('fas', 'angle-right', class: 'angle')
+  .social-media-links
+    %ul.social-media-boxes
+      %li.social-media-box.facebook
+        = link_to '#', class: 'social-icon' do
+          = icon('fab', 'facebook-square')
+      %li.social-media-box.twitter
+        = link_to '#', class: 'social-icon' do
+          = icon('fab', 'twitter')
+      %li.social-media-box.pinterest
+        = link_to '#', class: 'social-icon' do
+          = icon('fab', 'pinterest')
+  .item-image-box
+    .user-item-box.clearfix
+      %h2.item-box-head
+        = link_to "#", class: 'item-box-head' do
+          沢尻エリカさんのその他の出品
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+    .brand-item-box.clearfix
+      %h2.item-box-head
+        = link_to "#", class: 'item-box-head' do
+          リドムのデニム/ジーンズ その他の出品
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
+      .item-box
+        = link_to '#', class: 'item-box-link' do
+          = image_tag '138475205.jpg', alt: '商品説明', height: '210px', width: '210px'
+          .item-box-body
+            %h3.item-box-name LIDNM ハイストレッチスキニー
+            .item-box-price ¥3,500
