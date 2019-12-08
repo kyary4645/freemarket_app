@@ -1,0 +1,84 @@
+.l-content {
+  width: 700px;
+  height: 650px;
+  margin: 0 auto;
+  border: 1px solid #f2f2f2f2;
+}
+
+.l-header {
+  height: 50px;
+  text-align: center;
+  color: #333333;
+  padding: 8px 24px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+
+
+.input-information {
+  display: flex;
+  padding: 20px 0 10px 0;
+}
+
+.l-main {
+  height: 450px;
+  padding: 32px 64px 0 150px;
+}
+
+input {
+  height: 50px;
+  width: 400px;
+  display: inline-block;
+}
+
+select {
+  height: 50px;
+  width: 150px;
+}
+
+.required {
+  background-color: #ea352D;
+  color: #ffffff;
+  width: 40px;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.input-information > .required {
+  background-color: #ea352D;
+  color: #ffffff;
+  width: 40px;
+  display: inline-block;
+}
+
+.card-logo {
+  margin: 8px 8px 20px 0;
+}
+
+.card-lists {
+  display: flex;
+}
+
+img {
+  width: 44px;
+  height: 34px;
+}
+
+.submit_btn {
+  background-color: #ea352D;
+  color: #ffffff;
+  width: 350px;
+  height: 50px;
+  margin: 20px auto 0;
+  font-size: 14px;
+  display: block;
+}
+
+.info {
+  color: #1488E4;
+  margin-left: 250px;
+  padding-top: 10px;
+}

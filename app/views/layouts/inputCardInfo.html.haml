@@ -1,0 +1,89 @@
+%main
+  .l-content
+    %section.l-container
+      %h2.l-header クレジットカード情報入力
+      .l-main
+        .l-main__container
+          .input-information
+            %h3.l-main__header カード番号
+            %p.required 必須
+          .card_number
+            %input.card_number_form{placeholder: "半角数字のみ", type: "text"}
+          %ul.card-lists
+            %li.card-logo
+              = image_tag {alt: "visa", src: "img/logo_visa.gif"}
+            %li.card-logo
+              = image_tag {alt: "mastercard", src: "img/logo_mastercard.gif"}
+            %li.card-logo
+              = image_tag {alt: "saison", src: "img/320px-Saison_card_logo.svg.png"}
+            %li.card-logo
+              = image_tag {alt: "jcb", src: "img/jcb-logomark-img-02.gif"}
+            %li.card-logo
+              = image_tag {alt: "amex", src: "img/amex-logomark-img-05.gif"}
+            %li.card-logo
+              = image_tag {alt: "diners", src: "img/diners-logomark-img-02.gif"}
+            %li.card-logo
+              = image_tag {alt: "discover", src: "img/discover-logomark-img-07.gif"}
+          .l-main__cont
+            .input-information
+              %h3.expiration 有効期限
+              %p.required 必須
+            = succeed "\u{3000}\u{6708}" do
+              %select{name: "month"}
+                %option{value: ""} -
+                %option{value: "1"} 1
+                %option{value: "2"} 2
+                %option{value: "3"} 3
+                %option{value: "4"} 4
+                %option{value: "5"} 5
+                %option{value: "6"} 6
+                %option{value: "7"} 7
+                %option{value: "8"} 8
+                %option{value: "9"} 9
+                %option{value: "10"} 10
+                %option{value: "11"} 11
+                %option{value: "12"} 12
+            = succeed "\u{3000}\u{65e5}" do
+              %select{name: "day"}
+                %option{value: ""} -
+                %option{value: "1"} 1
+                %option{value: "2"} 2
+                %option{value: "3"} 3
+                %option{value: "4"} 4
+                %option{value: "5"} 5
+                %option{value: "6"} 6
+                %option{value: "7"} 7
+                %option{value: "8"} 8
+                %option{value: "9"} 9
+                %option{value: "10"} 10
+                %option{value: "11"} 11
+                %option{value: "12"} 12
+                %option{value: "13"} 13
+                %option{value: "14"} 14
+                %option{value: "15"} 15
+                %option{value: "16"} 16
+                %option{value: "17"} 17
+                %option{value: "18"} 18
+                %option{value: "19"} 19
+                %option{value: "20"} 20
+                %option{value: "21"} 21
+                %option{value: "22"} 22
+                %option{value: "23"} 23
+                %option{value: "24"} 24
+                %option{value: "25"} 25
+                %option{value: "26"} 26
+                %option{value: "27"} 27
+                %option{value: "28"} 28
+                %option{value: "29"} 29
+                %option{value: "30"} 30
+                %option{value: "31"} 31
+          %div
+            .input-information
+              %h3.securityCord セキュリティーコード
+              %p.required 必須
+            %input{placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}
+            %p.info
+              %i.fas.fa-question-circle>
+              カード裏面の番号とは？
+      .l-footer
+        %button.submit_btn{:type => "submit"} 追加する
