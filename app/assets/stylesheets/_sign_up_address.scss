@@ -1,4 +1,4 @@
-.wrapper-phone-number {
+.wrapper-address {
   background-color: #f8f8f8;
   .registrations-header {
     height: 128px;
@@ -25,7 +25,6 @@
           position: relative;
           z-index: 10;
           margin: auto 0;
-          color: #9b9b9b;
           .user-info {
             margin-right: 40px;
             width: 60px;
@@ -75,6 +74,7 @@
             margin-right: 40px;
             width: 96px;
             height: 32px;
+            color: #ea352d;
             .text {
               text-align: center;
               font-size: 12px;
@@ -88,7 +88,7 @@
               width: 12px;
               margin: 0 auto;
               border-radius: 50%;
-              background-color: #cccccc;
+              background-color: #ea352d;
               display: flex;
               flex-direction: column;
             }
@@ -97,6 +97,7 @@
             margin-right: 40px;
             width: 60px;
             height: 32px;
+            color: #9b9b9b;
             .text {
               text-align: center;
               font-size: 12px;
@@ -118,6 +119,7 @@
           .complite {
             width: 60px;
             height: 32px;
+            color: #9b9b9b;
             .text {
               text-align: center;
               font-size: 12px;
@@ -148,92 +150,108 @@
       }
     }
   }
-  .form {
+  .l-content {
     width: 700px;
     margin: 0 auto;
     background-color: #ffffff;
-    &__top {
-      padding: 32px;
-      font-size: 22px;
+  }
+
+  .l-header {
+    padding: 32px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+
+
+  .custermer-info {
+    margin-top: 32px;
+    text-align: center;
+    display: flex;
+    font-size: 14px;
+    .custermer-detail {
       font-weight: bold;
-      text-align: center;
     }
-    &__bottom {
-      border-top: 1px solid #f5f5f5;
-      padding: 40px 40px 64px;
-      &__text-box {
-        width: 343px;
-        margin: 0 auto;
-        &__phone-number {
-          .label {
-            font-weight: bold;
-            font-size: 14px;
-          }
-          .box {
-            margin-top: 8px;
-            .phone {
-              width: 307px;
-              height: 26px;
-              padding: 10px 16px 8px;
-              border-radius: 4px;
-              border: 1px solid #cccccc;
-              outline: 0;
-              &:focus {
-                border: 1px solid #0099e8;
-              }
-            }
-          }
-        }
-        &__identification {
-          font-size: 13.5px;
-          margin-top: 8px;
-          color: #585858;
-        }
-        &__send-btn {
-          display: block;
-          margin-top: 32px;
-          height: 50px;
+  }
+
+  .l-main {
+    padding: 40px 40px 64px;
+    border-top: 2px solid #f5f5f5;
+    &__container {
+      width: 343px;
+      margin: 0 auto;
+      .pref {
+        margin-top: 8px;
+        &__name {
+          background-color: #ffffff;
           width: 343px;
-          background-color: #ea352d;
-          text-align: center;
-          line-height: 50px;
-          transition-duration: 0.8s;
           outline: 0;
-          &:hover {
-            background-color: #e62017;
-            transition-duration: 0.8s;
-          }
-          h3 {
-            color: #ffffff;
-            font-size: 14px;
-          }
-        }
-        &__caution {
-          margin-top: 8px;
-          font-size: 14px;
-          color: #333333;
-        }
-        &__confirmation-reason {
-          margin-top: 32px;
-          text-align: right;
-          font-size: 14px;
-          a {
-            text-decoration: none;
-            color: #51b9ef;
-            h3 {
-              display: inline;
-              font-weight: 500;
-            }
-            &:hover {
-              color: lighten(#4db8ef, 10%);
-              h3 {
-                border-bottom: 1px solid #51b9ef;
-              }
-            }
-          }
         }
       }
     }
+  }
+
+  input {
+    height: 32px;
+    width: 309px;
+    margin-top: 8px;
+    border-radius: 4px;
+    outline: 0;
+    padding: 10px 16px 8px;
+    border: 1px solid #cccccc;
+  }
+
+  select {
+    height: 50px;
+    width: 400px;
+  }
+
+  .custermer-info > .required {
+    background-color: #ea352d;
+    padding: 1px 4px;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 12px;
+    height: 19px;
+    margin-left: 6px;
+  }
+
+  .custermer-name__last, 
+  .custermer-name__last-kana {
+    margin-bottom: 10px;
+  }
+
+
+  .custermer-info > .random {
+    background-color: #c1c1c1;
+    padding: 1px 4px;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 12px;
+    height: 19px;
+    margin-left: 6px;
+  }
+
+  .l-footer {
+    text-decoration: none;
+    .submit_btn {
+      background-color: #ea352D;
+      color: #ffffff;
+      width: 343px;
+      height: 50px;
+      margin: 60px auto 0;
+      font-size: 14px;
+      display: block;
+      outline: 0;
+      transition-duration: 0.8s;
+      &:hover {
+        background-color: #e62017;
+        transition-duration: 0.8s;
+      }
+    }  
   }
   .terms {
     height: 220px;

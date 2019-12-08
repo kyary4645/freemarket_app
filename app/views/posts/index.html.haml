@@ -1,13 +1,25 @@
-.wrapper-complite
+.wrapper-phone-number
   = render "devise/registrations/header1"
   .form
     .form__top
-      会員登録完了
+      電話番号の確認
     .form__bottom
-      .form__bottom__center
-        .form__bottom__center__text
-          %h3 ありがとうございます。
-          %h3 会員登録が完了しました。
-        %a.form__bottom__center__start-btn{href: "#"}
-          %h3 メルカリをはじめる
-  = render "layouts/sign_up/sign_up_footer"
+      .form__bottom__text-box
+        .form__bottom__text-box__phone-number
+          .label
+            %label{for: "phone-number"} 携帯電話の番号
+          .box
+            %input{name: "phone-number", type: "tel", placeholder: "携帯電話の番号を入力", class: "phone"}
+        .form__bottom__text-box__identification
+          %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+        = link_to "#", style: "text-decoration: none;" do
+          %button.form__bottom__text-box__send-btn{type: "submit"}
+            %h3 SMSを送信する
+        .form__bottom__text-box__caution
+          %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+        .form__bottom__text-box__confirmation-reason
+          = link_to "#" do
+            %h3 電話番号の確認が必要な理由
+            = icon('fas', 'chevron-right')
+
+  = render "/layouts/sign_up/sign_up_footer"
