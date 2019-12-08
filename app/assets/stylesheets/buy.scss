@@ -1,0 +1,195 @@
+a{
+  text-decoration: none;
+}
+
+
+ul{
+  list-style: none;
+  
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+body{
+  background-color: rgb(245, 245, 245);
+  display: block;
+  
+
+  
+}
+div{
+  display: block;
+}
+
+main{
+  display: block;
+}
+
+form{
+  display: block;
+}
+
+.purchase-container{
+  width: 700px;
+  height: 856px;
+  margin: 0 auto;
+  background-color: #fff;
+  &-title{
+    padding: 32px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid #f5f5f5 ;
+  }
+}
+
+
+.purchase-content{
+  border-bottom: 1px solid #f5f5f5 ;
+  &-box{
+    padding: 32px 16px 48px;
+    margin: 0 162.5px;
+    width: 343px;
+  }
+
+}
+
+
+.item-box{
+  display: flex;
+}
+
+
+.item-detail{
+  margin-left: 16px;
+  &-name{
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 8px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+}
+
+
+.item-price{
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.price-table{
+  width: 100%;
+  &-row{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+
+}
+
+
+.price-table-cell{
+  font-size: 24px;
+  
+}
+
+.text-price{
+  font-size: 18px;
+  
+}
+
+.price-cell{
+  line-height: 20px;
+}
+
+.buy-point{
+  margin: 24px 0 32px;
+  
+
+}
+
+.checkbox-default{
+  position: relative;
+  
+}
+
+
+.fa-square{
+  color: #ccc;
+  background: #ccc;
+  position: absolute;
+  left: 1px;
+  bottom: 2px;
+}
+
+.point-text{
+  padding: 0 0 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888;
+  
+}
+
+.purchase-content-inner{
+  padding: 32px 0;
+  
+  border-top: 1px solid #f5f5f5;
+  
+}
+
+.l-left{
+  font-size: 14px;
+  float: left;
+}
+
+.l-right{
+  display: block;
+  color: #0099e8;
+  text-decoration: none;
+}
+.change{
+  margin-left: 200px;
+
+}
+
+.change-second{
+  margin-left: 230px;
+}
+.user-info-text{
+  font-size: 14px;
+  margin: 8px 0 0 ;
+  line-height: 1.5;
+}
+
+.user-card-logo{
+  margin-top: 8px;
+  display: block;
+ 
+}
+
+.purchase-content-shippings{
+  padding: 32px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.purchase-content-submit{
+  padding-top: 32px;
+}
+
+.btn-default{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
