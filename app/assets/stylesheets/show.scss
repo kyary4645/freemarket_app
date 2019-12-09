@@ -27,9 +27,15 @@
         float: left;
         height: 375px;
         width: 290px;
-        .item-detail-photo-main {
+        .photo-main {
           display: block;
           margin: 0 auto;
+          height: 270px;
+          width: 220px;
+        }
+        .photo-sub {
+          height: 80px;
+          width: 70px;
         }
       }
       .item-detail-table {
@@ -250,6 +256,10 @@
       margin: 0 20px 20px 0;
       float: left;
       font-size: 0;
+      .item-box-photo {
+        height: 210px;
+        width: 210px;
+      }
       .item-box-body {
         padding: 16px;
         background-color: #fff;
