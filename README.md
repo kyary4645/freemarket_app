@@ -1,4 +1,4 @@
-# DB設計
+# DB設計 
 
 
 ## usersテーブル 
@@ -68,7 +68,7 @@
 - has_many :items
 
 
-## brandsテーブル
+## brandsテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
@@ -86,11 +86,11 @@
 |item_id|reference|null: false, forein_key: true| 
 |url|String|null: false| 
 
-### Association
-- belongs_to :item
+### Association 
+- belongs_to :item 
 
 
-## creditテーブル
+## creditsテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
@@ -99,11 +99,11 @@
 |security_code|integer|null: false| 
 |user_id|reference|null: false, forein_key: true| 
 
-### Association
-- belongs_to :user
+### Association 
+- belongs_to :user 
 
 
-## addressesテーブル
+## addressesテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
@@ -114,5 +114,5 @@
 |building|String|null: true| 
 |user_id|reference|null: false, forein_key: true| 
 
-### Association
-- belongs_to :user
+### Association 
+- belongs_to :user 
