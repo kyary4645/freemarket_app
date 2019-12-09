@@ -1,0 +1,286 @@
+.item-detail {
+  background-color: #fafafa;
+  padding: 40px 0;
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  .item-detail-contents {
+    background-color: #fff;
+    width: 610px;
+    margin: 0 auto 0;
+    padding: 24px 40px 40px;
+    .item-detail-name {
+      font-size: 24px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .item-detail-main {
+      margin: 20px auto 0;
+      .item-detail-photo {
+        background-color: #fafafa;
+        float: left;
+        height: 375px;
+        width: 290px;
+        .photo-main {
+          display: block;
+          margin: 0 auto;
+          height: 270px;
+          width: 220px;
+        }
+        .photo-sub {
+          height: 80px;
+          width: 70px;
+        }
+      }
+      .item-detail-table {
+        float: right;
+        width: 290px;
+        font-size: 14px;
+        th {
+          width: 39%;
+          text-align: left;
+          background-color: #fafafa;
+          border: solid 1px #f5f5f5;
+          padding: 8px;
+        }
+        td {
+          width: 61%;
+          border: solid 1px #f5f5f5;
+          padding: 8px;
+          .item-detail-evaluation {
+            margin: 8px 10px 0 0 ;
+            .laugh {
+              color: pink;
+              font-size: 16px;
+            }
+            .meh {
+              color: orange;
+              font-size: 16px;
+            }
+            .frown {
+              color: lightblue;
+              font-size: 16px;
+            }
+          }
+          .item-detail-category {
+            display: block;
+          }
+          a {
+            color: #0099e8;
+          }
+          a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .item-detail-price-box {
+      margin: 24px auto 0;
+      text-align: center;
+      .item-detail-price {
+        font-size: 40px;
+        margin-right: 16px;
+        font-weight: bold;
+      }
+      .item-detail-tax {
+        font-size: 10px;
+      }
+      .item-detail-postage {
+        font-size: 16px;
+      }
+    }
+    .item-buy-btn {
+      height: 50px;
+      display: block;
+      margin-top: 16px;
+      background-color: #ea352d;
+      color: #ffffff;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .item-detail-description {
+      padding-top: 32px;
+      font-size: 18px;
+      &__sentence {
+        white-space: pre-wrap;
+      }
+    }
+    .item-detail-button {
+      margin-top: 16px;
+      .item-detail-button-left {
+        display: inline-block;
+        &__like {
+          padding: 5px 16px;
+        }
+        &__report {
+          padding: 8px 16px;
+        }
+        &__report:hover {
+          opacity: 0.7;
+        }
+        .item-button {
+          background-color: #f5f5f5;
+          border: 1px solid #f5f5f5;
+          border-radius: 40px;
+          font-size: 13px;
+          color: #333333;
+          span {
+            margin: 0 0 0 8px;
+          }
+        }
+      }
+      .item-detail-button-right {
+        font-size: 14px;
+        float: right;
+        padding-top: 5px;
+      }
+      .item-detail-button-right a {
+        color: #0099e8;
+      }
+      .item-detail-button-right a:hover {
+        opacity: 0.7;
+        text-decoration: underline;
+      }
+    }
+  }
+  .item-detail-message {
+    background-color: #fff;
+    width: 642px;
+    margin: 8px auto;
+    padding: 24px;
+    .message-comments {
+      p {
+        font-size: 14px;
+        padding: 8px;
+        background-color: #fff6ed;
+      }
+      textarea {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 100px;
+        border: 1px solid #cccccc;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 8px;
+      }
+      .form-submit {
+        box-sizing: border-box;
+        display: block;
+        height: 50px;
+        width: 100%;
+        border: 1px solid #aaaaaa;
+        font-size: 14px;
+        margin-top: 8px;
+        background-color: #aaa;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .item-links {
+    margin: 24px auto 0;
+    width: 690px;
+    .angle {
+      font-size: 18px;
+    }
+    .item-link-next {
+      float: right;
+    }
+  }
+  .item-links a {
+    color: #0099e8;
+  }
+  .item-links a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+  .social-media-links {
+    background-color: #fff;
+    width: 690px;
+    margin: 24px auto;
+    padding: 32px 0;
+    .social-media-boxes {
+      text-align: center;
+      .social-media-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 4px;
+        line-height: 44px;
+        .social-icon {
+          color: #fff;
+          padding: 10px;
+        }
+      }
+      .social-media-box:hover {
+        opacity: 0.7;
+      }
+      .facebook {
+        font-size: 26px;
+        background-color: #385185;
+      }
+      .twitter {
+        font-size: 26px;
+        background-color: #5d9dc9;
+      }
+      .pinterest {
+        font-size: 26px;
+        background-color: #aa262a;
+      }
+    }
+  }
+  .item-image-box {
+    margin: 0 auto;
+    width: 690px;
+    .item-box-head {
+      font-size: 22px;
+      margin: 24px 0 8px;
+      font-weight: bold;
+      color: #0099e8;
+    }
+    .item-box-head:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+    .item-box {
+      width: 210px;
+      margin: 0 20px 20px 0;
+      float: left;
+      font-size: 0;
+      .item-box-photo {
+        height: 210px;
+        width: 210px;
+      }
+      .item-box-body {
+        padding: 16px;
+        background-color: #fff;
+        color: #333333;
+        .item-box-name {
+          font-size: 16px;
+        }
+        .item-box-price {
+          margin-top: 8px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+    .item-box a {
+      display: block;
+    }
+  }
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
