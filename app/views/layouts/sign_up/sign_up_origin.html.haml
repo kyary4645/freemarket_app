@@ -5,13 +5,13 @@
       新規会員登録
     .form__btn
       .form__btn__list
-        %a.form__btn__list__email{href: "#"}
+        =link_to "#", class: "form__btn__list__email" do
           = icon('far', 'envelope')
           %h3 メールアドレスで登録する
-        %a.form__btn__list__facebook{href: "#"}
+        =link_to "#", class: "form__btn__list__facebook" do
           = icon('fab', 'facebook-square')
           %h3 Facebookで登録する
-        %a.form__btn__list__google{href: "#"}
+        =link_to "#", class: "form__btn__list__google" do
           = icon('fab', 'google')
           %h3 Googleで登録する
   = render "sign_up_footer"
