@@ -57,35 +57,34 @@
 - belongs_to :brand
 
 
-## items_categoriesテーブル
+## categoriesテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
+|Column|Type|Options| 
+|------|----|-------| 
+|item_id|integer|null: false, forein_key: true| 
+|name|String|null: false| 
 
-### Association
-- belongs_to :item
-- belongs_to :category
-
-
-## items_brandsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|item_id|integer|null: false, forein_key: true|
-|brand_id|integer|null: false, forein_key: true|
-
-### Association
-- belongs_to :item
-- belongs_to :brand
+### Association 
+- has_many :items
 
 
-## imageテーブル
+## brandsテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|item_id|reference|null: false, foreign_key: true|
+|Column|Type|Options| 
+|------|----|-------| 
+|item_id|integer|null: false, forein_key: true| 
+|name|String|null: false| 
+
+### Association 
+- has_many :items
+
+
+## imagesテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|item_id|reference|null: false, forein_key: true| 
+|url|String|null: false| 
 
 ### Association
 - belongs_to :item
@@ -93,25 +92,27 @@
 
 ## creditテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|number|integer|null: false, unique: true|
-|effective_date|integer|null: false|
-|security_code|integer|null: false|
-|user_id|reference|null: false, foreign_key: true|
+|Column|Type|Options| 
+|------|----|-------| 
+|number|integer|null: false, unique: true| 
+|effective_date|integer|null: false| 
+|security_code|integer|null: false| 
+|user_id|reference|null: false, forein_key: true| 
 
 ### Association
 - belongs_to :user
 
 
-## addressテーブル
+## addressesテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|address|String|null: false|
-|building|String|null: true|
-|user_id|String|null: true, foreign_key: true|
-|zip_code|integer|null: true|
+|Column|Type|Options| 
+|------|----|-------| 
+|prefecture|String|null: false| 
+|city|String|null: false| 
+|house_number|integer|null: false| 
+|zip_code|integer|null: false| 
+|building|String|null: true| 
+|user_id|reference|null: false, forein_key: true| 
 
 ### Association
 - belongs_to :user
