@@ -115,4 +115,4 @@
 |user_id|reference|null: false, forein_key: true| 
 
 ### Association 
-- belongs_to :user 
+- belongs_to :user  
