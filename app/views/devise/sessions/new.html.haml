@@ -1,0 +1,24 @@
+.wrapper-login
+  = render "layouts/sign_up/sign_up_header"
+  .form
+    .form__top
+      %h3 アカウントをお持ちでない方はこちら
+      =link_to "#", class: "new-create" do
+        %h3 新規会員登録
+    .form__bottom
+      .form__bottom__btn
+        .form__bottom__btn__list
+          =link_to "#", class: "facebook" do
+            = icon('fab', 'facebook-square')
+            %h3 Facebookでログイン
+          =link_to "#", class: "google" do
+            = icon('fab', 'google')
+            %h3 Googleでログイン
+      .form__bottom__text-box
+        %input{name: "email", placeholder: "メールアドレス", type: "email", class: "email"}
+        %input{name: "password", placeholder: "パスワード", type: "password", class: "password"}
+        .authentic-check
+          私はロボットではありません
+        %input{name: "send", type: "submit", value: "ログイン", class: "login-btn", style: "cursor:pointer"}
+        = link_to "パスワードをお忘れの方", "#", class: "password-forgot"
+  = render "layouts/sign_up/sign_up_footer"
