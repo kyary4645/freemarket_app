@@ -1,65 +1,60 @@
 # DB設計
 
 
-## usersテーブル
+## usersテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|first_name|String|null: false|
-|last_name|String|null: false|
-|first_name_kana|String|null: false|
-|last_name_kana|String|null: false|
-|nickname|String|null: false|
-|email|String|null: false, unique: true|
-|image|String|null: false|
-|phone_number|integer|null: false, unique: true|
-|password|String|null: false|
-|birthday|integer|null: false|
+|Column|Type|Options| 
+|------|----|-------| 
+|first_name|String|null: false| 
+|last_name|String|null: false| 
+|first_name_kana|String|null: false| 
+|last_name_kana|String|null: false| 
+|nickname|String|null: false| 
+|email|String|null: false, unique: true| 
+|image|String|null: false| 
+|phone_number|integer|null: true, unique: true| 
+|password|String|null: false| 
+|birthday|integer|null: false| 
 
-### Association
-- has_many :items
-- has_many :comments
-- belongs_to :address
-
-
-## commentテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|text|text|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
+### Association 
+- has_many :items 
+- has_many :comments 
+- has_many :addresses
 
 
-## itemsテーブル
+## commentsテーブル 
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|items_categories|references|null: false, foreign_key: true|
-|items_brands|references|null: false, foreign_key: true|
-|size|String|null: true|
-|status|String|null: false|
-|derivery_fee_id|integer|null: false, forein_key: true|
-|derivery_method_id|integer|null: false, foreign_key: true|
-|price|integer|null: false|
-|derivery_estimated_id|integer|null: false, foreign_key: true|
-|description|text|null: false|
+|Column|Type|Options| 
+|------|----|-------| 
+|text|text| 
+|user_id|integer|null: false, forein_key: true| 
+|item_id|integer|null: false, forein_key: true| 
+
+### Association 
+- belongs_to :user 
+- belongs_to :item 
 
 
-### Association
-- has_many :images
-- has_many :comments
-- has_many :categories through: :items_categories
-- has_many :brands through: :items_brands
-- belongs_to :status
-- belongs_to :derivery_fee
-- belongs_to :derivery_estimated
-- belongs_to :derivery_method
+## itemsテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|user_id|integer|null: false, forein_key: true| 
+|size|String|null: false| 
+|status|integer|null: false| 
+|derivery_fee|integer|null: false| 
+|derivery_method|integer|null: false| 
+|price|integer|null: false| 
+|derivery_estimated|integer|null: false| 
+|description|text|null: false| 
+|category_id|integer|null: false, forein_key: true| 
+|brand_id|text|null: false, forein_key: true|
+
+### Association 
+- has_many :images 
+- has_many :comments 
+- belongs_to :category
+- belongs_to :brand
 
 
 ## items_categoriesテーブル
