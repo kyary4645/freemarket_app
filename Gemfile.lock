@@ -304,9 +304,6 @@ DEPENDENCIES
   carrierwave
   chromedriver-helper
   coffee-rails (~> 4.2)
-  devise
-  devise-i18n
-  devise-i18n-views
   fog-aws
   font-awesome-sass
   haml-rails
