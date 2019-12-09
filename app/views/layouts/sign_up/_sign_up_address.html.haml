@@ -14,7 +14,8 @@
             %h3.custermer-detail 都道府県
             %p.required 必須
           .pref
-            = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+            = form_for "" do |f|
+              = f.collection_select :prefecture_id, Prefecture.all, :id, :name
           .custermer-info
             %h3.custermer-detail 市区町村
             %p.required 必須
