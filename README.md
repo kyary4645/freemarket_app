@@ -61,7 +61,6 @@
 
 |Column|Type|Options| 
 |------|----|-------| 
-|item_id|integer|null: false, forein_key: true| 
 |name|String|null: false| 
 
 ### Association 
@@ -72,7 +71,6 @@
 
 |Column|Type|Options| 
 |------|----|-------| 
-|item_id|integer|null: false, forein_key: true| 
 |name|String|null: false| 
 
 ### Association 
