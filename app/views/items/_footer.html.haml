@@ -11,13 +11,13 @@
         .AD_message1 スマホでかんたんフリマアプリ
         .AD_message2 今すぐ無料ダウンロード！
         %div
-          = image_tag id: "#freemarket",alt: "フリマアイコン", src: "SVG/logo_red.svg"
+          = image_tag "logo_red.svg", id: "#freemarket",alt: "フリマアイコン"
           = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
-            =image_tag class:"apple", alt: "", src: "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg"
-          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja"
-            =image_tag class: "google", alt: "", src: "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg"
+            =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class:"apple", alt: "apple"
+          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
+            =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg", class: "google", alt: "google"
       %figure
-        =image_tag id:"smartphone", alt: "", src: "https://web-jp-assets.mercdn.net/_next/static/images/download_app_pc-a4418175e8be071827ac88d073f40e4a.png"
+        =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/download_app_pc-a4418175e8be071827ac88d073f40e4a.png", id:"smartphone", alt: "smartphone"
   .footer
     %nav.footer_navi
       .description
@@ -110,5 +110,5 @@
               United States
     .footer_bottom
       = link_to "#" do
-        =image_tag id: "footer_icon", alt: "", src: "SVG/fmarket_logo_red.svg"
+        =image_tag "fmarket_logo_red.svg", id: "footer_icon", alt: "freemarket"
       %span.copy_right © FreeMarket Int.

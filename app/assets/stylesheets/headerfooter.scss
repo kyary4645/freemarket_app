@@ -188,6 +188,11 @@ aside {
   margin: 0 auto;
 }
 
+.apple, .google {
+  height: 40px;
+  width: 144px;
+}
+
 .apple:hover, .google:hover {
   opacity: 0.7;
   cursor: pointer;
