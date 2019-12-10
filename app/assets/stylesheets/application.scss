@@ -1,7 +1,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "reset";
-@import "post";
+
 @import "registration";
 @import "buy";
 @import "sign_up";
@@ -14,7 +14,7 @@
 @import "item_selling_page";
 @import "headerfooter";
 @import "inputCardInfo";
-@import "items";
+@import "items/item.scss";
 @import "logout";
 @import "registerCardInfo";
 @import "registration";

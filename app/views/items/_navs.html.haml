@@ -7,7 +7,7 @@
       ルイヴィトン
     = link_to "#supreme" ,class:"appliance button" do
       シュプリーム
-    = link_to "#toy" ,class:"toy button" do
+    = link_to "#nike" ,class:"toy button" do
       ナイキ
 .items-holders
   #chanel.item-title
@@ -19,52 +19,16 @@
       %ul.images
         %li.image
           .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
+            - @items.each do |item|
+              = link_to "#" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = item.price
+                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
+        
   #louisvuitton.item-title
     %h3.item-title-louisvuitton ルイヴィトン新着アイテム
     = link_to "#" ,class:"see-more" do
@@ -74,52 +38,16 @@
       %ul.images
         %li.image
           .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag  "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
+            - @items.each do |item|
+              = link_to "#" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = item.price
+                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
+        
   #supreme.item-title
     %h3.item-title-supreme シュプリーム新着アイテム
     = link_to "#" ,class:"see-more" do
@@ -129,52 +57,16 @@
       %ul.images
         %li.image
           .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", classs: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", clsss: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", classs: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", classd: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
+            - @items.each do |item|
+              = link_to "#" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = item.price
+                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
+       
   #nike.item-title
     %h3.item-title-nike ナイキ新着アイテム
     = link_to "#" ,class:"see-more" do
@@ -184,49 +76,13 @@
       %ul.images
         %li.image
           .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", classs: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
-        %li.image
-          .product
-            = link_to "#" ,class:"product-image" do
-              .product-card
-                %span.product-price $ 1000
-                = image_tag "m62329875568_1.jpg", class: "product-image-size", alt: "商品写真"
-                .product-description
-                  %span ワンピース
+            - @items.each do |item|
+              = link_to "#" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = item.price
+                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
+        
