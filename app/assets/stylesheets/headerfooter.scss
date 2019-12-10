@@ -27,7 +27,8 @@ a :hover {
               /* top */
 /* ----------------------------- */
 #headerbg {
-  min-width: auto;
+  width: 1020px;
+  margin: 0 auto;
 }
 
 .refarence > .fa {
@@ -58,7 +59,7 @@ header {
   width: 40px;
   height: 40px;
   position: absolute;
-  right: 40px;
+  right: 320px;
   padding: 0;
 }
 
@@ -180,6 +181,7 @@ header {
 
 .AD {
   background-image: url(https://web-jp-assets.mercdn.net/_next/static/images/download_app_bg-b57d6f1a32f2aebd89cf6f43bc2e4b39.jpg);
+  background-size: cover;
 }
 
 aside {
@@ -201,6 +203,9 @@ aside {
 /* ----------------------------- */
           /* footer */
 /* ----------------------------- */
+.footerbg {
+  width: 1670px;
+}
 
 .footer {
   background-color: #222222;
@@ -208,16 +213,24 @@ aside {
   padding: 0 20px 10px;
 }
 
+.adm {
+  margin-left:500px;
+}
+
 .footer_navi {
   display: flex;
   height: 296px;
-  margin: 0 auto;
+  padding-left: 300px;
 }
 
-.description {
+.description, .description1 {
   margin: 18px 0 0;
   padding: 0 40px 0 0;
   color: #ffffff;
+}
+
+.description1 {
+  margin-top: 42px;
 }
 
 
@@ -237,7 +250,7 @@ aside {
 
 .footer_bottom {
   height: 31px;
-  margin: 30px auto 20px;
+  margin: 30px 0 20px 300px;
   box-sizing: border-box;
 }
 
