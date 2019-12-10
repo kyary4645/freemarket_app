@@ -4,10 +4,11 @@
       = link_to "#" do
         = image_tag "fmarket_logo_red.svg", id: "freemarket_string", alt: "freemarket"
       %form{action: "#"}
-        %input.search_form{placeholder: "何をお探しですか？", type: "text"}/
-        %button.search_btn
-          = link_to "#" do
-            %i.fas.fa-search
+        %div.search-field
+          %input.search_form{placeholder: "何をお探しですか？", type: "text"}/
+          %button.search_btn
+            = link_to "#" do
+              %i.fas.fa-search
     %nav.top_navi
       %ul.refarence
         %li.search_category
