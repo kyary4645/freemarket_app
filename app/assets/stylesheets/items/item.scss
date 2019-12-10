@@ -1,3 +1,7 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 a{
   text-decoration: none;
 }
@@ -15,7 +19,7 @@ h3{
 body{
   background-color: rgb(245, 245, 245);
   display: block;
-
+ 
   
 }
 
@@ -75,6 +79,8 @@ body{
   margin: 0 auto;
   padding-top: 42px;
   padding-bottom: 100px;
+  background-color: rgb(245, 245, 245);
+  
   
   
 }
