@@ -12,14 +12,14 @@
             %input{name: "phone-number", type: "tel", placeholder: "携帯電話の番号を入力", class: "phone"}
         .form__bottom__text-box__identification
           %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-        = link_to step3_users_path, style: "text-decoration: none;" do
+        = link_to step3_signup_index_path, style: "text-decoration: none;" do
           %button.form__bottom__text-box__send-btn{type: "submit"}
             %h3 SMSを送信する
         .form__bottom__text-box__caution
           %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
         .form__bottom__text-box__confirmation-reason
           = link_to "#" do
-            %h3 電話番号の確認が必要な理由
+            %p 電話番号の確認が必要な理由
             = icon('fas', 'chevron-right')
 
   = render "sign_up_footer"

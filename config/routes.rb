@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   root to: "items#index"
 
   resources :items, only: [:index, :new, :create, :destroy, :show]
-  resources :users do
+  resources :signup do
     collection do
       get 'index'
       get 'step1'
-      post 'step1'
       get 'step2'
       get 'step3'
       get 'step4'

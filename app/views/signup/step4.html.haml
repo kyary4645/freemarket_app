@@ -1,12 +1,12 @@
 .wrapper-payment
   = render "header1"
-  .l-content
+  .p-content
     %section.l-container
       %h2.l-header クレジットカード情報入力
-      .l-main
-        .l-main__container
+      .p-main
+        .p-main__container
           .input-information
-            %h3.l-main__header カード番号
+            %h3.p-main__header カード番号
             %p.required 必須
           .card_number
             %input.card_number_form{placeholder: "半角数字のみ", type: "text"}
@@ -25,7 +25,7 @@
               = image_tag "diners-logomark-img-02.gif"
             %li.card-logo
               = image_tag "discover-logomark-img-07.gif"
-          .l-main__cont
+          .p-main__cont
             .input-information
               %h3.expiration 有効期限
               %p.required 必須
@@ -66,10 +66,10 @@
               %h3.securityCord セキュリティーコード
               %p.required 必須
             %input{placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}
-            = link_to "#", class: "info" do
+            = link_to "#", class: "info-number" do
               %i.fas.fa-question-circle>
-              %h3 カード裏面の番号とは？
-          = link_to done_users_path, class: "l-footer", style: "text-decoration: none;" do
+              %p カード裏面の番号とは？
+          = link_to done_signup_index_path, class: "l-footer", style: "text-decoration: none;" do
             %button.submit_btn{:type => "submit"} 
               %h3 次へ進む
   = render "sign_up_footer"
