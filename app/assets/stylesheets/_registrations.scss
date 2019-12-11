@@ -267,16 +267,19 @@
           }
           &__check {
             margin-top: 16px;
-            .checkbox{
-              margin-left: 4px;
-              -webkit-transform: scale(1.7, 1.7);
+            height: 20px;
+            display: flex;
+            line-height: 20px;
+            .checkbox-password{
+              width: 20px;
+              height: 21px;
               &:focus {
                 color: #000000;
               }
 
             }
             label {
-              margin-left: 10px;
+              
             }
           }
         }
@@ -456,6 +459,7 @@
               font-size: 14px;
               color: #8b8b8b;
               margin-top: 8px;
+              font-weight: normal;
             }
           }
         }
@@ -471,16 +475,12 @@
           margin-top: 32px;
           font-size: 14px;
           text-align: center;
-          &__above {
-            height: 22px;
-            display: flex;
-            a {
-              text-decoration: none;
-              color: #51b9ef;
-              &:hover {
-                border-bottom: 1px solid #51b9ef;
-                color: lighten(#4db8ef, 10%);
-              }
+          a {
+            text-decoration: none;
+            color: #51b9ef;
+            &:hover {
+              border-bottom: 1px solid #51b9ef;
+              color: lighten(#4db8ef, 10%);
             }
           }
         }
@@ -512,6 +512,8 @@
             color: #51b9ef;
             h3 {
               display: inline;
+              font-size: 14px;
+              font-weight: normal;
             }
             &:hover {
               color: lighten(#4db8ef, 10%);
