@@ -19,20 +19,28 @@
           %i.fas.fa-tags
           = link_to "#" do
             ブランドから探す
-      %ul.top_lists
-        %li.top_list
-          %i.far.fa-heart
-          = link_to "#" do
-            いいね！一覧
-        %li.top_list
-          %i.far.fa-bell
-          = link_to "#" do
-            お知らせ
-        %li.top_list
-          %i.fas.fa-check
-          = link_to "#" do
-            やることリスト
-        %li.top_list
-          %i.fas.fa-user-circle
-          = link_to "#" do
-            マイページ
+      - if user_signed_in?
+        %ul.top_lists
+          %li.top_list
+            %i.far.fa-heart
+            = link_to "#" do
+              いいね！一覧
+          %li.top_list
+            %i.far.fa-bell
+            = link_to "#" do
+              お知らせ
+          %li.top_list
+            %i.fas.fa-check
+            = link_to "#" do
+              やることリスト
+          %li.top_list
+            %i.fas.fa-user-circle
+            = link_to "#" do
+              マイページ
+      - else
+        %ul.top_lists
+          %li.top_list
+            = link_to "新規登録", signup_index_path, class: "top-list-registration"
+          %li.top_list
+            = link_to "ログイン", new_user_session_path, class: "top-list-session"
+                

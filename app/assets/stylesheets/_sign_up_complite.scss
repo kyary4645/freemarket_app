@@ -168,7 +168,9 @@
         margin: 0 auto;
         &__text {
           text-align: center;
-          font-size: 20px;
+          h3 {
+            font-size: 20px;
+          }
         }
         &__start-btn {
           display: block;
