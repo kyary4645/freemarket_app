@@ -1,5 +1,5 @@
 .wrapper-payment
-  = render "devise/registrations/header1"
+  = render "header1"
   .l-content
     %section.l-container
       %h2.l-header クレジットカード情報入力
@@ -69,7 +69,7 @@
             = link_to "#", class: "info" do
               %i.fas.fa-question-circle>
               %h3 カード裏面の番号とは？
-          = link_to "#", class: "l-footer", style: "text-decoration: none;" do
+          = link_to done_users_path, class: "l-footer", style: "text-decoration: none;" do
             %button.submit_btn{:type => "submit"} 
               %h3 次へ進む
   = render "sign_up_footer"

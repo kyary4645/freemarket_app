@@ -243,11 +243,11 @@
               利用規約
             に
           %p 同意したものとみなします
-        = link_to "#", style: "text-decoration: none;" do
+        = link_to step2_users_path, style: "text-decoration: none;" do
           %button.next-page-btn{type: "submit"}
             %h3 次へ進む
         .about-personal-information
           = link_to "#" do
             %h3 本人情報の登録について
             = icon('fas', 'chevron-right')
-  = render "layouts/sign_up/sign_up_footer"
+  = render "sign_up_footer"
