@@ -26,7 +26,7 @@
             %input{name: "password", placeholder: "7文字以上の半角英数字", type: "password", class: "password"}
           %p ※ 英字と数字の両方を含めて設定してください
           .password-box__check
-            %input{type: "checkbox", id: "reveal_password",class: "checkbox"}
+            %input{type: "checkbox", id: "reveal_password",class: "checkbox-password"}
             %label{for: "reveal_password"} パスワードを表示する
 
         .identification-text
@@ -237,12 +237,10 @@
         .identification
           私はロボットではありません
         .service
-          .service__above
-            %h3 「次へ進む」のボタンを押すことにより、
-            %a{href: "#"} 
-              利用規約
-            に
-          %p 同意したものとみなします
+          「次へ進む」のボタンを押すことにより、
+          %a{href: "#"} 利用規約
+          %br に同意したものとみなします
+          
         = link_to "#", style: "text-decoration: none;" do
           %button.next-page-btn{type: "submit"}
             %h3 次へ進む
