@@ -17,14 +17,14 @@
   .holder
     .items-images
       %ul.images
-        %li.image
-          .product
-            - @items.each do |item|
-              = link_to "#" ,class:"product-image" do
+        - @items.each do |item|
+          %li.image
+            .product
+              = link_to "/items/#{item.id}" ,class:"product-image" do
                 .product-card
                   %span.product-price
-                    = item.price
-                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                   .product-description
                     %span
                       = item.description
@@ -36,14 +36,14 @@
   .holder
     .items-images
       %ul.images
-        %li.image
-          .product
-            - @items.each do |item|
-              = link_to "#" ,class:"product-image" do
+        - @items.each do |item|
+          %li.image
+            .product
+              = link_to "/items/#{item.id}" ,class:"product-image" do
                 .product-card
                   %span.product-price
-                    = item.price
-                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                   .product-description
                     %span
                       = item.description
@@ -55,14 +55,14 @@
   .holder
     .items-images
       %ul.images
-        %li.image
-          .product
-            - @items.each do |item|
-              = link_to "#" ,class:"product-image" do
+        - @items.each do |item|
+          %li.image
+            .product
+              = link_to "/items/#{item.id}" ,class:"product-image" do
                 .product-card
                   %span.product-price
-                    = item.price
-                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                   .product-description
                     %span
                       = item.description
@@ -74,14 +74,14 @@
   .holder
     .items-images
       %ul.images
-        %li.image
-          .product
-            - @items.each do |item|
-              = link_to "#" ,class:"product-image" do
+        - @items.each do |item|
+          %li.image
+            .product
+              = link_to "/items/#{item.id}" ,class:"product-image" do
                 .product-card
                   %span.product-price
-                    = item.price
-                  = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                   .product-description
                     %span
                       = item.description

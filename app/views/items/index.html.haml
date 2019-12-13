@@ -2,8 +2,13 @@
 .main-top 
   .advertisements 
     .advertisement 
-      = link_to "#" ,class:"advertisement-box" do
-        =image_tag "https://i.gyazo.com/9192b15b3c92a30aff8772d5b0b12d43.png", class:"scroll-advertisement"
+      %ul.advertisement-box
+        %li
+          = image_tag "pictweet.jpg", class: "scroll-advertisement"
+        -# %li
+        -#   = image_tag "pictweet.jpg", class: "scroll-advertisement"
+        -# %li
+        -#   = image_tag "pictweet.jpg", class: "scroll-advertisement"
   .nav
     %h2.popularity-category 人気のカテゴリー
     .categories
@@ -23,17 +28,17 @@
     .holder
       .items-images
         %ul.images
+        - @items.each do |item|
           %li.image
             .product
-              - @items.each do |item|
-                = link_to "#" ,class:"product-image" do
-                  .product-card
-                    %span.product-price
-                      = item.price
-                    = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
-                    .product-description
-                      %span
-                        = item.description
+              = link_to "/items/#{item.id}" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
 
 
                         
@@ -45,17 +50,17 @@
     .holder
       .items-images
         %ul.images
+        - @items.each do |item|
           %li.image
             .product
-              - @items.each do |item|
-                = link_to "#" ,class:"product-image" do
-                  .product-card
-                    %span.product-price
-                      = item.price
-                    = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
-                    .product-description
-                      %span
-                        = item.description
+              = link_to "/items/#{item.id}" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
 
 
           
@@ -66,17 +71,17 @@
     .holder
       .items-images
         %ul.images
+        - @items.each do |item|
           %li.image
             .product
-              - @items.each do |item|
-                = link_to "#" ,class:"product-image" do
-                  .product-card
-                    %span.product-price
-                      = item.price
-                    = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
-                    .product-description
-                      %span
-                        = item.description
+              = link_to "/items/#{item.id}" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
           
 
 
@@ -87,17 +92,17 @@
     .holder
       .items-images
         %ul.images
+        - @items.each do |item|
           %li.image
             .product
-              - @items.each do |item|
-                = link_to "#" ,class:"product-image" do
-                  .product-card
-                    %span.product-price
-                      = item.price
-                    = image_tag "#{item.image_id}", class:"product-image-size", alt: "商品写真"
-                    .product-description
-                      %span
-                        = item.description
+              = link_to "/items/#{item.id}" ,class:"product-image" do
+                .product-card
+                  %span.product-price
+                    = "¥#{item.price}"
+                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                  .product-description
+                    %span
+                      = item.description
           
   
   = render partial: "navs"
