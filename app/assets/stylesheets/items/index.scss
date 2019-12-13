@@ -36,6 +36,24 @@ body{
 .advertisement-box{
   max-width: 1440px;
   height: 390px;
+  position: absolute;
+  
+  
+  .icon-icon-two{
+    display: flex;
+
+    .apple-one{
+      position: relative;
+      bottom: 150px;
+      left: 560px;
+    }
+    .google-one{
+      position: relative;
+      bottom: 150px;
+      left: 570px;
+    }
+
+  }
 }
 
 .scroll-advertisement{

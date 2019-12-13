@@ -4,11 +4,16 @@
     .advertisement 
       %ul.advertisement-box
         %li
-          = image_tag "pictweet.jpg", class: "scroll-advertisement"
-        -# %li
-        -#   = image_tag "pictweet.jpg", class: "scroll-advertisement"
-        -# %li
-        -#   = image_tag "pictweet.jpg", class: "scroll-advertisement"
+          = image_tag "pictweet.jpg", class: "scroll-advertisement one"
+        %li
+          = image_tag "sns_01.jpg", class: "scroll-advertisement second"
+        %li
+          = image_tag "pictweet.jpg", class: "scroll-advertisement third"
+          .icon-icon-two
+            = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
+              =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class:"apple apple-one", alt: ""
+            = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
+              =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg", class: "google google-one", alt: ""  
   .nav
     %h2.popularity-category 人気のカテゴリー
     .categories
