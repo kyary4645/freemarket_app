@@ -1,0 +1,163 @@
+= render partial: "signup/sign_up_header"
+.item
+  .item-content
+    .item-chapter-container
+      商品の情報を入力
+    = form_for @item do |f|
+      .item-image
+        .item-image-upload
+          %h3.item-image-upload-character
+            出品画像
+            %span.item-image-upload-require
+              必須
+          %p 最大10枚までアップロードできます
+          %label
+            
+            .item-image-drop
+              %p
+                
+              = f.file_field :image, class:"item-image-drop-default" 
+      .item-sell
+        .item-sell-name
+          %label
+            商品名
+            %span.item-image-upload-require
+              必須
+          %div
+            = f.text_field :name, placeholder:"商品名(必須４０字まで)", class:"item-sell-name-default" 
+        .item-sell-text
+          %label
+            商品の説明
+            %span.item-image-upload-require
+              必須
+          %div
+            = f.text_area :description,placeholder:"商品の説明",class:"item-sell-text-default" 
+      .item-sell.detail
+        %h3.item-image-upload-character 商品の詳細
+        .item-sell-clearfix-box
+          .item-sell-clearfix-box-group
+            %label
+              カテゴリー
+              %span.item-image-upload-require
+                必須
+            %div
+              .item-sell-clearfix-box-wrap
+                %ul
+                  %li.icon-bottom
+                    = f.select :category1, [["レディース"],["メンズ"],["ベビー•キッズ"],["インテリア•住まい•小物"],["本•音楽•ゲーム"],["おもちゃ•ホビー•グッズ"],["コスメ•香水•美容"],["家電•スマホ•カメラ"],["スポーツ•レジャー"],["ハンドメイド"],["チケット"],["自動車•オートバイ"],["その他"]],{prompt:"選択してください"},{class:"select-default"}
+                  %li.icon-bottom.is-hidden1
+                    =f.select :category2, ["---", "トップス", "ジャケット/アウター", "パンツ", "スカート", "ワンピース", "靴", "ルームウェア/パジャマ", "レッグウェア", "帽子", "バッグ", "アクセサリー", "ヘアアクセサリー", "小物", "時計", "ウィッグ/エクステ", "浴衣/水着", "スーツ/フォーマル/ドレス", "マタニティ", "その他"]
+                  %li.icon-bottom.is-hidden2
+                    =f.select :category3, ["---", "Tシャツ/カットソー(半袖/袖なし)", "Tシャツ/カットソー(七分/長袖)", "シャツ/ブラウス(半袖/袖なし)", "シャツ/ブラウス(七分/長袖)", "ポロシャツ", "キャミソール", "タンクトップ", "ホルターネック", "ニット/セーター", "チュニック", "カーディガン/ボレロ", "アンサンブレ", "ベスト/ジレ", "パーカー", "トレーナー/スウェット", "ベアトップ/チューブトップ", "ジャージ", "その他"]
+            .item-sell-clearfix-box-type
+              %h5.item-size.is-hidden3
+                サイズ
+                %span.item-image-upload-require.is-hidden3
+                  必須
+              %div
+                .item-sell-clearfix-box-wrap
+                  %i.icon-bottom.is-hidden3
+                    = f.select :size, ["---", "XXS以下", "XS(SS)", "S", "M", "L", "XL(LL)", "2XL(3L)", "3XL(4L)", "4XL(5L)以上", "FREE SIZE"]
+              .item-sell-clearfix-box-type
+                %h5.item-brand.is-hidden3
+                  ブランド
+                  %span.item-image-upload-require.is-hidden3
+                    任意
+                %div
+                  .item-sell-clearfix-box-wrap
+                    %i.is-hidden3
+                      = f.text_area :brand, class: "icon-bottom", placeholder: "例)　シャネル"
+            .item-sell-clearfix-box-type
+              %label
+                商品の状態
+                %span.item-image-upload-require
+                  必須
+              %div
+                .item-sell-clearfix-box-wrap
+                  %i.icon-bottom
+                  = f.select :status, [["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]],{prompt:"選択してください"},{class:"select-default"}
+
+      .item-sell.detail
+        %h3.item-image-upload-character 配送について
+        %a.form-question{href: "", target: "_blank"} ?
+        .item-sell-clearfix-box
+          .item-sell-clearfix-box-money
+            %label
+              配送料の負担
+              %span.item-image-upload-require
+                必須
+            %div
+              .item-sell-clearfix-box-wrap
+                %i.icon-bottom
+                = f.select :derivery_fee, [["送料込み(出品者負担)"],["着払い(購入者負担)"]],{prompt:"選択してください"},{class:"select-default"}
+          .item-sell-clearfix-box-money
+            %h5.delivery-method.is-hidden4
+              配送料の方法
+              %span.item-image-upload-require.is-hidden4
+                必須
+            %div
+              .item-sell-clearfix-box-wrap
+                %i.icon-bottom.is-hidden4
+                  =f.select :derivery_method, ["---", "未定", "らくらくメルカリ便", "ゆうメール", "レターパック", "普通郵便(定形、定形外)", "クロネコヤマト", "ゆうパック", "クリックポスト", "ゆうパケット"]
+          .item-sell-clearfix-box
+            .item-sell-clearfix-box-street
+              %label
+                発送元の地域
+                %span.item-image-upload-require
+                  必須
+              .item-sell-clearfix-box-wrap
+                %i.icon-bottom
+              
+                = f.collection_select :prefecture_id, Prefecture.all, :name, :name, include_blank: "-------" 
+          .item-sell-clearfix-box
+            .item-sell-clearfix-box-street
+              %label
+                発送までの日数
+                %span.item-image-upload-require
+                  必須
+              %div
+                .item-sell-clearfix-box-wrap
+                  %i.icon-bottom
+                  = f.select :derivery_estimated,[["１〜２日で発送"],["２〜３日で発送"],["４〜７日で発送"]],{prompt:"選択してください"},{class:"select-default"}
+      .item-sell.money
+        %h3.item-image-upload-character 販売価格(300~9,999,999)
+        %a.form-question{href: "", target: "_blank"} ?
+        .item-sell-form-box
+          %ul.item-sell-price
+            .item-sell-form-group
+              .item-sell-form-clearfix
+                %label.l-money
+                  価格
+                  %span.item-image-upload-require
+                    必須
+                %label.l-right-sell-price-input
+                  .yen ¥
+                  = f.number_field :price, placeholder:"例)300", class:"input-default"
+            .clearfix
+              .l-left
+                販売手数料（10%）
+                %span.haifun -
+            .clearfix.bold
+              .l-right
+                販売利益
+                %span.underber _
+        .modal{role: "dialog", tabindex: "-1"}
+          .modem-inner
+        .sell-content.sell-btn-box
+          = link_to "#" do
+            > 禁止されている出品
+          = succeed "\u3092\u5FC5\u305A\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002" do
+            = link_to "#" do
+              行為
+          = succeed "\u306F\u72AF\u7F6A\u3067\u3042\u308A\u51E6\u7F70\u3055\u308C\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002" do
+            = link_to "#" do
+              偽ブランドの販売
+          = succeed "\u306B\u540C\u610F\u3057\u305F\u3053\u3068\u306B\u306A\u308A\u307E\u3059\u3002" do
+            = link_to "#" do
+              加盟店規約
+        .botton
+          = f.submit "出品する", class:"syuppin-botton"
+          = link_to "#" do
+            .back-botton もどる
+
+= render partial: "signup/sign_up_footer"            

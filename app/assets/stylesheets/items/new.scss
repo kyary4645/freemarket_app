@@ -1,0 +1,181 @@
+.item {
+  background-color :#f5f5f5;
+  .item-content {
+      width: 700px;
+      background-color: #FFFFFF;
+      margin: 10px auto;
+  }
+  .item-image-upload {
+    padding: 40px;
+    border-bottom-style:solid;
+    border-bottom-color: #EEEEEE;
+    border-width:1px;
+  }
+  .item-image-upload-character {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    display: inline-block;
+  }
+  .item-image-upload-require {
+    color: #FFFFFF;
+    background-color: red;
+    position: relative;
+    bottom: 3px;
+    font-size: 12px;
+  }
+  p {
+    font-size: 14px;
+  }
+  input{
+    font-size: 14px;
+    text-align: center;
+    opacity:1;
+    position: relative;
+  }
+  .item-image-drop {
+    height: 150px;
+    width: 620px;
+    font-size: 14px;
+    background-color:#f5f5f5;
+    border-style:dashed;
+    border-color:#ccc;
+    border-width:1px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    p{
+      size: 140px;
+      top: 40px;
+    }
+  }
+  .item-image-drop-default {
+    display: none;
+  }
+  .item-sell {
+    padding: 40px;
+    font-weight: bold;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  .item-sell-name {
+    margin-bottom: 15px;
+  }
+  .item-sell-name-default {
+    height: 48px;
+    width: 620px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .item-sell-text-default {
+    height: 154px;
+    width: 620px;
+    text-align: left;
+    padding: 10px;
+  }
+  .detail{
+    border-bottom: 1px solid #EEEEEE;
+  }
+  
+  .select-default,
+  #item_category2,
+  #item_category3,
+  #item_size,
+  #item_brand,
+  #item_derivery_method,
+  #item_prefecture_id{
+    width: 400px;
+    height: 48px;
+  }
+  h3{
+    margin: 0;
+    font-weight: normal;
+  }
+  .item-sell-clearfix-box-type{
+    margin: 40px 0 0 0;
+  }
+  .item-sell-clearfix-box-street{
+    margin: 40px 0 0 0;
+    font-weight: bold;
+    }
+  .l-right-sell-price-input{
+    position: relative;
+    display: flex;
+    left: 270px;
+    bottom: 20px;
+    }
+  .input-default{
+    position: relative;
+    right:40px;
+    width: 160px;
+    height: 48px;
+    bottom: 6px;
+    }
+  .yen{
+    position: relative;
+    top: 10px;
+    right: 10px;
+  }
+  .l-left{
+    border-top:1px solid #CCCCCC;
+    padding: 20px 0;
+    width: 400px;
+    font-weight: normal;
+  }
+  .haifun{
+    position: relative;
+    left:250px;
+  }
+  .l-right{
+    border-top:1px solid #CCCCCC;
+    padding: 20px 0;
+    width: 400px;
+    font-weight: bold;
+  }
+  .underber{
+    position: relative;
+    left:325px;
+    font-weight: bold;
+  }
+  .sell-content{
+    padding: 40px;
+    font-size: 14px;
+    height: 20px;
+  }
+  .sell-content a{
+    color: #0B9DE9;
+    text-decoration: none;
+  }
+  .sell-content a:hover{
+    border-bottom:1px solid  #0B9DE9;
+    color: #5CBEF0;
+  }
+  .botton{
+    width: 620px;
+    height: 170px;
+    color: #EA352D;
+    margin: 0 auto;
+    }
+  .syuppin-botton{
+  width: 620px;
+  height: 50px;
+  background-color: #EA352D;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  top: 24px;
+  }
+  .back-botton{
+    position: relative;
+    top: 48px;
+    width: 279px;
+    height: 50px;
+    background-color: #aaa;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+}

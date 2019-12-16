@@ -1,7 +1,7 @@
 %header
   #headerbg
     .header-top
-      = link_to "#" do
+      = link_to root_path do
         = image_tag "fmarket_logo_red.svg", id: "freemarket_string", alt: "freemarket"
       %form{action: "#"}
         %div.search-field
@@ -43,4 +43,5 @@
             = link_to "新規登録", signup_index_path, class: "top-list-registration"
           %li.top_list
             = link_to "ログイン", new_user_session_path, class: "top-list-session"
-                
+    - breadcrumb :users
+    = render "layouts/breadcrumbs"

@@ -14,9 +14,20 @@
 @import "item_selling_page";
 @import "headerfooter";
 @import "inputCardInfo";
-@import "items/item.scss";
+
+@import "items/index";
+@import "items/show";
+@import "items/new";
+
 @import "logout";
 @import "registerCardInfo";
 @import "registration";
-@import "show";
-@import "userEditProfile";
+
+@import "users/userEditProfile";
+@import "users/mypage";
+@import "users/side-bar";
+@import "users/tab";
+
+@import "slick-theme"; 
+@import "slick";
+@import "carousel";

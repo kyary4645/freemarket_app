@@ -1,0 +1,36 @@
+.slick-prev{
+  left: 50px;
+  height: 80px;
+  width: 80px;
+  background-image: image-url("hidari1");
+  z-index: 100;
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+
+.slick-next{
+  right: 50px;
+  height: 80px;
+  width: 80px;
+  background-image: image-url("migi1.png");
+  z-index: 100;
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.slick-dots {
+  bottom: 25px;
+  li button{
+    &::before{
+      height: 10px;
+      width: 10px;
+      background-color: rgb(177, 172, 177);
+      border-radius: 50%;
+    }
+  }
+}
