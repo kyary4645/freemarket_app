@@ -87,4 +87,7 @@ gem 'jquery-rails'
 group :development do
   gem 'web-console'
 end
+
+gem 'payjp'
+gem 'pry-rails'
 gem 'gretel'
