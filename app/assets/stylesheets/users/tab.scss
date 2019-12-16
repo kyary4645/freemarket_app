@@ -1,0 +1,36 @@
+.l-content-tab {
+  width: 700px;
+  height: 466px;
+  background-color: yellow;
+
+}
+.tab-container {
+  height: 382px;
+  background-color: pink;
+}
+.tab-group {
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+}
+.tab {
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  background-color: #EAEAEA;
+  height: 74px;
+  line-height: 74px;
+}
+.tab-content {
+  height: 236px;
+  background-color: #FFFFFF;
+}
+.panel {
+  display: none;
+  list-style: none;
+}
+.tab.is-active {
+  background-color: #FFFFFF;
+  border-top: 2px solid #E31D23;
+}
