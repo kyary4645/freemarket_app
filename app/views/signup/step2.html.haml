@@ -7,19 +7,16 @@
       .form__bottom__text-box
         .form__bottom__text-box__phone-number
           .label
-            %label{for: "phone-number"} 携帯電話の番号
+            %label 携帯電話の番号
           .box
-            %input{name: "phone-number", type: "tel", placeholder: "携帯電話の番号を入力", class: "phone"}
+            %input{name: "phone_number", placeholder: "携帯電話の番号を入力", class: "phone"}
         .form__bottom__text-box__identification
           %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-        = link_to step3_signup_index_path, style: "text-decoration: none;" do
-          %button.form__bottom__text-box__send-btn{type: "submit"}
-            %h3 SMSを送信する
+        = link_to "次へ進む", step3_signup_index_path, class: "form__bottom__text-box__send-btn"
         .form__bottom__text-box__caution
           %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
         .form__bottom__text-box__confirmation-reason
           = link_to "#" do
             %p 電話番号の確認が必要な理由
             = icon('fas', 'chevron-right')
-
   = render "sign_up_footer"

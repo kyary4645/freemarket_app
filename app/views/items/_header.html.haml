@@ -35,7 +35,7 @@
               やることリスト
           %li.top_list
             %i.fas.fa-user-circle
-            = link_to "#" do
+            = link_to destroy_user_session_path, method: :delete do
               マイページ
       - else
         %ul.top_lists

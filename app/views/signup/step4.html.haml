@@ -1,75 +1,48 @@
 .wrapper-payment
   = render "header1"
   .p-content
-    %section.l-container
-      %h2.l-header クレジットカード情報入力
-      .p-main
-        .p-main__container
-          .input-information
-            %h3.p-main__header カード番号
-            %p.required 必須
-          .card_number
-            %input.card_number_form{placeholder: "半角数字のみ", type: "text"}
-          %ul.card-lists
-            %li.card-logo
-              = image_tag "logo_visa.gif"
-            %li.card-logo
-              = image_tag "logo_mastercard.gif"
-            %li.card-logo
-              = image_tag "320px-Saison_card_logo.svg.png"
-            %li.card-logo
-              = image_tag "jcb-logomark-img-02.gif"
-            %li.card-logo
-              = image_tag "amex-logomark-img-05.gif"
-            %li.card-logo
-              = image_tag "diners-logomark-img-02.gif"
-            %li.card-logo
-              = image_tag "discover-logomark-img-07.gif"
-          .p-main__cont
+    = form_with url: signup_index_path, method: :post, html: { name: "inputForm" } do |f|
+      %section.l-container
+        %h2.l-header クレジットカード情報入力
+        .p-main
+          .p-main__container
             .input-information
-              %h3.expiration 有効期限
+              %h3.p-main__header カード番号
               %p.required 必須
-            .month
-              = succeed "\u{3000}\u{6708}" do
-                %select{name: "month"}
-                  %option{value: ""} --
-                  %option{value: "1"} 1
-                  %option{value: "2"} 2
-                  %option{value: "3"} 3
-                  %option{value: "4"} 4
-                  %option{value: "5"} 5
-                  %option{value: "6"} 6
-                  %option{value: "7"} 7
-                  %option{value: "8"} 8
-                  %option{value: "9"} 9
-                  %option{value: "10"} 10
-                  %option{value: "11"} 11
-                  %option{value: "12"} 12
-            .year
-              = succeed "\u{3000}\u{5e74}" do
-                %select{name: "year"}
-                  %option{value: ""} --
-                  %option{value: "2019"} 2019
-                  %option{value: "2020"} 2020
-                  %option{value: "2021"} 2021
-                  %option{value: "2022"} 2022
-                  %option{value: "2023"} 2023
-                  %option{value: "2024"} 2024
-                  %option{value: "2025"} 2025
-                  %option{value: "2026"} 2026
-                  %option{value: "2027"} 2027
-                  %option{value: "2028"} 2028
-                  %option{value: "2029"} 2029
-                  %option{value: "2030"} 2030
-          .input-information-box
-            .input-information
-              %h3.securityCord セキュリティーコード
-              %p.required 必須
-            %input{placeholder: "カード背面4桁もしくは3桁の番号", type: "text"}
-            = link_to "#", class: "info-number" do
-              %i.fas.fa-question-circle>
-              %p カード裏面の番号とは？
-          = link_to done_signup_index_path, class: "l-footer", style: "text-decoration: none;" do
-            %button.submit_btn{:type => "submit"} 
-              %h3 次へ進む
-  = render "sign_up_footer"
+            .card_number
+              = f.text_field :card_number, type: 'text', class: 'card_number_form', placeholder: '半角英数字のみ', maxlength: '16'
+            %ul.card-lists
+              %li.card-logo
+                = image_tag "logo_visa.gif"
+              %li.card-logo
+                = image_tag "logo_mastercard.gif"
+              %li.card-logo
+                = image_tag "320px-Saison_card_logo.svg.png"
+              %li.card-logo
+                = image_tag "jcb-logomark-img-02.gif"
+              %li.card-logo
+                = image_tag "amex-logomark-img-05.gif"
+              %li.card-logo
+                = image_tag "diners-logomark-img-02.gif"
+              %li.card-logo
+                = image_tag "discover-logomark-img-07.gif"
+            .p-main__cont
+              .input-information
+                %h3.expiration 有効期限
+                %p.required 必須
+              .month
+                = f.select :exp_month, [["01",1],["02",2],["03",3],["04",4],["05",5],["06",6],["07",7],["08",8],["09",9],["10",10],["11",11],["12",12]],{}
+                %span.expire-text 月
+              .year
+                = f.select :exp_year, [["19",2019],["20",2020],["21",2021],["22",2022],["23",2023],["24",2024],["25",2025],["26",2026],["27",2027],["28",2028],["29",2029]],{}
+                %span.expire-text 年
+            .input-information-box
+              .input-information#card_token
+                %h3.securityCord セキュリティーコード
+                %p.required 必須
+              =f.text_field :cvc, type: 'text', placeholder: "カード背面4桁もしくは3桁の番号", maxlength: '4'
+              = link_to "#", class: "info-number" do
+                %i.fas.fa-question-circle>
+                %p カード裏面の番号とは？
+            = f.submit "次へ進む", class: "submit_btn" , id: 'token_submit'
+    = render "sign_up_footer"
