@@ -148,19 +148,22 @@
         .modal{role: "dialog", tabindex: "-1"}
           .modem-inner
         .sell-content.sell-btn-box
-          %a{href: "#"}> 禁止されている出品
-          、
+          = link_to "#" do
+            > 禁止されている出品
           = succeed "\u3092\u5FC5\u305A\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002" do
-            %a{href: "#"} 行為
+            = link_to "#" do
+              行為
           = succeed "\u306F\u72AF\u7F6A\u3067\u3042\u308A\u51E6\u7F70\u3055\u308C\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002" do
-            %a{href: "#"} 偽ブランドの販売
+            = link_to "#" do
+              偽ブランドの販売
           = succeed "\u306B\u540C\u610F\u3057\u305F\u3053\u3068\u306B\u306A\u308A\u307E\u3059\u3002" do
-            %a{href: "#"} 加盟店規約
+            = link_to "#" do
+              加盟店規約
         .botton
           = f.submit "出品する", class:"syuppin-botton"
-          %a{href: "#"}
+          = link_to "#" do
             -# .syuppin-botton 出品する
-          %a{href: "#"}
+          = link_to "#" do
             .back-botton もどる
 
 = render partial: "signup/sign_up_footer"            
