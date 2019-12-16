@@ -75,8 +75,14 @@
     border-bottom: 1px solid #EEEEEE;
   }
   
-  .select-default{
-    width: 620px;
+  .select-default,
+  #item_category2,
+  #item_category3,
+  #item_size,
+  #item_brand,
+  #item_derivery_method,
+  #item_prefecture_id{
+    width: 400px;
     height: 48px;
   }
   h3{
