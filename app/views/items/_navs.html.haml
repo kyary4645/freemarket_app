@@ -20,7 +20,7 @@
         - @items.each do |item|
           %li.image
             .product
-              = link_to "/items/#{item.id}" ,class:"product-image" do
+              = link_to item_path(item.id) ,class:"product-image" do
                 .product-card
                   %span.product-price
                     = "¥#{item.price}"
@@ -39,7 +39,7 @@
         - @items.each do |item|
           %li.image
             .product
-              = link_to "/items/#{item.id}" ,class:"product-image" do
+              = link_to item_path(item.id) ,class:"product-image" do
                 .product-card
                   %span.product-price
                     = "¥#{item.price}"
@@ -58,7 +58,7 @@
         - @items.each do |item|
           %li.image
             .product
-              = link_to "/items/#{item.id}" ,class:"product-image" do
+              = link_to item_path(item.id) ,class:"product-image" do
                 .product-card
                   %span.product-price
                     = "¥#{item.price}"
@@ -77,7 +77,7 @@
         - @items.each do |item|
           %li.image
             .product
-              = link_to "/items/#{item.id}" ,class:"product-image" do
+              = link_to item_path(item.id) ,class:"product-image" do
                 .product-card
                   %span.product-price
                     = "¥#{item.price}"
