@@ -38,7 +38,7 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(
       :name, :size, :status, :derivery_fee, :derivery_method,
-      :price, :derivery_estimated, :description, :image, :category_id, :brand_id, :prefecture_id)
+      :price, :derivery_estimated, :description, :image, :category, :brand, :prefecture_id)
   end  
 
   def set_item

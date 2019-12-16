@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2019_12_09_112047) do
     t.text "derivery_estimated"
     t.text "description"
     t.string "image"
-    t.text "category_id"
-    t.text "brand_id"
+    t.text "category"
+    t.text "brand"
     t.string "prefecture_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

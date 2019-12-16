@@ -1,0 +1,29 @@
+= render "items/header"
+  
+.mypage-main-containe
+  %main.mypage-container.clearfix
+  
+    = render 'users/side-bar'
+
+.l-content-tab
+  %section.tab-container
+    %h2 出品した商品
+    .tab-panel
+      %ul.tab-group
+        %li.tab.tab-A.is-active 出品中
+        %li.tab.tab-B 取引中
+        %li.tab.tab-C 売却済み
+      .tab-content
+        %ul.panel-group
+          %li.panel.tab-A.in-show 出品中の商品がありません
+          %li.panel.tab-B 取引中の商品がありません
+          %li.panel.tab-C 売却済の商品がありません
+  %ul.pager
+    %li.pager-prev
+      = link_to "#" do
+        %i.fas.fa-chevron-left
+    %li.pager-next
+      = link_to "#" do
+        %i.fas.fa-chevron-right
+
+= render "items/footer"

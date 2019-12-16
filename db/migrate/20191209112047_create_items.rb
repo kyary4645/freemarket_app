@@ -12,8 +12,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text :derivery_estimated
       t.text :description
       t.string :image
-      t.text :category_id
-      t.text :brand_id
+      t.text :category
+      t.text :brand
       t.string :prefecture_id
 
       
