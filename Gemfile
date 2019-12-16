@@ -44,6 +44,9 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+
+
+ 
 end
 
 group :development do
@@ -78,3 +81,5 @@ gem 'fog-aws'
 gem 'active_hash'
 gem 'devise'
 gem 'jquery-rails'
+
+

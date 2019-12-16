@@ -4,8 +4,8 @@ $(function() {
   $('.advertisement-box').slick({
       dots: true,
       // 下のドット表示
+      arrows: true,
       
-
       autoplay: true,
       // 自動再生。trueで自動再生される。
       speed: 400,
