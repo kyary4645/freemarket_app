@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   root to: "items#index"
 
   resources :items, only: [:index, :new, :create, :destroy, :show]
+  resources :users, only: [:index] do
+    member do
+      get "tab"
+
+    end
+  end
   resources :signup, only: [:index,:create] do
     collection do
       get 'step1'
