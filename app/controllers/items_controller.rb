@@ -2,12 +2,11 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show, :destroy]
 
   def index
-    @items = Item.all
+    @items = Item.includes(:user)
   end
 
   def new
     @item = Item.new
-    
   end
   
   def create
@@ -27,6 +26,7 @@ class ItemsController < ApplicationController
   end  
 
   def show
+    
   end
 
   
@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(
       :name, :size, :status, :derivery_fee, :derivery_method,
-      :price, :derivery_estimated, :description, :image, :category, :brand, :prefecture_id)
+      :price, :derivery_estimated, :description, :image, :category, :brand, :prefecture_id).merge(user_id: current_user.id)
   end  
 
   def set_item

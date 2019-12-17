@@ -5,8 +5,8 @@ crumb :root do
 end
 
 # マイページ
-crumb :users do
-  link "マイページ", users_path
-  parent :root
-end
+# crumb :users do
+#   link "マイページ", user_path
+#   parent :root
+# end
 
