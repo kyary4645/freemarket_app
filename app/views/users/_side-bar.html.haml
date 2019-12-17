@@ -20,7 +20,7 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to new_sell_path, class: 'mypage-side-bar__list-item' do
-        = link_to 'items/new', class: 'mypage-side-bar__list-item' do
+        = link_to new_item_path , class: 'mypage-side-bar__list-item' do
           出品する
           = icon 'fas', 'chevron-right'
       %li
@@ -105,6 +105,6 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to logout_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to destroy_user_session_path, method: :delete, class: 'mypage-side-bar__list-item' do
           ログアウト
           = icon 'fas', 'chevron-right'

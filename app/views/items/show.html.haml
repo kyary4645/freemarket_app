@@ -30,10 +30,10 @@
               = link_to "#{@item.category1}", class:"item-detail-category" 
               = link_to "#{@item.category2}", class:"item-detail-category" do
                 = icon('fas', 'angle-right')
-          
+                = @item.category2
               = link_to "#{@item.category3}", class: "item-detail-category" do
                 = icon('fas', 'angle-right')
-                
+                = @item.category3
           %tr
             %th ブランド
             %td
@@ -70,7 +70,11 @@
         = "¥#{@item.price}"
       %span.item-detail-tax （税込）
       %span.item-detail-postage 送料込み
-    = link_to "購入画面に進む", '#', class: "item-buy-btn"
+    - if user_signed_in? && current_user.id == @item.user_id
+      = link_to "編集", "/items/#{@item.id}/edit",method: :get, class:"item-buy-btn"
+      = link_to "削除", "/items/#{@item.id}",method: :delete, class:"item-buy-btn"
+    - else  
+      = link_to "購入画面に進む", '#', class: "item-buy-btn"
     .item-detail-description
       %p.item-detail-description__sentence
         = @item.description

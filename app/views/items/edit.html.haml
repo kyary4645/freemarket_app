@@ -45,9 +45,9 @@
                 %ul
                   %li.icon-bottom
                     = f.select :category1, [["レディース"],["メンズ"],["ベビー•キッズ"],["インテリア•住まい•小物"],["本•音楽•ゲーム"],["おもちゃ•ホビー•グッズ"],["コスメ•香水•美容"],["家電•スマホ•カメラ"],["スポーツ•レジャー"],["ハンドメイド"],["チケット"],["自動車•オートバイ"],["その他"]],{prompt:"選択してください"},{class:"select-default"}
-                  %li.icon-bottom.is-hidden1
+                  %li.icon-bottom
                     =f.select :category2, ["---", "トップス", "ジャケット/アウター", "パンツ", "スカート", "ワンピース", "靴", "ルームウェア/パジャマ", "レッグウェア", "帽子", "バッグ", "アクセサリー", "ヘアアクセサリー", "小物", "時計", "ウィッグ/エクステ", "浴衣/水着", "スーツ/フォーマル/ドレス", "マタニティ", "その他"]
-                  %li.icon-bottom.is-hidden2
+                  %li.icon-bottom
                     =f.select :category3, ["---", "Tシャツ/カットソー(半袖/袖なし)", "Tシャツ/カットソー(七分/長袖)", "シャツ/ブラウス(半袖/袖なし)", "シャツ/ブラウス(七分/長袖)", "ポロシャツ", "キャミソール", "タンクトップ", "ホルターネック", "ニット/セーター", "チュニック", "カーディガン/ボレロ", "アンサンブレ", "ベスト/ジレ", "パーカー", "トレーナー/スウェット", "ベアトップ/チューブトップ", "ジャージ", "その他"]
             .item-sell-clearfix-box-type
               %h5.item-size.is-hidden3
@@ -156,8 +156,8 @@
             = link_to "#" do
               加盟店規約
         .botton
-          = f.submit "出品する", class:"syuppin-botton"
+          = f.submit "編集する", class:"syuppin-botton"
           = link_to root_path do
             .back-botton もどる
 
-= render partial: "signup/sign_up_footer"            
+= render partial: "signup/sign_up_footer"
