@@ -3,16 +3,16 @@
     %h1.item-detail-name リドム 黒スキニー
     .item-detail-main.clearfix
       .item-detail-photo
-        = image_tag 'm62329875568_1.jpg', alt: '商品紹介', class: 'photo-main'
+        = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-main'
         .item-detail-photo-sub
-          = image_tag 'm62329875568_1.jpg', alt: '商品紹介', class: 'photo-sub'
-          = image_tag 'm62329875568_2.jpg', alt: '商品紹介', class: 'photo-sub'
+          = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-sub'
+          = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-sub'
       %table.item-detail-table
         %tbody
           %tr
             %th 出品者
             %td
-              = link_to "沢尻エリカ", "#", class: "item-detail-username"
+              = link_to "#{@item.user.nickname}", class: "item-detail-username"
               %div
                 %span.item-detail-evaluation
                   = icon('fas', 'laugh', class: 'laugh')
@@ -26,38 +26,47 @@
           %tr
             %th カテゴリー
             %td
-              = link_to "メンズ", "#", class:  "item-detail-category"
-              = link_to "#", class: "item-detail-category" do
+              = link_to "#{@item.category1}", class:"item-detail-category" 
+              = link_to "#{@item.category2}", class:"item-detail-category" do
                 = icon('fas', 'angle-right')
-                パンツ
-              = link_to "#", class: "item-detail-category" do
+          
+              = link_to "#{@item.category3}", class: "item-detail-category" do
                 = icon('fas', 'angle-right')
-                デニム/ジーンズ
+                
           %tr
             %th ブランド
             %td
-              = link_to "リドム", "#"
+              - unless @item.brand.blank?
+                = @item.brand
           %tr
             %th 商品のサイズ
-            %td M
+            %td
+              - unless @item.size.blank?
+                = @item.size 
           %tr
             %th 商品の状態
-            %td 目立った傷や汚れなし
+            %td
+              = @item.status
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td
+              = @item.derivery_fee
           %tr
             %th 配送の方法
-            %td らくらくメルカリ便
+            %td
+              = @item.derivery_method
           %tr
             %th 配送元地域
             %td
-              = link_to "大阪府", "#"
+              = link_to "#{@item.prefecture_id}" 
           %tr
             %th 発送日の目安
-            %td 2~3日で発送
+            %td
+              = @item.derivery_estimated
+
     .item-detail-price-box
-      %span.item-detail-price ¥10,000
+      %span.item-detail-price
+        = "¥#{@item.price}"
       %span.item-detail-tax （税込）
       %span.item-detail-postage 送料込み
     = link_to "購入画面に進む", '#', class: "item-buy-btn"
