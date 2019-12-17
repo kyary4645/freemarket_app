@@ -2,7 +2,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
   def change
     create_table :items do |t|
 
-      t.integer :user_id
+      t.integer :seller_id
       t.text :name
       t.string :size
       t.text :status
@@ -17,6 +17,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text :category3
       t.text :brand
       t.string :prefecture_id
+      t.integer :buyer_id
 
       
       t.timestamps
