@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit, :show, :destroy]
+  before_action :set_item, only: [ :show, :destroy, :edit]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @items = Item.includes(:user)
@@ -20,10 +21,28 @@ class ItemsController < ApplicationController
 
 
   def destroy
+    if @item.destroy
+      redirect_to root_path if user_signed_in? && current_user.id == @item.user_id
+    else
+      render :new, notice: "削除しました"
+    end
   end  
 
   def edit
+
   end  
+
+  def update
+
+    item = Item.find(params[:id])
+    item.update(item_params)
+    redirect_to root_path
+    
+
+  end
+
+
+  
 
   def show
   end
@@ -40,6 +59,10 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end
