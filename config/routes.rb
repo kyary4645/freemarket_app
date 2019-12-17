@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :new, :create, :destroy, :show]
 
 
-  resources :users, only: [:index] do
+  resources :users do
     member do
       get "tab"
-
     end
   end
   resources :signup, only: [:index,:create] do
