@@ -1,24 +1,25 @@
 .wrapper-login
   = render "signup/sign_up_header"
   .form
-    .form__top
-      %h3 アカウントをお持ちでない方はこちら
-      = link_to signup_index_path, class: "new-create" do
-        %h3 新規会員登録
-    .form__bottom
-      .form__bottom__btn
-        .form__bottom__btn__list
-          =link_to "#", class: "facebook" do
-            = icon('fab', 'facebook-square')
-            %h3 Facebookでログイン
-          =link_to "#", class: "google" do
-            = icon('fab', 'google')
-            %h3 Googleでログイン
-      .form__bottom__text-box
-        %input{name: "email", placeholder: "メールアドレス", type: "email", class: "email"}
-        %input{name: "password", placeholder: "パスワード", type: "password", class: "password"}
-        .authentic-check
-          私はロボットではありません
-        %input{name: "send", type: "submit", value: "ログイン", class: "login-btn", style: "cursor:pointer"}
-        = link_to "パスワードをお忘れの方", "#", class: "password-forgot"
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form__top
+        %h3 アカウントをお持ちでない方はこちら
+        = link_to signup_index_path, class: "new-create" do
+          %h3 新規会員登録
+      .form__bottom
+        .form__bottom__btn
+          .form__bottom__btn__list
+            =link_to "#", class: "facebook" do
+              = icon('fab', 'facebook-square')
+              %h3 Facebookでログイン
+            =link_to "#", class: "google" do
+              = icon('fab', 'google')
+              %h3 Googleでログイン
+        .form__bottom__text-box
+          = f.email_field :email, placeholder: "メールアドレス", type: "email", class: "email"
+          = f.password_field :password, placeholder: "パスワード", type: "password", class: "password"
+          .authentic-check
+            私はロボットではありません
+          = f.submit "ログイン", type: "submit", value: "ログイン", class: "login-btn", style: "cursor:pointer"
+          = link_to "パスワードをお忘れの方", "#", class: "password-forgot"
   = render "signup/sign_up_footer"
