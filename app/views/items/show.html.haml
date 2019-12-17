@@ -70,7 +70,7 @@
         = "¥#{@item.price}"
       %span.item-detail-tax （税込）
       %span.item-detail-postage 送料込み
-    = link_to "購入画面に進む", '#', class: "item-buy-btn"
+    = link_to "購入画面に進む", "/items/#{params[:id]}/purchase", class: "item-buy-btn"
     .item-detail-description
       %p.item-detail-description__sentence
         = @item.description
