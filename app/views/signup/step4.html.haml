@@ -3,7 +3,7 @@
   .p-content
     = form_with url: signup_index_path, method: :post, html: { name: "inputForm" } do |f|
       %section.l-container
-        %h2.l-header クレジットカード情報入力
+        %h2.l-header-credit クレジットカード情報入力
         .p-main
           .p-main__container
             .input-information
@@ -45,4 +45,4 @@
                 %i.fas.fa-question-circle>
                 %p カード裏面の番号とは？
             = f.submit "次へ進む", class: "submit_btn" , id: 'token_submit'
-    = render "sign_up_footer"
+  = render "sign_up_footer"

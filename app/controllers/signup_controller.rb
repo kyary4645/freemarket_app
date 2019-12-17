@@ -88,7 +88,7 @@ class SignupController < ApplicationController
     @user = User.new(
       nickname: session[:nickname],
       email: session[:email],
-      password: session[:password],
+      password: session[:password]
     )
 
     # 保存できなければ最初の登録画面へ
