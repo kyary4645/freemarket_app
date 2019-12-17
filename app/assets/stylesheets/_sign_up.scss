@@ -43,12 +43,13 @@
         margin: 0 auto;
         h3 {
           font-size: 14px;
+          font-weight: normal;
         }
         &__email {
           height: 50px;
           width: 343px;
           background-color: #ea352d;
-          border-radius: 5px;
+          border-radius: 4px;
           font-size: 14px;
           text-align: center;
           line-height: 50px;
@@ -71,7 +72,7 @@
           height: 50px;
           width: 343px;
           background-color: #385185;
-          border-radius: 5px;
+          border-radius: 4px;
           font-size: 14px;
           text-align: center;
           line-height: 50px;
@@ -90,7 +91,7 @@
           height: 50px;
           width: 343px;
           border: 1px solid #979797;
-          border-radius: 5px;
+          border-radius: 4px;
           font-size: 14px;
           text-align: center;
           line-height: 50px;
