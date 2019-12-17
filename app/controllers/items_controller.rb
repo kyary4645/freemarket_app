@@ -35,9 +35,11 @@ class ItemsController < ApplicationController
   def update
 
     
-    @item.update(item_params)
-    redirect_to root_path
-    
+    if @item.update(item_params)
+      redirect_to root_path if user_signed_in? && current_user.id == @item.user_id
+    else  
+      render :edit, notice: "編集しました"
+    end
 
   end
 
