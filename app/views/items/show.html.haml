@@ -72,9 +72,7 @@
     = link_to "購入画面に進む", '#', class: "item-buy-btn"
     .item-detail-description
       %p.item-detail-description__sentence
-        ここで買いましたがサイズが合わなかったので安くお売りします。
-        
-        サイズはMです。
+        = @item.description
     .item-detail-button.clearfix
       .item-detail-button-left
         %button.item-detail-button-left__like.item-button
