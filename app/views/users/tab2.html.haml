@@ -7,17 +7,16 @@
         %h2.tab-header 出品した商品
         .tab-panel
           %ul.tab-group
-            %li.tab.tab-A.is-active 出品中
-            %li.tab.tab-B 取引中
+            %li.tab.tab-A 出品中
+            %li.tab.tab-B.is-active 取引中
             %li.tab.tab-C 売却済み
           .tab-content
             %ul.panel-group
-              %li.panel.tab-A.is-show 
+              %li.panel.tab-A
                 = image_tag "logo_gray.svg", class:"tab-logo"
-                %if item.id >= 1 
                 %h5.panel-content
                   出品中の商品がありません
-              %li.panel.tab-B 
+              %li.panel.tab-B.is-show  
                 = image_tag "logo_gray.svg", class:"tab-logo"
                 %h5.panel-content
                   取引中の商品がありません

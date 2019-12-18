@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      get "tab"
+      get "tab1"
+      get "tab2"
+      get "tab3"
     end
   end
   resources :signup, only: [:index,:create] do
