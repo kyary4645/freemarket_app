@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     member do
       get "tab"
       get "profile"
+      get "personalinformation"
     end
   end
   resources :signup, only: [:index,:create] do

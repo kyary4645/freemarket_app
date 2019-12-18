@@ -11,4 +11,9 @@ class UsersController < ApplicationController
   def profile
   end
 
+  def personalinformation
+    @user = User.find(params[:id])
+    @profiles = @user.profile
+  end  
+
 end
