@@ -60,9 +60,8 @@ class ItemsController < ApplicationController
   def pay
     Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
     @credit = Credit.find_by(user_id: current_user.id)
-    charge = Payjp::Charge.create(
+    @credit.card_id = Payjp::Charge.create(
       amount: @item.price,
-      customer: @credit.customer_id,
       card: params['payjp-token'],
       currency: 'jpy'
     )
