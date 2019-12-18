@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   require "payjp"
-  before_action :set_item, only: [:edit, :show, :destroy, :pay]
+  before_action :set_item, only: [:edit, :show, :destroy, :pay, :purchase]
 
   def index
     @items = Item.includes(:user)
@@ -30,6 +30,7 @@ class ItemsController < ApplicationController
   end
 
   def purchase
+
   end
 
   def pay
@@ -51,10 +52,27 @@ class ItemsController < ApplicationController
     params.require(:item).permit(
       :name, :size, :status, :derivery_fee, :derivery_method,
       :price, :derivery_estimated, :description, :image, :category1, :category2, :category3, :brand, :prefecture_id).merge(user_id: current_user.id)
-  end  
+  end
 
   def set_item
     @item = Item.find(params[:id])
   end
+
+  # def profile_params
+  #   params.require(:profile).permit(
+  #     :birth_year,
+  #     :birth_month,
+  #     :birth_day,
+  #     :first_name,
+  #     :last_name,
+  #     :first_name_kana,
+  #     :last_name_kana,
+  #     :phone_number,
+  #     :prefecture,
+  #     :city,
+  #     :house_number,
+  #     :zip_code,
+  #     :building).merge(user_id: current_user.id, profile_id: current_user.id)
+  # end
 
 end
