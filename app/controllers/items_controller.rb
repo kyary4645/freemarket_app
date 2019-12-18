@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit, :show, :destroy]
+  require "payjp"
+  before_action :set_item, only: [:edit, :show, :destroy, :pay]
 
   def index
     @items = Item.includes(:user)
@@ -28,7 +29,21 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def purchase
+  end
 
+  def pay
+    Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
+    charge = Payjp::Charge.create(
+      amount: 300,
+      customer: "cus_41a602e8723ab96b36f58dd2302f",
+      currency: 'jpy'
+    )
+    redirect_to action: :done
+  end
+
+  def done
+  end
 
   private
 
