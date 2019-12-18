@@ -22,7 +22,6 @@
               .price-table-cell.price-cell
                 %span 
                   ¥
-                %span 
                   = @item.price
 
           %ul.buy-point
@@ -38,11 +37,15 @@
               %p.user-info-text
                 クレジットカード
                 %br>/
-                ************0000
+                = "**** **** ****" + @credit_information.last4
                 %br>/
-                有効期限 01/20
+                = "有効期限" 
+                %span
+                = @credit_information.exp_month.to_s
+                = "/"
+                = @credit_information.exp_year.to_s.slice(2,3)
               .user-card-logo
-                = image_tag "https://i.gyazo.com/7dd1a6befcc1beb95214e848f825772b.png", alt: "visa", height: "15", width: "49"
+                = @credit_brand
           %section.purchase-content-shippings
             .purchase-content-shipping
               %div
@@ -50,11 +53,18 @@
                 = link_to "変更する", "#" , class:"l-right change-second"
             %address.user-info-text
               %p
-                〒123-4567
+                〒 
+                = current_user.profile.zip_code
                 %br>/
-                東京都港区
+                = current_user.profile.prefecture
+                %span
+                = current_user.profile.city
+                %span
+                = current_user.profile.house_number
                 %br>/
-                沢尻エリカ
+                = current_user.profile.last_name
+                %span
+                = current_user.profile.first_name
           %section.purchase-content-submit
             = form_for [@item], url: pay_items_path, method: :post do |f|
               %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_1f7c9ff5d0aaaf3f1444a5dd"}

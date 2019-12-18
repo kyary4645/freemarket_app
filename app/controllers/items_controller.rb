@@ -30,11 +30,34 @@ class ItemsController < ApplicationController
   end
 
   def purchase
-
+    @credit = Credit.find_by(user_id: current_user.id)
+    if @credit.present?
+      Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
+      customer = Payjp::Customer.retrieve(@credit.customer_id)
+      @credit_information = customer.cards.retrieve(@credit.card_id)
+      # 《＋α》 登録しているカード会社のブランドアイコンを表示するためのコードです。---------
+      @credit_brand = @credit_information.brand
+      case @credit_brand
+      when "Visa"
+        @credit_src = "visa.svg"
+      when "JCB"
+        @credit_src = "jcb.svg"
+      when "MasterCard"
+        @credit_src = "master-card.svg"
+      when "American Express"
+        @credit_src = "american_express.svg"
+      when "Diners Club"
+        @credit_src = "dinersclub.svg"
+      when "Discover"
+        @credit_src = "discover.svg"
+      end
+      # ---------------------------------------------------------------
+    end
   end
 
   def pay
     Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
+    @credit = Credit.find_by(user_id: current_user.id)
     charge = Payjp::Charge.create(
       amount: 300,
       customer: "cus_41a602e8723ab96b36f58dd2302f",
