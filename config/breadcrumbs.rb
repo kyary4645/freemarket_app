@@ -10,3 +10,9 @@
 #   parent :root
 # end
 
+# プロフィール
+
+crumb :"/users/index/profile" do
+  link "プロフィール", profile_user_path(current_user.id)
+  parent :users
+end

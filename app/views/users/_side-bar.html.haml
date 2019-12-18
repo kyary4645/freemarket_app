@@ -78,7 +78,7 @@
     %ul.mypage-side-bar__list
       %li
         -# = link_to profile_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to profile_user_path(current_user.id), class: 'mypage-side-bar__list-item' do
           プロフィール
           = icon 'fas', 'chevron-right'
       %li
@@ -96,7 +96,7 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to identification_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to personalinformation_user_path(current_user.id), class: 'mypage-side-bar__list-item' do
           本人情報
           = icon 'fas', 'chevron-right'
       %li

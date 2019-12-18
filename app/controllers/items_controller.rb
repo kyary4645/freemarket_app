@@ -40,6 +40,7 @@ class ItemsController < ApplicationController
     else  
       render :edit, notice: "編集しました"
     end
+    
 
   end
 

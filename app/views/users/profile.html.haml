@@ -1,0 +1,23 @@
+
+= render "items/header"
+- breadcrumb :"/users/index/profile"
+= render "layouts/breadcrumbs"
+.mypage-main-containe
+  %main.mypage-container.clearfix
+  
+    = render 'users/side-bar'
+  
+    .l-content
+      %section.l-container
+        %h2.l-header プロフィール
+        %form{:action => ""}
+          .l-profile
+            %i.fas.fa-user-circle.fa-3x
+            %input.user-name{placeholder: "#{current_user.nickname}", type: "text"}/
+          .setting-profile
+            %textarea.user-description{placeholder: "例) こんにちは☆ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪", :type => "textarea"}
+            %button.submit_btn{type: "submit"} 変更する
+
+
+
+= render "items/footer"          

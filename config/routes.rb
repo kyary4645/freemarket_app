@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
+      get "profile"
+      get "personalinformation"
       get "tab1"
       get "tab2"
       get "tab3"
