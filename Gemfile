@@ -91,3 +91,7 @@ end
 gem 'payjp'
 gem 'pry-rails'
 gem 'gretel'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
