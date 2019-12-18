@@ -25,7 +25,7 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to listing_listing_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to 'users/index/tab', class: 'mypage-side-bar__list-item' do
+        = link_to '/users/index/tab', class: 'mypage-side-bar__list-item' do
           出品した商品 - 出品中
           = icon 'fas', 'chevron-right'
       %li
@@ -78,7 +78,7 @@
     %ul.mypage-side-bar__list
       %li
         -# = link_to profile_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to '/users/index/profile', class: 'mypage-side-bar__list-item' do
           プロフィール
           = icon 'fas', 'chevron-right'
       %li

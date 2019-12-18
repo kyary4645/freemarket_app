@@ -23,7 +23,7 @@
 @import "registerCardInfo";
 @import "registration";
 
-@import "users/userEditProfile";
+@import "users/profile";
 @import "users/mypage";
 @import "users/side-bar";
 @import "users/tab";
@@ -31,3 +31,6 @@
 @import "slick-theme"; 
 @import "slick";
 @import "carousel";
+
+
+@import "breadcrumbs";
