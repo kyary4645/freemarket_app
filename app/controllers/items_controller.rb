@@ -52,18 +52,21 @@ class ItemsController < ApplicationController
         @credit_src = "discover.svg"
       end
       # ---------------------------------------------------------------
+    
     end
+    
   end
 
   def pay
     Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
     @credit = Credit.find_by(user_id: current_user.id)
     charge = Payjp::Charge.create(
-      amount: 300,
-      customer: "cus_41a602e8723ab96b36f58dd2302f",
+      amount: @item.price,
+      customer: @credit.customer_id,
+      card: params['payjp-token'],
       currency: 'jpy'
     )
-    redirect_to action: :done
+    redirect_to done_items_path
   end
 
   def done
