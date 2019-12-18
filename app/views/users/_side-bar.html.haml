@@ -25,17 +25,17 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to listing_listing_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to tab_user_path, class: 'mypage-side-bar__list-item' do
+        = link_to tab1_user_path , class: 'mypage-side-bar__list-item' do
           出品した商品 - 出品中
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to  listing_in_progress_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to tab2_user_path, class: 'mypage-side-bar__list-item' do
           出品した商品 - 取引中
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to  listing_completed_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to tab3_user_path, class: 'mypage-side-bar__list-item' do
           出品した商品 - 売却済み
           = icon 'fas', 'chevron-right'
       %li
