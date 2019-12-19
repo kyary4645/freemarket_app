@@ -3,13 +3,13 @@
     margin: 0 auto;
     }
     .l-chapter-container{
-    background-color: white;
+    background-color: $white;
     padding: 64px;
     
     }
     .btn-red1{
-        background-color: red;
-        color: white;
+        background-color: $red;
+        color: $white;
         height:50px;
         width:324px; 
         display: block;
@@ -20,7 +20,7 @@
             height: 50px;
             display: inline-block;
             text-decoration: none;
-            color: white;
+            color: $white;
         }
         
     }

@@ -2,7 +2,7 @@
   padding: 50px 180px;
 }
 .mypage-main-containe{
-  background-color: #f5f5f5;
+  background-color: $whitesmoke;
 }
 .mypage-content{
     width: 720px;
@@ -51,11 +51,11 @@
     }
     &__main-tab-container{
       margin: 0;
-      background: #fff;
+      background: $white;
     }
     &__tabs{
       border: 0;
-      background: #eee;
+      background: $light_grey2;
       font-size: 0;
       a{
         position: relative;
@@ -73,9 +73,9 @@
       text-align: center;
       vertical-align: top;
       &--active{
-        background: #fff;
+        background: $white;
         a{
-          border-top: 2px solid #ea352d;
+          border-top: 2px solid $red;
         }
       }
     }
@@ -87,7 +87,7 @@
       }
       li{
         position: relative;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid $light_grey2;
         &:last-child {
           border: 0;
         }
@@ -134,7 +134,7 @@
       }
     }
     &__item-link:hover{
-      background-color: lightgray;
+      background-color: $whitesmoke;
     }
     &__item-body{
       margin: 0 40px 0 68px;
@@ -152,7 +152,7 @@
         display: block;
         height: 56px;
         margin: 0 auto;
-        background: #eee;
+        background: $light_grey2;
         color: #333;
         line-height: 56px;
         text-align: center;
@@ -167,11 +167,11 @@
       background-size: 78px 85px;
       text-align: center;
       font-size: 16px;
-      color: #ccc;
+      color: $grey;
     }
     &__secondary-tab-container{
       margin-top: 40px;
-      background: #fff;
+      background: $white;
     }
     &__tab-head{
       padding: 0 4%;
@@ -185,7 +185,7 @@
       padding: 5px 6px;
       border-radius: 2px;
       font-size: 12px;
-      color: #fff;
+      color: $white;
       &--done{
         background: #888;
       }
