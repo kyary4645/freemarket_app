@@ -38,8 +38,4 @@ class PurchaseController < ApplicationController
   def set_credit
     @credit = Credit.find_by(user_id: current_user.id)
   end
-
-  # def set_item
-  #   @item = Item.find(params[:id])
-  # end
 end
