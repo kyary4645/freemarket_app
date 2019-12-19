@@ -17,7 +17,7 @@
       .new-create {
         height: 50px;
         width: 328px;
-        background-color: #0099e8;
+        background-color: $blue;
         font-size: 14px;
         line-height: 50px;
         color: $white;
@@ -92,7 +92,7 @@
           border: 1px solid #cccccc;
           font-size: 14px;
           &:focus {
-            border: 1px solid #0099e8;
+            border: 1px solid $blue;
           }
         }
         .password {
@@ -105,7 +105,7 @@
           border: 1px solid #cccccc;
           font-size: 14px;
           &:focus {
-            border: 1px solid #0099e8;
+            border: 1px solid $blue;
           }
         }
         .authentic-check {

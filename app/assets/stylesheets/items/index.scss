@@ -138,7 +138,7 @@ body{
 .see-more{
   display: inline-block;
   position: absolute;
-  color: rgb(0, 149, 238);
+  color: $blue;
   font-weight: 600;
   right: 0px;
   bottom: 0px;
@@ -184,7 +184,7 @@ body{
 }
 
 .product-image:hover{
-  border: solid 1px rgb(0, 149, 238);
+  border: solid 1px $blue;
 }
 
 .product-card{

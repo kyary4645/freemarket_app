@@ -178,7 +178,7 @@
 
   .l-mains {
     padding: 40px 40px 64px;
-    border-top: 2px solid #f5f5f5;
+    border-top: 2px solid $light_grey1;
     &__container {
       width: 343px;
       margin: 0 auto;
@@ -202,7 +202,7 @@
     padding: 10px 16px 8px;
     border: 1px solid #cccccc;
     &:focus {
-      border: 1px solid #0099e8;
+      border: 1px solid $blue;
     }
   }
 
@@ -212,7 +212,7 @@
     background-color: $white;
     outline: 0;
     &:focus {
-      border: 1px solid #0099e8;
+      border: 1px solid $blue;
     }
   }
 

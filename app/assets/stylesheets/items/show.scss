@@ -46,12 +46,12 @@
           width: 39%;
           text-align: left;
           background-color: #fafafa;
-          border: solid 1px #f5f5f5;
+          border: solid 1px $light_grey1;
           padding: 8px;
         }
         td {
           width: 61%;
-          border: solid 1px #f5f5f5;
+          border: solid 1px $light_grey1;
           padding: 8px;
           .item-detail-evaluation {
             margin: 8px 10px 0 0 ;
@@ -72,7 +72,7 @@
             display: block;
           }
           a {
-            color: #0099e8;
+            color: $blue;
           }
           a:hover {
             opacity: 0.7;
@@ -101,7 +101,7 @@
       display: block;
       margin-top: 16px;
       background-color: #ea352d;
-      color: #ffffff;
+      color: $white;
       text-align: center;
       line-height: 50px;
       font-size: 20px;
@@ -128,8 +128,8 @@
           opacity: 0.7;
         }
         .item-button {
-          background-color: #f5f5f5;
-          border: 1px solid #f5f5f5;
+          background-color: $light_grey1;
+          border: 1px solid $light_grey1;
           border-radius: 40px;
           font-size: 13px;
           color: #333333;
@@ -144,7 +144,7 @@
         padding-top: 5px;
       }
       .item-detail-button-right a {
-        color: #0099e8;
+        color:$blue;
       }
       .item-detail-button-right a:hover {
         opacity: 0.7;
@@ -198,7 +198,7 @@
     }
   }
   .item-links a {
-    color: #0099e8;
+    color: $blue;
   }
   .item-links a:hover {
     opacity: 0.7;
@@ -245,7 +245,7 @@
       font-size: 22px;
       margin: 24px 0 8px;
       font-weight: bold;
-      color: #0099e8;
+      color: $blue;
     }
     .item-box-head:hover {
       opacity: 0.7;
