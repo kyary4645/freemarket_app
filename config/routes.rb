@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {
-    :omniauth_callbacks => "users/omniauth_callbacks"
+  devise_for :users,
+  controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
   }
-  # devise_scope :user do
-  #   delete 'destroy' => 'devise/sessions#destroy',as: :current_user_destroy
-  # end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
   root to: "items#index"
   resources :items, only: [:index, :new, :create, :destroy, :show]
 
@@ -15,6 +13,7 @@ Rails.application.routes.draw do
       get "tab"
     end
   end
+  
   resources :signup, only: [:index,:create] do
     collection do
       get 'step1'
