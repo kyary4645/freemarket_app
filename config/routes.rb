@@ -5,7 +5,15 @@ Rails.application.routes.draw do
   }
   
   root to: "items#index"
-  resources :items
+  resources :items, only: [:index, :new, :create, :destroy, :show] do
+    resources :purchase, only: [:show] do
+      member do
+        post 'pay', to: 'purchase#pay'
+        get 'done', to: 'purchase#done'
+      end
+    end
+  end
+
 
 
   resources :users do
@@ -22,10 +30,10 @@ Rails.application.routes.draw do
   resources :signup, only: [:index,:create] do
     collection do
       get 'step1'
-      post 'step1' => 'signup#post_step1'
+      post 'step1', to: 'signup#post_step1'
       get 'step2'
       get 'step3'
-      post 'step3' => 'signup#post_step3'
+      post 'step3', to: 'signup#post_step3'
       get 'step4'
       get 'done'
     end

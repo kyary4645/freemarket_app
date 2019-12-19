@@ -143,7 +143,7 @@ class SignupController < ApplicationController
       end
       
 
-      Payjp.api_key = 'sk_test_4854d0c360476b8cab020092'
+      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
       # トークンが作成できていれば、Pay.jpへ顧客データ作成を行う
       unless params['payjp-token'].blank?
         customer = Payjp::Customer.create(

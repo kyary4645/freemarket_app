@@ -1,5 +1,6 @@
 class Profile < ApplicationRecord
   belongs_to :user
+  has_one :item
   ZIP_CODE_VALID = /\A\d{3}-\d{4}\z/i
 
   validates :birth_year,              presence: true

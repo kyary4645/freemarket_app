@@ -17,7 +17,6 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text :category3
       t.text :brand
       t.string :prefecture_id
-      t.integer :buyer_id
 
       
       t.timestamps

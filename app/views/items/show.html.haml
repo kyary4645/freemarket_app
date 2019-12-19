@@ -68,14 +68,14 @@
 
     .item-detail-price-box
       %span.item-detail-price
-        = "¥#{@item.price}"
+        = "¥#{price}"
       %span.item-detail-tax （税込）
       %span.item-detail-postage 送料込み
     - if user_signed_in? && current_user.id == @item.user_id
       = link_to "編集", "/items/#{@item.id}/edit",method: :get, class:"item-buy-btn"
       = link_to "削除", "/items/#{@item.id}",method: :delete, class:"item-buy-btn"
     - else  
-      = link_to "購入画面に進む", '#', class: "item-buy-btn"
+      = link_to "購入画面に進む", item_purchase_path(@item.id), class: "item-buy-btn"
     .item-detail-description
       %p.item-detail-description__sentence
         = @item.description

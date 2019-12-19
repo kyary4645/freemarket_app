@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [ :show, :destroy, :edit, :update]
+  require "payjp"
+  before_action :set_item, only: [:edit, :show, :destroy]
   before_action :move_to_index, except: [:index, :show]
 
   def index
@@ -44,15 +45,11 @@ class ItemsController < ApplicationController
 
   end
 
-
-  
-
   def show
     @user = @item.user_id
     @items = Item.where(user_id: @user)
   end
 
-  
 
   private
 
@@ -60,7 +57,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(
       :name, :size, :status, :derivery_fee, :derivery_method,
       :price, :derivery_estimated, :description, :image, :category1, :category2, :category3, :brand, :prefecture_id).merge(user_id: current_user.id)
-  end  
+  end
 
   def set_item
     @item = Item.find(params[:id])

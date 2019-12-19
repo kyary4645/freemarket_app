@@ -1,0 +1,71 @@
+= render "signup/sign_up_header"
+%main.purchase
+  %section.purchase-container
+    %h2.purchase-container-title 購入内容の確認
+    %section.purchase-content-item
+      .item-box
+        = image_tag "#{@item.image}", alt: "購入アイテムの写真", height: "80px", width: "80px", class: "item-image"
+        .item-detail-text
+          %p.item-detail-name 
+            = @item.name
+          %p.item-detail-price
+            %span.item-price-figure
+              ¥
+              = price
+            %span.item-price-tax （税込）送料込み
+    %section.purchase-content
+      .purchase-content-box
+        %form.item-detail-form{action: "#"}
+          %ul.price-table
+            %li.price-table-row
+              .price-table-cell.text-price 支払い金額
+              .price-table-cell.price-cell
+                %span 
+                  ¥
+                  = price
+
+          %ul.buy-point
+            %li.buy-point-cell
+              .checkbox-default.use-point
+                %i.fas.fa-square
+                %label.point-text ポイントを使用(所持ポイント:P0)
+          %section.purchase-content
+            .purchase-content-inner
+              %div
+                %h3.l-left 支払い方法
+                = link_to "変更する", "#" ,class:"l-right change"
+              %p.user-info-text
+                クレジットカード
+                %br>/
+                = "**** **** ****" + @credit_information.last4
+                %br>/
+                = "有効期限" 
+                %span
+                = @credit_information.exp_month.to_s
+                = "/"
+                = @credit_information.exp_year.to_s.slice(2,3)
+              .user-card-logo
+                = @credit_brand
+          %section.purchase-content-shippings
+            .purchase-content-shipping
+              %div
+                %h3.l-left 配送先
+                = link_to "変更する", "#" , class:"l-right change-second"
+            %address.user-info-text
+              %p
+                〒 
+                = current_user.profile.zip_code
+                %br>/
+                = current_user.profile.prefecture
+                %span
+                = current_user.profile.city
+                %span
+                = current_user.profile.house_number
+                %br>/
+                = current_user.profile.last_name
+                %span
+                = current_user.profile.first_name
+        .buy__centerbox__buyinfo__buybutton
+          = form_tag(action: :pay, method: :post) do
+            %button.btn{type:"submit",class:"buy__centerbox__buyinfo__buybutton__red"} 購入する
+= render "signup/sign_up_footer"

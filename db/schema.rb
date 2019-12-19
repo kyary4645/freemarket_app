@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2019_12_17_092850) do
     t.text "category3"
     t.text "brand"
     t.string "prefecture_id"
-    t.integer "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

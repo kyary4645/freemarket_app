@@ -1,14 +1,14 @@
 .wrapper-complite
-  = render "header1"
+  = render "signup/sign_up_header"
   .form
     .form__top
-      会員登録完了
+      購入完了
     .form__bottom
       .form__bottom__center
         .form__bottom__center__text
           %h3 ありがとうございます。
-          %h3 会員登録が完了しました。
+          %h3 商品の購入が完了しました。
         = link_to root_path do
           %button.form__bottom__center__start-btn{type: "submit"}
-            %h3 メルカリをはじめる
-  = render "sign_up_footer"
+            %h3 トップページに戻る
+  = render "signup/sign_up_footer"
