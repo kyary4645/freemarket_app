@@ -17,7 +17,7 @@ h3{
 }
 
 body{
-  background-color: rgb(245, 245, 245);
+  background-color: $whitesmoke;
   display: block;
  
   
@@ -65,7 +65,7 @@ body{
 
 .nav{
   padding: 50px 0px 30px;
-  background-color: #fff;
+  background-color: $white;
   text-align: center;
 }
 .popularity-category{
@@ -84,7 +84,7 @@ body{
 
 .button{
   color: black;
-  background-color: rgb(245, 245, 245);
+  background-color: $whitesmoke;
   cursor: pointer;
   margin: 10px 0 0 10px ;
   border-radius: 15px;
@@ -104,7 +104,7 @@ body{
   margin: 0 auto;
   padding-top: 42px;
   padding-bottom: 100px;
-  background-color: rgb(245, 245, 245);
+  background-color: $whitesmoke;
   
   
   
@@ -138,7 +138,7 @@ body{
 .see-more{
   display: inline-block;
   position: absolute;
-  color: rgb(0, 149, 238);
+  color: $blue;
   font-weight: 600;
   right: 0px;
   bottom: 0px;
@@ -167,7 +167,7 @@ body{
 .product{
   width: 188px;
   height: 252px;
-  background-color: rgb(255, 255, 255);
+  background-color: $white;
   box-sizing: border-box;
 
 }
@@ -184,7 +184,7 @@ body{
 }
 
 .product-image:hover{
-  border: solid 1px rgb(0, 149, 238);
+  border: solid 1px $blue;
 }
 
 .product-card{
@@ -201,7 +201,7 @@ body{
   background: rgba(0,0,0,.4);
   border-radius: 0 14px 14px 0;
   position: absolute;
-  color: #fff;
+  color: $white;
   height: 28px;
   font-size: 17px;
   bottom: 72px;
@@ -223,7 +223,7 @@ body{
   display: inline-block;
   width: 188px;
   height: 64px;
-  background-color: #fff;
+  background-color: $white;
   color: #222;
   box-sizing: border-box;
   padding: 0 12px;

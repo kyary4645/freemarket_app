@@ -28,7 +28,7 @@
   line-height: 74px;
 }
 .tab-content {
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 .panel {
   display: none;
@@ -43,7 +43,7 @@
 }
 
 .tab.is-active {
-  background-color: #FFFFFF;
+  background-color: $white;
   border-top: 2px solid #E31D23;
 }
 .panel.is-show {
@@ -73,7 +73,7 @@
 .pager-next {
   width: 42px;
   height: 42px;
-  border: 1px solid #c1c1c1;
+  border: 1px solid $grey;
   text-align: center;
   border-radius: 5px;
   display: block;

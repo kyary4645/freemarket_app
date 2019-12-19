@@ -13,7 +13,7 @@ h3{
 }
 
 body{
-  background-color: rgb(245, 245, 245);
+  background-color: $whitesmoke;
   display: block;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
@@ -43,7 +43,7 @@ form{
 
 
 .information-chapter-container{
-  background-color: rgb(255, 255, 255);
+  background-color: $white;
 }
 
 .information-chapter-head{
@@ -51,7 +51,7 @@ form{
   font-size: 24px;
   padding: 8px 24px;
   text-align: center;
-  border-bottom: 1px solid #f5f5f5 ;
+  border-bottom: 1px solid $whitesmoke;
   line-height: 1.4;
 }
 
@@ -83,7 +83,7 @@ form{
   background-color: #ccc;
   margin: 0 0 0 8px;
   border-radius: 2px;
-  color: #fff;
+  color: $white;
   padding: 2px 4px;
   font-size: 12px;
   vertical-align: top;
@@ -102,7 +102,7 @@ form{
 
 .select-wrap{
   position: relative;
-  background-color: #fff;
+  background-color: $white;
   outline:none;
   text-indent: 0.01px;
   text-overflow: '';
@@ -115,8 +115,8 @@ form{
   right: 16px;
   top: 50%;
   z-index: 2;
-  color: #fff;
-  font-size: 8px
+  color: $white;
+  font-size: 8px;
 }
 
 .select-default{
@@ -125,17 +125,17 @@ form{
   width: 572px;
   padding: 10px 16px 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid $grey;
   line-height: 1.5;
   font-size: 16px;
-  background-color: #fff ;
+  background-color: $white;
 
 }
 
 .btn-red{
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
+  background: $red;
+  border: 1px solid $red;
+  color: $white;
   margin-top: 40px;
 }
 

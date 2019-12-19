@@ -4,7 +4,7 @@
   background-color: #f2f2f2;
   .form {
     width: 456px;
-    background-color: #ffffff;
+    background-color: $white;
     margin: 0 auto;
     &__top {
       padding: 40px 64px;
@@ -17,10 +17,10 @@
       .new-create {
         height: 50px;
         width: 328px;
-        background-color: #0099e8;
+        background-color: $blue;
         font-size: 14px;
         line-height: 50px;
-        color: #ffffff;
+        color: $white;
         display: flex;
         text-decoration: none;
         margin-top: 8px;
@@ -32,7 +32,7 @@
     }
     &__bottom {
       height: 587px;
-      border-top: 1px solid #eeeeee;
+      border-top: 1px solid $light_grey2;
       &__btn {
         padding: 32px 64px;
         &__list {
@@ -44,7 +44,7 @@
             font-size: 14px;
             text-align: center;
             line-height: 50px;
-            color: #ffffff;
+            color: $white;
             margin-bottom: 16px;
             display: flex;
             text-decoration: none;
@@ -89,10 +89,10 @@
           height: 48px;
           border-radius: 5px;
           outline: 0;
-          border: 1px solid #cccccc;
+          border: 1px solid $grey;
           font-size: 14px;
           &:focus {
-            border: 1px solid #0099e8;
+            border: 1px solid $blue;
           }
         }
         .password {
@@ -102,10 +102,10 @@
           border-radius: 5px;
           outline: 0;
           margin: 24px 0 0;
-          border: 1px solid #cccccc;
+          border: 1px solid $grey;
           font-size: 14px;
           &:focus {
-            border: 1px solid #0099e8;
+            border: 1px solid $blue;
           }
         }
         .authentic-check {
@@ -115,11 +115,11 @@
           margin: 24px 0 0;
         }
         .login-btn {
-          color: #ffffff;
+          color: $white;
           padding: 15px 0;
           width: 328px;
           height: 50px;
-          background-color: #ea352d;
+          background-color: $red;
           font-size: 14px;
           margin: 24px 0 0;
           outline: 0;

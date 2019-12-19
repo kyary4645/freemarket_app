@@ -24,7 +24,7 @@
   .form {
     height: 384px;
     width: 700px;
-    background-color: #ffffff;
+    background-color: $white;
     margin: 0 auto;
     &__logo {
       height:97px;
@@ -35,7 +35,7 @@
       color: #333333;
     }
     &__btn {
-      border-top: 1px solid #f5f5f5;
+      border-top: 1px solid $whitesmoke;
       padding: 40px 40px 64px;
       line-height: center;
       &__list {
@@ -53,7 +53,7 @@
           font-size: 14px;
           text-align: center;
           line-height: 50px;
-          color: #ffffff;
+          color: $white;
           margin-bottom: 16px;
           transition-duration: 0.4s;
           display: flex;
@@ -76,7 +76,7 @@
           font-size: 14px;
           text-align: center;
           line-height: 50px;
-          color: #ffffff;
+          color: $white;
           margin-bottom: 16px;
           display: flex;
           text-decoration: none;
