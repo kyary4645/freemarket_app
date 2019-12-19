@@ -65,10 +65,7 @@
                 = current_user.profile.last_name
                 %span
                 = current_user.profile.first_name
-          %section.purchase-content-submit
-            = form_with url: pay_items_path, method: :post do
-              %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_1f7c9ff5d0aaaf3f1444a5dd"}
-              -# = f.submit "購入する"
-            -# = form_tag(action: 'pay', method: :post) do
-            -#   %button.btn{type:"submit",class:"buy__centerbox__buyinfo__buybutton__red"} 購入する
+        .buy__centerbox__buyinfo__buybutton
+          = form_tag(action: :pay, method: :post) do
+            %button.btn{type:"submit",class:"buy__centerbox__buyinfo__buybutton__red"} 購入する
 = render "signup/sign_up_footer"

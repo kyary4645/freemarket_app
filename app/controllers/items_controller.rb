@@ -62,6 +62,7 @@ class ItemsController < ApplicationController
     @credit = Credit.find_by(user_id: current_user.id)
     @credit.card_id = Payjp::Charge.create(
       amount: @item.price,
+      customer: @credit.customer_id,
       card: params['payjp-token'],
       currency: 'jpy'
     )

@@ -1,1 +1,14 @@
-%h1 完了
+.wrapper-complite
+  = render "signup/sign_up_header"
+  .form
+    .form__top
+      購入完了
+    .form__bottom
+      .form__bottom__center
+        .form__bottom__center__text
+          %h3 ありがとうございます。
+          %h3 商品の購入が完了しました。
+        = link_to "/", style: "text-decoration: none;" do
+          %button.form__bottom__center__start-btn{type: "submit"}
+            %h3 トップページに戻る
+  = render "signup/sign_up_footer"
