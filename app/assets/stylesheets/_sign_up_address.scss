@@ -111,7 +111,7 @@
               width: 12px;
               margin: 0 auto;
               border-radius: 50%;
-              background-color: #cccccc;
+              background-color: $grey;
               display: flex;
               flex-direction: column;
             }
@@ -133,7 +133,7 @@
               width: 12px;
               margin: 0 auto;
               border-radius: 50%;
-              background-color: #cccccc;
+              background-color: $grey;
               display: flex;
               flex-direction: column;
             }
@@ -142,7 +142,7 @@
         .list-movement-border {
           height: 2px;
           width: 450px;
-          background-color: #cccccc;
+          background-color: $grey;
           position: relative;
           bottom: 4px;
           left: 29px;
@@ -153,7 +153,7 @@
   .l-contents {
     width: 700px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: $white;
   }
 
   .l-header-address {
@@ -178,14 +178,14 @@
 
   .l-mains {
     padding: 40px 40px 64px;
-    border-top: 2px solid #f5f5f5;
+    border-top: 2px solid $whitesmoke;
     &__container {
       width: 343px;
       margin: 0 auto;
       .pref {
         margin-top: 8px;
         &__name {
-          background-color: #ffffff;
+          background-color: $white;
           width: 343px;
           outline: 0;
         }
@@ -200,19 +200,19 @@
     border-radius: 4px;
     outline: 0;
     padding: 10px 16px 8px;
-    border: 1px solid #cccccc;
+    border: 1px solid $grey;
     &:focus {
-      border: 1px solid #0099e8;
+      border: 1px solid $blue;
     }
   }
 
   select {
     height: 50px;
     width: 343px;
-    background-color: #ffffff;
+    background-color: $white;
     outline: 0;
     &:focus {
-      border: 1px solid #0099e8;
+      border: 1px solid $blue;
     }
   }
 
@@ -220,7 +220,7 @@
     background-color: #ea352d;
     padding: 1px 4px;
     border-radius: 2px;
-    color: #ffffff;
+    color: $white;
     font-weight: normal;
     font-size: 12px;
     height: 19px;
@@ -237,7 +237,7 @@
     background-color: #c1c1c1;
     padding: 1px 4px;
     border-radius: 2px;
-    color: #ffffff;
+    color: $white;
     font-weight: normal;
     font-size: 12px;
     height: 19px;
@@ -249,7 +249,7 @@
   }
   .submit_btn_next_page {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
     width: 343px;
     height: 50px;
     margin: 40px auto 0;

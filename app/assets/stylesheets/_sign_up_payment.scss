@@ -133,7 +133,7 @@
               width: 12px;
               margin: 0 auto;
               border-radius: 50%;
-              background-color: #cccccc;
+              background-color: $grey;
               display: flex;
               flex-direction: column;
             }
@@ -142,7 +142,7 @@
         .list-movement-border {
           height: 2px;
           width: 450px;
-          background-color: #cccccc;
+          background-color: $grey;
           position: relative;
           bottom: 4px;
           left: 29px;
@@ -154,7 +154,7 @@
     width: 700px;
     margin: 0 auto;
     border: 1px solid #f2f2f2f2;
-    background-color: #ffffff;
+    background-color: $white;
   }
 
   .l-header {
@@ -179,7 +179,7 @@
 
   .p-main {
     padding: 40px 40px 64px;
-    border-top: 2px solid #f5f5f5;
+    border-top: 2px solid $whitesmoke;
     &__container {
       width: 343px;
       margin: 0 auto;
@@ -192,10 +192,10 @@
       select {
         font-size: 14px;
         width: 90px;
-        background-color: #ffffff;
+        background-color: $white;
         outline: 0;
         &:focus {
-          border: 1px solid #0099e8;
+          border: 1px solid $blue;
         }
       }
       .year {
@@ -217,11 +217,11 @@
     width: 343px;
     display: inline-block;
     border-radius: 4px;
-    border: 1px solid #cccccc;
+    border: 1px solid $grey;
     padding: 10px 16px 8px;
     outline: 0;
     &:focus {
-      border: 1px solid #0099e8;
+      border: 1px solid $blue;
     }
   }
 
@@ -232,7 +232,7 @@
 
   .required {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
     padding: 1px 4px;
     margin-left: 10px;
     border-radius: 2px;
@@ -241,7 +241,7 @@
 
   .input-information > .required {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
   }
 
   .card-logo {
@@ -259,7 +259,7 @@
 
   .submit_btn {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
     width: 347px;
     height: 50px;
     margin: 72px auto 0;
