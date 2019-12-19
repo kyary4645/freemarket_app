@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
 
   def destroy
     if @item.destroy
-      redirect_to root_path if user_signed_in? && current_user.id == @item.user_id
+      redirect_to root_path if user_signed_in? && current_user.id == @item.user_id 
     else
       render :new, notice: "削除しました"
     end
