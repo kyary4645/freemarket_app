@@ -26,10 +26,7 @@ class UsersController < ApplicationController
     @profiles = @user.profile
   end  
 
-  def personalinformation
-    @user = User.find(params[:id])
-    @profiles = @user.profile
-  end 
+
   
   private
   def set_user
