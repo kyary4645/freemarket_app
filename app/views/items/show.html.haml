@@ -74,7 +74,7 @@
       = link_to "編集", "/items/#{@item.id}/edit",method: :get, class:"item-buy-btn"
       = link_to "削除", "/items/#{@item.id}",method: :delete, class:"item-buy-btn"
     - else  
-      = link_to "購入画面に進む", item_purchase_index_path(@item.id), class: "item-buy-btn"
+      = link_to "購入画面に進む", item_purchase_path(@item.id), class: "item-buy-btn"
     .item-detail-description
       %p.item-detail-description__sentence
         = @item.description
