@@ -1,5 +1,5 @@
 .item {
-  background-color : $light_grey1;
+  background-color : $whitesmoke;
   .item-content {
       width: 700px;
       background-color: $white;
@@ -18,7 +18,7 @@
   }
   .item-image-upload-require {
     color: $white;
-    background-color: red;
+    background-color: $red;
     position: relative;
     bottom: 3px;
     font-size: 12px;
@@ -36,7 +36,7 @@
     height: 150px;
     width: 620px;
     font-size: 14px;
-    background-color: $light_grey1;
+    background-color: $whitesmoke;
     border-style:dashed;
     border-color: $grey;
     border-width:1px;

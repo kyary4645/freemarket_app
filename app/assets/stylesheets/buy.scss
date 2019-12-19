@@ -42,13 +42,13 @@ form{
   font-size: 22px;
   font-weight: 600;
   text-align: center;
-  border-bottom: 1px solid $light_grey1 ;
+  border-bottom: 1px solid $whitesmoke;
   }
 }
 
 
 .purchase-content{
-  border-bottom: 1px solid $light_grey1;
+  border-bottom: 1px solid $whitesmoke;
   &-box{
     padding: 32px 16px 48px;
     margin: 0 162.5px;
@@ -137,7 +137,7 @@ form{
 .purchase-content-inner{
   padding: 32px 0;
   
-  border-top: 1px solid $light_grey1;
+  border-top: 1px solid $whitesmoke;
   
 }
 
@@ -173,7 +173,7 @@ form{
 
 .purchase-content-shippings{
   padding: 32px 0;
-  border-bottom: 1px solid $light_grey1;
+  border-bottom: 1px solid $whitesmoke;
 }
 
 .purchase-content-submit{

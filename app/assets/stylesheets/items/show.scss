@@ -46,12 +46,12 @@
           width: 39%;
           text-align: left;
           background-color: #fafafa;
-          border: solid 1px $light_grey1;
+          border: solid 1px $whitesmoke;
           padding: 8px;
         }
         td {
           width: 61%;
-          border: solid 1px $light_grey1;
+          border: solid 1px $whitesmoke;
           padding: 8px;
           .item-detail-evaluation {
             margin: 8px 10px 0 0 ;
@@ -128,8 +128,8 @@
           opacity: 0.7;
         }
         .item-button {
-          background-color: $light_grey1;
-          border: 1px solid $light_grey1;
+          background-color: $whitesmoke;
+          border: 1px solid $whitesmoke;
           border-radius: 40px;
           font-size: 13px;
           color: #333333;
@@ -153,7 +153,7 @@
     }
   }
   .item-detail-message {
-    background-color: #fff;
+    background-color: $white;
     width: 642px;
     margin: 8px auto;
     padding: 24px;
@@ -182,7 +182,7 @@
         font-size: 14px;
         margin-top: 8px;
         background-color: #aaa;
-        color: #fff;
+        color: $white;
         text-align: center;
       }
     }
@@ -205,7 +205,7 @@
     text-decoration: underline;
   }
   .social-media-links {
-    background-color: #fff;
+    background-color: $white;
     width: 690px;
     margin: 24px auto;
     padding: 32px 0;
@@ -217,7 +217,7 @@
         border-radius: 4px;
         line-height: 44px;
         .social-icon {
-          color: #fff;
+          color: $white;
           padding: 10px;
         }
       }
@@ -262,7 +262,7 @@
       }
       .item-box-body {
         padding: 16px;
-        background-color: #fff;
+        background-color: $white;
         color: #333333;
         .item-box-name {
           font-size: 16px;
