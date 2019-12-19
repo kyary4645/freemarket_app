@@ -68,7 +68,7 @@
 
     .item-detail-price-box
       %span.item-detail-price
-        = "¥#{@item.price.to_s(:delimited, delimiter: ',')}"
+        = "¥#{price}"
       %span.item-detail-tax （税込）
       %span.item-detail-postage 送料込み
     - if user_signed_in? && current_user.id == @item.user_id

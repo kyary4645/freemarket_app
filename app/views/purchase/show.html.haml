@@ -11,7 +11,7 @@
           %p.item-detail-price
             %span.item-price-figure
               ¥
-              = @item.price.to_s(:delimited, delimiter: ',')
+              = price
             %span.item-price-tax （税込）送料込み
     %section.purchase-content
       .purchase-content-box
@@ -22,7 +22,7 @@
               .price-table-cell.price-cell
                 %span 
                   ¥
-                  = @item.price.to_s(:delimited, delimiter: ',')
+                  = price
 
           %ul.buy-point
             %li.buy-point-cell

@@ -1,9 +1,7 @@
 class PurchaseController < ApplicationController
-  before_action :set_credit
-  require 'payjp'
+  before_action :set_credit, :set_item
   
   def show
-    @item = Item.find(params[:id])
     if @credit.present?
       Payjp.api_key = ENV['PAYJP_SECRET_KEY']
       customer = Payjp::Customer.retrieve(@credit.customer_id)
@@ -13,7 +11,6 @@ class PurchaseController < ApplicationController
   end
 
   def pay
-    @item = Item.find(params[:item_id])
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: @item.price,
@@ -21,7 +18,7 @@ class PurchaseController < ApplicationController
       card: params['payjp-token'],
       currency: 'jpy'
     )
-    redirect_to done_item_purchase_index_path
+    redirect_to done_item_purchase_path
   end
 
   def done
@@ -37,5 +34,9 @@ class PurchaseController < ApplicationController
     
   def set_credit
     @credit = Credit.find_by(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end

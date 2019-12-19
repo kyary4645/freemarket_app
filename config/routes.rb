@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: "items#index"
   resources :items, only: [:index, :new, :create, :destroy, :show] do
     resources :purchase, only: [:show] do
-      collection do
+      member do
         post 'pay', to: 'purchase#pay'
         get 'done', to: 'purchase#done'
       end
