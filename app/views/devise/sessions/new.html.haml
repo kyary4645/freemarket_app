@@ -9,10 +9,10 @@
       .form__bottom
         .form__bottom__btn
           .form__bottom__btn__list
-            =link_to "#", class: "facebook" do
+            =link_to user_facebook_omniauth_authorize_path, class: "facebook" do
               = icon('fab', 'facebook-square')
               %h3 Facebookでログイン
-            =link_to "#", class: "google" do
+            =link_to user_google_oauth2_omniauth_authorize_path, class: "google" do
               = icon('fab', 'google')
               %h3 Googleでログイン
         .form__bottom__text-box
