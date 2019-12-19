@@ -106,22 +106,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  # def profile_params
-  #   params.require(:profile).permit(
-  #     :birth_year,
-  #     :birth_month,
-  #     :birth_day,
-  #     :first_name,
-  #     :last_name,
-  #     :first_name_kana,
-  #     :last_name_kana,
-  #     :phone_number,
-  #     :prefecture,
-  #     :city,
-  #     :house_number,
-  #     :zip_code,
-  #     :building).merge(user_id: current_user.id, profile_id: current_user.id)
-  # end
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
