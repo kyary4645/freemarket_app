@@ -40,7 +40,7 @@ select {
 
 .required {
   background-color: #ea352D;
-  color: #ffffff;
+  color: $white;
   width: 40px;
   text-align: center;
   margin-left: 10px;
@@ -49,7 +49,7 @@ select {
 
 .input-information > .required {
   background-color: #ea352D;
-  color: #ffffff;
+  color: $white;
   width: 40px;
   display: inline-block;
 }
@@ -69,7 +69,7 @@ img {
 
 .submit_btn {
   background-color: #ea352D;
-  color: #ffffff;
+  color: $white;
   width: 350px;
   height: 50px;
   margin: 20px auto 0;

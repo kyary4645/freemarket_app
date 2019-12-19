@@ -154,7 +154,7 @@
     width: 700px;
     margin: 0 auto;
     border: 1px solid #f2f2f2f2;
-    background-color: #ffffff;
+    background-color: $white;
   }
 
   .l-header {
@@ -192,7 +192,7 @@
       select {
         font-size: 14px;
         width: 90px;
-        background-color: #ffffff;
+        background-color: $white;
         outline: 0;
         &:focus {
           border: 1px solid #0099e8;
@@ -232,7 +232,7 @@
 
   .required {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
     padding: 1px 4px;
     margin-left: 10px;
     border-radius: 2px;
@@ -241,7 +241,7 @@
 
   .input-information > .required {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
   }
 
   .card-logo {
@@ -259,7 +259,7 @@
 
   .submit_btn {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
     width: 347px;
     height: 50px;
     margin: 72px auto 0;

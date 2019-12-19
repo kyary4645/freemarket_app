@@ -153,7 +153,7 @@
   .l-contents {
     width: 700px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: $white;
   }
 
   .l-header-address {
@@ -185,7 +185,7 @@
       .pref {
         margin-top: 8px;
         &__name {
-          background-color: #ffffff;
+          background-color: $white;
           width: 343px;
           outline: 0;
         }
@@ -209,7 +209,7 @@
   select {
     height: 50px;
     width: 343px;
-    background-color: #ffffff;
+    background-color: $white;
     outline: 0;
     &:focus {
       border: 1px solid #0099e8;
@@ -220,7 +220,7 @@
     background-color: #ea352d;
     padding: 1px 4px;
     border-radius: 2px;
-    color: #ffffff;
+    color: $white;
     font-weight: normal;
     font-size: 12px;
     height: 19px;
@@ -237,7 +237,7 @@
     background-color: #c1c1c1;
     padding: 1px 4px;
     border-radius: 2px;
-    color: #ffffff;
+    color: $white;
     font-weight: normal;
     font-size: 12px;
     height: 19px;
@@ -249,7 +249,7 @@
   }
   .submit_btn_next_page {
     background-color: #ea352D;
-    color: #ffffff;
+    color: $white;
     width: 343px;
     height: 50px;
     margin: 40px auto 0;

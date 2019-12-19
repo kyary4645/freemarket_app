@@ -65,7 +65,7 @@ body{
 
 .nav{
   padding: 50px 0px 30px;
-  background-color: #fff;
+  background-color: $white;
   text-align: center;
 }
 .popularity-category{
@@ -201,7 +201,7 @@ body{
   background: rgba(0,0,0,.4);
   border-radius: 0 14px 14px 0;
   position: absolute;
-  color: #fff;
+  color: $white;
   height: 28px;
   font-size: 17px;
   bottom: 72px;
@@ -223,7 +223,7 @@ body{
   display: inline-block;
   width: 188px;
   height: 64px;
-  background-color: #fff;
+  background-color: $white;
   color: #222;
   box-sizing: border-box;
   padding: 0 12px;

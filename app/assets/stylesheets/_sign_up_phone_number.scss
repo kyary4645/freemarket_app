@@ -151,7 +151,7 @@
   .form {
     width: 700px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: $white;
     &__top {
       padding: 32px;
       font-size: 22px;
@@ -198,7 +198,7 @@
           text-align: center;
           line-height: 50px;
           transition-duration: 0.8s;
-          color: #ffffff;
+          color: $white;
           font-size: 14px;
           outline: 0;
           &:hover {

@@ -4,7 +4,7 @@
   background-color: #f2f2f2;
   .form {
     width: 456px;
-    background-color: #ffffff;
+    background-color: $white;
     margin: 0 auto;
     &__top {
       padding: 40px 64px;
@@ -20,7 +20,7 @@
         background-color: #0099e8;
         font-size: 14px;
         line-height: 50px;
-        color: #ffffff;
+        color: $white;
         display: flex;
         text-decoration: none;
         margin-top: 8px;
@@ -44,7 +44,7 @@
             font-size: 14px;
             text-align: center;
             line-height: 50px;
-            color: #ffffff;
+            color: $white;
             margin-bottom: 16px;
             display: flex;
             text-decoration: none;
@@ -115,7 +115,7 @@
           margin: 24px 0 0;
         }
         .login-btn {
-          color: #ffffff;
+          color: $white;
           padding: 15px 0;
           width: 328px;
           height: 50px;
