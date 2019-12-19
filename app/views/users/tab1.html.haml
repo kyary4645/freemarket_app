@@ -1,0 +1,47 @@
+= render "items/header"
+  
+.mypage-main-containe
+  %main.mypage-container.clearfix
+    .l-content-tab
+      %section.tab-container
+        %h2.tab-header 出品した商品
+        .tab-panel
+          %ul.tab-group
+            %li.tab.tab-A.is-active 出品中
+            %li.tab.tab-B 取引中
+            %li.tab.tab-C 売却済み
+          .tab-content
+            %ul.panel-group
+              %li.panel.tab-A.is-show 
+                - @items.each do |item|
+                  .panel-container
+                    - if item.image.present?
+                      = image_tag "#{item.image}", class:"panel-image"
+                      %p.panel-message
+                        #{item.name}
+                      = link_to edit_item_path(item.id), class: "pager-next" do
+                        %i.fas.fa-chevron-right
+                    - else 
+                      = image_tag "logo_gray.svg", class:"tab-logo"
+                      %h5.panel-content
+                        出品中の商品がありません
+              %li.panel.tab-B 
+                = image_tag "logo_gray.svg", class:"tab-logo"
+                %h5.panel-content
+                  取引中の商品がありません
+              %li.panel.tab-C 
+                = image_tag "logo_gray.svg", class:"tab-logo"
+                %h5.panel-content
+                  売却済の商品がありません
+      %ul.pager
+        %li.pagers
+          = link_to "#", class: "pager-prev" do
+            %i.fas.fa-chevron-left
+        %li.pagers
+          = link_to "#", class: "pager-next" do
+            %i.fas.fa-chevron-right
+  
+
+
+    = render 'users/side-bar'
+= render "items/footer"

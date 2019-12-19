@@ -20,22 +20,22 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to new_sell_path, class: 'mypage-side-bar__list-item' do
-        = link_to 'items/new', class: 'mypage-side-bar__list-item' do
+        = link_to new_item_path , class: 'mypage-side-bar__list-item' do
           出品する
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to listing_listing_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to 'users/index/tab', class: 'mypage-side-bar__list-item' do
+        = link_to tab1_user_path , class: 'mypage-side-bar__list-item' do
           出品した商品 - 出品中
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to  listing_in_progress_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to tab2_user_path, class: 'mypage-side-bar__list-item' do
           出品した商品 - 取引中
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to  listing_completed_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to tab3_user_path, class: 'mypage-side-bar__list-item' do
           出品した商品 - 売却済み
           = icon 'fas', 'chevron-right'
       %li
@@ -78,7 +78,7 @@
     %ul.mypage-side-bar__list
       %li
         -# = link_to profile_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to profile_user_path(current_user.id), class: 'mypage-side-bar__list-item' do
           プロフィール
           = icon 'fas', 'chevron-right'
       %li
@@ -96,7 +96,7 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to identification_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to personalinformation_user_path(current_user.id), class: 'mypage-side-bar__list-item' do
           本人情報
           = icon 'fas', 'chevron-right'
       %li
@@ -105,6 +105,6 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to logout_mypage_index_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to destroy_user_session_path, method: :delete, class: 'mypage-side-bar__list-item' do
           ログアウト
           = icon 'fas', 'chevron-right'

@@ -1,10 +1,9 @@
 .l-content-tab {
   width: 700px;
-  height: 466px;
   font-weight: bold;
+  float: right;
 }
 .tab-container {
-  height: 382px;
   background-color: #f9f9f9;
 }
 
@@ -29,7 +28,6 @@
   line-height: 74px;
 }
 .tab-content {
-  height: 236px;
   background-color: #FFFFFF;
 }
 .panel {
@@ -50,6 +48,15 @@
 }
 .panel.is-show {
   display: block;
+}
+
+.panel-container {
+  font-weight: normal;
+  color: black;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #f9f9f9;
 }
 
 .pager {
@@ -77,4 +84,14 @@
 .fa-chevron-right {
   color: #262626;
   vertical-align: -10px;
+}
+
+.panel-image {
+  height: 100px;
+  width: 100px;
+}
+
+.panel-message {
+  font-size: nomal;
+  margin-left: 10px;
 }

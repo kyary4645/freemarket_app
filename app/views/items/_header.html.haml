@@ -35,7 +35,7 @@
               やることリスト
           %li.top_list
             %i.fas.fa-user-circle
-            = link_to destroy_user_session_path, method: :delete do
+            = link_to user_path(current_user.id) do
               マイページ
       - else
         %ul.top_lists
@@ -43,5 +43,4 @@
             = link_to "新規登録", signup_index_path, class: "top-list-registration"
           %li.top_list
             = link_to "ログイン", new_user_session_path, class: "top-list-session"
-    - breadcrumb :users
-    = render "layouts/breadcrumbs"
+    
