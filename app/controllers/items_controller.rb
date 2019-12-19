@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   require "payjp"
-  before_action :set_item, only: [:edit, :show, :destroy, :pay, :purchase]
+  before_action :set_item, only: [:edit, :show, :destroy]
   before_action :move_to_index, except: [:index, :show]
 
   def index
@@ -45,54 +45,9 @@ class ItemsController < ApplicationController
 
   end
 
-
-  
-
   def show
   end
 
-  def purchase
-    @credit = Credit.find_by(user_id: current_user.id)
-    if @credit.present?
-      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-      customer = Payjp::Customer.retrieve(@credit.customer_id)
-      @credit_information = customer.cards.retrieve(@credit.card_id)
-      # 《＋α》 登録しているカード会社のブランドアイコンを表示するためのコードです。---------
-      @credit_brand = @credit_information.brand
-      case @credit_brand
-      when "Visa"
-        @credit_src = "visa.svg"
-      when "JCB"
-        @credit_src = "jcb.svg"
-      when "MasterCard"
-        @credit_src = "master-card.svg"
-      when "American Express"
-        @credit_src = "american_express.svg"
-      when "Diners Club"
-        @credit_src = "dinersclub.svg"
-      when "Discover"
-        @credit_src = "discover.svg"
-      end
-      # ---------------------------------------------------------------
-    
-    end
-    
-  end
-
-  def pay
-    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    @credit = Credit.find_by(user_id: current_user.id)
-    @credit.card_id = Payjp::Charge.create(
-      amount: @item.price,
-      customer: @credit.customer_id,
-      card: params['payjp-token'],
-      currency: 'jpy'
-    )
-    redirect_to done_items_path
-  end
-
-  def done
-  end
 
   private
 

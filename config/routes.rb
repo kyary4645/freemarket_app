@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "items#index"
   resources :items, only: [:index, :new, :create, :destroy, :show] do
-    collection do
-      get 'purchase/:id' => 'items#purchase', as: 'purchase'
-      post 'pay/:id' => 'items#pay', as: 'pay'
-      get 'done' => 'items#done', as: 'done'
+    resources :purchase, only: [:index] do
+      collection do
+        post 'pay' => 'purchase#pay'
+        get 'done' => 'purchase#done'
+      end
     end
   end
 
