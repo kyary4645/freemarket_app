@@ -46,6 +46,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @user = @item.user_id
+    @items = Item.where(user_id: @user)
   end
 
 

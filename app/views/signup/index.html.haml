@@ -8,10 +8,10 @@
         =link_to step1_signup_index_path, class: "form__btn__list__email" do
           = icon('far', 'envelope')
           %h3 メールアドレスで登録する
-        =link_to "#", class: "form__btn__list__facebook" do
+        =link_to user_facebook_omniauth_authorize_path, class: "form__btn__list__facebook" do
           = icon('fab', 'facebook-square')
           %h3 Facebookで登録する
-        =link_to "#", class: "form__btn__list__google" do
+        =link_to user_google_oauth2_omniauth_authorize_path, class: "form__btn__list__google" do
           = icon('fab', 'google')
           %h3 Googleで登録する
   = render "sign_up_footer"

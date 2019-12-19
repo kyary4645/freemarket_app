@@ -1,0 +1,71 @@
+.wrapper-registration
+  = render "header1"
+
+  .form
+    .form__top
+      会員情報入力
+    .form__bottom
+      = form_for @user, url: step1_signup_index_path, method: :post do |f|
+        .form__bottom__text-box
+          .nickname-box
+            .nickname-box__topic
+              = f.label :nickname, "ニックネーム"
+              %span 必須
+            .nickname-box__field
+              = f.text_field :nickname, placeholder: "例)メルカリ太郎", type: "name", class: "nickname"
+          .email-box
+            .email-box__topic
+              = f.label :email, "メールアドレス"
+              %span 必須
+            .email-box__field
+              = f.text_field :email, placeholder: "PC・携帯どちらでも可", class: "email"
+          .identification-text
+            %h3 本人確認
+            %p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません
+          = fields_for @profile, url: step1_signup_index_path, method: :post do |o|
+            .user-info
+              .user-info__name-kanji
+                .label
+                  = o.label :name, "お名前(全角)"
+                  %span
+                    必須
+                .box
+                  = o.text_field :last_name, type: "text", placeholder: "例) 山田", class: "last_name"
+                  = o.text_field :first_name, type: "text", placeholder: "例) 彩", class: "first_name"
+              .user-info__name-kana
+                .label
+                  = o.label :name, "お名前カナ(全角)"
+                  %span
+                    必須
+                .box
+                  = o.text_field :last_name_kana, type: "text", placeholder: "例) ヤマダ", class: "last_name"
+                  = o.text_field :first_name_kana, type: "text", placeholder: "例) アヤ", class: "first_name"
+              .user-info__birthday
+                .label
+                  = o.label "生年月日"
+                  %span
+                    必須
+                .box
+                  .select-wrap
+                    = o.collection_select :birth_year, Year.all, :year, :year
+                  %span 年
+                  .select-wrap.wrap2
+                    = o.collection_select :birth_month, Month.all, :month, :month
+                  %span.span2 月
+                  .select-wrap.wrap3
+                    = o.collection_select :birth_day, Day.all, :day, :day
+                  %span.span3 日
+                %h3 ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+            .identification
+              私はロボットではありません
+            .service
+              「次へ進む」のボタンを押すことにより、
+              %a{href: "#"} 利用規約
+              %br に同意したものとみなします
+            = o.submit "次へ進む", class: "next-page-btn"
+              
+            .about-personal-information
+              = link_to "#" do
+                %h3 本人情報の登録について
+                = icon('fas', 'chevron-right')
+  = render "sign_up_footer"

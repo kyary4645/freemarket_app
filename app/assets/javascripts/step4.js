@@ -15,7 +15,7 @@ document.addEventListener(
 
       //トークン生成
       Payjp.createToken(card, (status, response) => {
-        if (status === 200) { //成功した場合
+        if (status === 200) { //成功した場合はstatusが200
           $("#card_number").removeAttr("name");
           $("#cvc").removeAttr("name");
           $("#exp_month").removeAttr("name");
