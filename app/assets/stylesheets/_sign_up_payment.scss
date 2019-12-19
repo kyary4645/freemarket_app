@@ -133,7 +133,7 @@
               width: 12px;
               margin: 0 auto;
               border-radius: 50%;
-              background-color: #cccccc;
+              background-color: $grey;
               display: flex;
               flex-direction: column;
             }
@@ -142,7 +142,7 @@
         .list-movement-border {
           height: 2px;
           width: 450px;
-          background-color: #cccccc;
+          background-color: $grey;
           position: relative;
           bottom: 4px;
           left: 29px;
@@ -217,7 +217,7 @@
     width: 343px;
     display: inline-block;
     border-radius: 4px;
-    border: 1px solid #cccccc;
+    border: 1px solid $grey;
     padding: 10px 16px 8px;
     outline: 0;
     &:focus {

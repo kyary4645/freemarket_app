@@ -32,7 +32,7 @@
     }
     &__bottom {
       height: 587px;
-      border-top: 1px solid #eeeeee;
+      border-top: 1px solid $light_grey2;
       &__btn {
         padding: 32px 64px;
         &__list {
@@ -89,7 +89,7 @@
           height: 48px;
           border-radius: 5px;
           outline: 0;
-          border: 1px solid #cccccc;
+          border: 1px solid $grey;
           font-size: 14px;
           &:focus {
             border: 1px solid $blue;
@@ -102,7 +102,7 @@
           border-radius: 5px;
           outline: 0;
           margin: 24px 0 0;
-          border: 1px solid #cccccc;
+          border: 1px solid $grey;
           font-size: 14px;
           &:focus {
             border: 1px solid $blue;
@@ -119,7 +119,7 @@
           padding: 15px 0;
           width: 328px;
           height: 50px;
-          background-color: #ea352d;
+          background-color: $red;
           font-size: 14px;
           margin: 24px 0 0;
           outline: 0;

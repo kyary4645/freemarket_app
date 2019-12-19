@@ -5,7 +5,7 @@
     margin: 0 auto;
     background-color: $white;
     &__top {
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid $light_grey2;
       font-size: 22px;
       font-weight: bold;
       padding: 32px 16px;
@@ -14,14 +14,14 @@
     &__bottom {
       &__item-image {
         padding: 40px;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid $light_grey2;
         .image-form {
           .label {
             font-weight: bold;
             font-size: 16px;
           }
           span {
-            background-color: #ea352d;
+            background-color: $red;
             padding: 3px 4px;
             border-radius: 2px;
             color: $white;
@@ -40,14 +40,14 @@
               height: 162px;
               width: 620px;
               background-color: $light_grey1;
-              border: 1px dashed #ccc;
+              border: 1px dashed $grey;
             }
           }
         }
       }
       &__item-overview {
         padding: 40px;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid $light_grey2;
       }
     }
   }

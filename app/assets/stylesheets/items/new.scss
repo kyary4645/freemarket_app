@@ -8,7 +8,7 @@
   .item-image-upload {
     padding: 40px;
     border-bottom-style:solid;
-    border-bottom-color: #EEEEEE;
+    border-bottom-color: $light_grey2;
     border-width:1px;
   }
   .item-image-upload-character {
@@ -38,7 +38,7 @@
     font-size: 14px;
     background-color: $light_grey1;
     border-style:dashed;
-    border-color:#ccc;
+    border-color: $grey;
     border-width:1px;
     text-align: center;
     position: relative;
@@ -54,7 +54,7 @@
   .item-sell {
     padding: 40px;
     font-weight: bold;
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid $light_grey2;
   }
   .item-sell-name {
     margin-bottom: 15px;
@@ -72,7 +72,7 @@
     padding: 10px;
   }
   .detail{
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid $light_grey2;
   }
   
   .select-default,
@@ -115,7 +115,7 @@
     right: 10px;
   }
   .l-left{
-    border-top:1px solid #CCCCCC;
+    border-top:1px solid $grey;
     padding: 20px 0;
     width: 400px;
     font-weight: normal;
@@ -125,7 +125,7 @@
     left:250px;
   }
   .l-right{
-    border-top:1px solid #CCCCCC;
+    border-top:1px solid $grey;
     padding: 20px 0;
     width: 400px;
     font-weight: bold;
@@ -151,13 +151,13 @@
   .botton{
     width: 620px;
     height: 170px;
-    color: #EA352D;
+    color: $red;
     margin: 0 auto;
     }
   .syuppin-botton{
   width: 620px;
   height: 50px;
-  background-color: #EA352D;
+  background-color: $red;
   color: $white;
   text-align: center;
   line-height: 50px;
