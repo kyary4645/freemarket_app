@@ -40,3 +40,9 @@ crumb :"/users/index/tab3" do
   link "売却済", tab3_user_path(current_user.id)
   parent :users
 end
+
+# # ログアウト
+crumb :"/users/index/logout" do
+  link "ログアウト", logout_user_path(current_user.id)
+  parent :users
+end
