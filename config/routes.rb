@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
   
   root to: "items#index"
-  resources :items, only: [:index, :new, :create, :destroy, :show] do
+  resources :items, only: [:index, :new, :create, :destroy, :show, :edit] do
     resources :purchase, only: [:show] do
       member do
         post 'pay', to: 'purchase#pay'
