@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       get "tab1"
       get "tab2"
       get "tab3"
+      get "logout"
     end
   end
   resources :signup, only: [:index,:create] do

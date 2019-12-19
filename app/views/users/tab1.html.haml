@@ -1,5 +1,6 @@
 = render "items/header"
-  
+- breadcrumb :"/users/index/tab1"
+= render "layouts/breadcrumbs"  
 .mypage-main-containe
   %main.mypage-container.clearfix
     .l-content-tab
@@ -18,7 +19,7 @@
                     - if item.image.present?
                       = image_tag "#{item.image}", class:"panel-image"
                       %p.panel-message
-                        #{item.name}
+                        = item.name
                       = link_to edit_item_path(item.id), class: "pager-next" do
                         %i.fas.fa-chevron-right
                     - else 

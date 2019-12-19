@@ -1,0 +1,15 @@
+= render "items/header"
+- breadcrumb :"/users/index/logout"
+= render "layouts/breadcrumbs"
+
+.mypage-main-containe
+  %main.mypage-container.clearfix
+  
+    = render 'users/side-bar'
+
+    .l-content
+      .l-chapter-container
+        %button.btn-default.btn-red1
+          = link_to destroy_user_session_path, method: :delete,class:"logoutabe" do
+            ログアウト
+= render "items/footer"

@@ -36,21 +36,18 @@
     .holder
       .items-images
         %ul.images
-        - @items.each do |item|
-          %li.image
-            .product
-              = link_to item_path(item.id) ,class:"product-image" do
-                .product-card
-                  %span.product-price
-                    = "¥#{item.price}"
-                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
-                  .product-description
-                    %span
-                      = item.description
+          - @items.each do |item|
+            %li.image
+              .product
+                = link_to item_path(item.id) ,class:"product-image" do
+                  .product-card
+                    %span.product-price
+                      = "¥#{item.price}"
+                    = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                    .product-description
+                      %span
+                        = item.description
 
-
-                        
-         
     #men.item-title
       %h3.item-title-men メンズ新着アイテム
       = link_to "#" ,class:"see-more" do
@@ -59,20 +56,18 @@
     .holder
       .items-images
         %ul.images
-        - @items.each do |item|
-          %li.image
-            .product
-              = link_to item_path(item.id) ,class:"product-image" do
-                .product-card
-                  %span.product-price
-                    = "¥#{item.price}"
-                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
-                  .product-description
-                    %span
-                      = item.description
+          - @items.each do |item|
+            %li.image
+              .product
+                = link_to item_path(item.id) ,class:"product-image" do
+                  .product-card
+                    %span.product-price
+                      = "¥#{item.price}"
+                    = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                    .product-description
+                      %span
+                        = item.description
 
-
-          
     #appliance.item-title
       %h3.item-title-appliance 家電・スマホ・カメラ新着アイテム
       = link_to "#" ,class:"see-more" do
@@ -81,19 +76,17 @@
     .holder
       .items-images
         %ul.images
-        - @items.each do |item|
-          %li.image
-            .product
-              = link_to item_path(item.id) ,class:"product-image" do
-                .product-card
-                  %span.product-price
-                    = "¥#{item.price}"
-                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
-                  .product-description
-                    %span
-                      = item.description
-          
-
+          - @items.each do |item|
+            %li.image
+              .product
+                = link_to item_path(item.id) ,class:"product-image" do
+                  .product-card
+                    %span.product-price
+                      = "¥#{item.price}"
+                    = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                    .product-description
+                      %span
+                        = item.description
 
     #toy.item-title
       %h3.item-title-toy おもちゃ・ホビー・グッズ新着アイテム
@@ -103,17 +96,17 @@
     .holder
       .items-images
         %ul.images
-        - @items.each do |item|
-          %li.image
-            .product
-              = link_to item_path(item.id) ,class:"product-image" do
-                .product-card
-                  %span.product-price
-                    = "¥#{item.price}"
-                  = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
-                  .product-description
-                    %span
-                      = item.description
+          - @items.each do |item|
+            %li.image
+              .product
+                = link_to item_path(item.id) ,class:"product-image" do
+                  .product-card
+                    %span.product-price
+                      = "¥#{item.price}"
+                    = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                    .product-description
+                      %span
+                        = item.description
           
   
   = render partial: "navs"

@@ -1,3 +1,4 @@
+= render "items/header"
 .item-detail
   .item-detail-contents
     %h1.item-detail-name
@@ -120,15 +121,16 @@
     .user-item-box.clearfix
       %h2.item-box-head
         = link_to "#", class: 'item-box-head' do
-          沢尻エリカさんのその他の出品
+          = @item.user.nickname
       .item-box
-        = link_to '#', class: 'item-box-link' do
-          = image_tag "#{@item.image}", alt: '商品説明', class: 'item-box-photo'
-          .item-box-body
-            %h3.item-box-name
-              = @item.description
-            .item-box-price
-              = @item.price
+        - @items.each do |item|
+          = link_to '#', class: 'item-box-link' do
+            = image_tag "#{item.image}", alt: '商品説明', class: 'item-box-photo'
+            .item-box-body
+              %h3.item-box-name
+                = item.description
+              .item-box-price
+                = item.price
 
 
       -# .item-box
@@ -149,37 +151,38 @@
       -#     .item-box-body
       -#       %h3.item-box-name LIDNM ハイストレッチスキニー
       -#       .item-box-price ¥3,500
-    .brand-item-box.clearfix
-      %h2.item-box-head
-        = link_to "#", class: 'item-box-head' do
-          リドムのデニム/ジーンズ その他の出品
-      .item-box
-        = link_to '#', class: 'item-box-link' do
-          = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
-          .item-box-body
-            %h3.item-box-name LIDNM ハイストレッチスキニー
-            .item-box-price ¥3,500
-      .item-box
-        = link_to '#', class: 'item-box-link' do
-          = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
-          .item-box-body
-            %h3.item-box-name LIDNM ハイストレッチスキニー
-            .item-box-price ¥3,500
-      .item-box
-        = link_to '#', class: 'item-box-link' do
-          = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
-          .item-box-body
-            %h3.item-box-name LIDNM ハイストレッチスキニー
-            .item-box-price ¥3,500
-      .item-box
-        = link_to '#', class: 'item-box-link' do
-          = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
-          .item-box-body
-            %h3.item-box-name LIDNM ハイストレッチスキニー
-            .item-box-price ¥3,500
-      .item-box
-        = link_to '#', class: 'item-box-link' do
-          = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
-          .item-box-body
-            %h3.item-box-name LIDNM ハイストレッチスキニー
-            .item-box-price ¥3,500
+    -# .brand-item-box.clearfix
+    -#   %h2.item-box-head
+    -#     = link_to "#", class: 'item-box-head' do
+    -#       リドムのデニム/ジーンズ その他の出品
+    -#   .item-box
+    -#     = link_to '#', class: 'item-box-link' do
+    -#       = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
+    -#       .item-box-body
+    -#         %h3.item-box-name LIDNM ハイストレッチスキニー
+    -#         .item-box-price ¥3,500
+    -#   .item-box
+    -#     = link_to '#', class: 'item-box-link' do
+    -#       = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
+    -#       .item-box-body
+    -#         %h3.item-box-name LIDNM ハイストレッチスキニー
+    -#         .item-box-price ¥3,500
+    -#   .item-box
+    -#     = link_to '#', class: 'item-box-link' do
+    -#       = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
+    -#       .item-box-body
+    -#         %h3.item-box-name LIDNM ハイストレッチスキニー
+    -#         .item-box-price ¥3,500
+    -#   .item-box
+    -#     = link_to '#', class: 'item-box-link' do
+    -#       = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
+    -#       .item-box-body
+    -#         %h3.item-box-name LIDNM ハイストレッチスキニー
+    -#         .item-box-price ¥3,500
+    -#   .item-box
+    -#     = link_to '#', class: 'item-box-link' do
+    -#       = image_tag '138475205.jpg', alt: '商品説明', class: 'item-box-photo'
+    -#       .item-box-body
+    -#         %h3.item-box-name LIDNM ハイストレッチスキニー
+    -#         .item-box-price ¥3,500
+= render "items/footer"            
