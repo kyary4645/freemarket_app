@@ -17,20 +17,22 @@ class UsersController < ApplicationController
 
   def tab3
   end
-
-  private
-  def set_user
-    @user = User.find(params[:id])
-    @items = @user.items
-  end
-
-
+  
+  
   def profile
   end
 
   def personalinformation
     @user = User.find(params[:id])
     @profiles = @user.profile
-  end  
+  end 
+  
+  private
+  def set_user
+    @user = User.find(params[:id])
+    @items = @user.items
+  end
+  
+
 
 end
