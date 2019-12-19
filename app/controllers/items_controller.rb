@@ -54,7 +54,7 @@ class ItemsController < ApplicationController
   def purchase
     @credit = Credit.find_by(user_id: current_user.id)
     if @credit.present?
-      Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
+      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
       customer = Payjp::Customer.retrieve(@credit.customer_id)
       @credit_information = customer.cards.retrieve(@credit.card_id)
       # 《＋α》 登録しているカード会社のブランドアイコンを表示するためのコードです。---------
@@ -80,7 +80,7 @@ class ItemsController < ApplicationController
   end
 
   def pay
-    Payjp.api_key = "sk_test_4854d0c360476b8cab020092"
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     @credit = Credit.find_by(user_id: current_user.id)
     @credit.card_id = Payjp::Charge.create(
       amount: @item.price,

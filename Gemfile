@@ -91,3 +91,4 @@ end
 gem 'payjp'
 gem 'pry-rails'
 gem 'gretel'
+gem 'dotenv-rails'
