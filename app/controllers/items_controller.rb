@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @items = Item.includes(:user)
+    @items = Item.where(buyer_id: nil).includes(:user)
   end
 
   def new
@@ -41,7 +41,6 @@ class ItemsController < ApplicationController
       render :edit, notice: "編集しました"
     end
     
-
   end
 
   def show
@@ -55,7 +54,7 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(
       :name, :size, :status, :derivery_fee, :derivery_method,
-      :price, :derivery_estimated, :description, :image, :category1, :category2, :category3, :brand, :prefecture_id).merge(user_id: current_user.id)
+      :price, :derivery_estimated, :description, :image, :category1, :category2, :category3, :brand, :prefecture_id, :buyer_id).merge(user_id: current_user.id)
   end
 
   def set_item
