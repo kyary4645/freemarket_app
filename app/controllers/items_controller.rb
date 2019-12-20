@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-  require "payjp"
   before_action :set_item, only: [:edit, :show, :destroy, :update]
   before_action :move_to_index, except: [:index, :show]
 

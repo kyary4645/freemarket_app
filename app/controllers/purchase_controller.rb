@@ -3,9 +3,7 @@ class PurchaseController < ApplicationController
   
   def show
     if @credit.present?
-      # Payjp呼び出せるようにする
-      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-      # DBに保存しているcustomer_idと紐づく顧客を取得
+      Payjp.api_key = Rails.application.credentials.payjp_secret_key
       customer = Payjp::Customer.retrieve(@credit.customer_id)
       # 取得した顧客がもつカードのうち、DB内のcard_idと紐付くものを取得
       # カード情報を表示させるために代入
@@ -16,9 +14,7 @@ class PurchaseController < ApplicationController
   end
 
   def pay
-    # Payjp呼び出せるようにする
-    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    # 支払いを生成
+    Payjp.api_key = Rails.application.credentials.payjp_secret_key
     Payjp::Charge.create(
       amount: @item.price,             # 金額
       customer: @credit.customer_id,   # 顧客情報
