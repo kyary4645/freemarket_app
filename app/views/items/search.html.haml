@@ -1,0 +1,43 @@
+= render "items/header"
+
+.main-top 
+  .advertisements 
+    .advertisement 
+      %ul.advertisement-box
+        %li
+          = image_tag "pictweet.jpg", class: "scroll-advertisement one"
+        %li
+          = image_tag "sns_01.jpg", class: "scroll-advertisement second"
+        %li
+          = image_tag "pictweet.jpg", class: "scroll-advertisement third"
+          .icon-icon-two
+            = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8",class:"apple apple-one" do
+              =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg",class:"apple"
+            = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja",class: "google google-one" do
+              =image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg" ,class:"google"
+  .nav
+    %h2.popularity-category 検索に引っかかった商品
+    .categories
+      
+  .items-holders
+    #women.item-title
+      %h3.item-title-women 
+      = link_to "#" ,class:"see-more" do
+        もっと見る
+        %i.fas.fa-angle-right
+    .holder
+      .items-images
+        %ul.images
+          - @items.each do |item|
+            %li.image
+              .product
+                = link_to item_path(item.id) ,class:"product-image" do
+                  .product-card
+                    %span.product-price
+                      = "¥#{item.price}"
+                    = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
+                    .product-description
+                      %span
+                        = item.description
+
+= render "items/footer"

@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   }
   
   root to: "items#index"
-  resources :items, only: [:index, :new, :create, :destroy, :show, :edit,:update] do
+  resources :items do
     resources :purchase, only: [:show] do
       member do       # すべてのアクションに対してitem_idを渡す
         post 'pay', to: 'purchase#pay'
         get 'done', to: 'purchase#done'
       end
+    end
+    collection do
+      get 'search'
     end
   end
 
