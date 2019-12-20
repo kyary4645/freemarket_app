@@ -3,7 +3,7 @@ class PurchaseController < ApplicationController
   
   def show
     if @credit.present?
-      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+      Payjp.api_key = Rails.application.credentials.payjp_secret_key
       customer = Payjp::Customer.retrieve(@credit.customer_id)
       @credit_information = customer.cards.retrieve(@credit.card_id)
       @credit_brand = @credit_information.brand
@@ -11,7 +11,7 @@ class PurchaseController < ApplicationController
   end
 
   def pay
-    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+    Payjp.api_key = Rails.application.credentials.payjp_secret_key
     Payjp::Charge.create(
       amount: @item.price,
       customer: @credit.customer_id,
