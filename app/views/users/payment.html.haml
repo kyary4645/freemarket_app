@@ -1,0 +1,23 @@
+= render "items/header"
+- breadcrumb :"/users/index/payment"
+= render "layouts/breadcrumbs"
+
+.mypage-main-containe
+  %main.mypage-container.clearfix
+    = render 'users/side-bar'
+
+    .l-content
+      %section.l-container
+        %h2.l-header 支払い方法
+        .l-main
+          .l-main__container
+            %h3.l-main__header クレジットカード一覧
+            .l-main__cont
+              %button.submit_btn{type: "submit"}
+                %i.far.fa-credit-card>
+                クレジットカードを追加する
+        .l-footer
+          %p.info 支払い方法について &gt;
+
+
+= render "items/footer"     

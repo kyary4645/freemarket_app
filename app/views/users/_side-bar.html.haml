@@ -87,7 +87,7 @@
           = icon 'fas', 'chevron-right'
       %li
         -# = link_to new_card_path, class: 'mypage-side-bar__list-item' do
-        = link_to '#', class: 'mypage-side-bar__list-item' do
+        = link_to payment_user_path(current_user.id), class: 'mypage-side-bar__list-item' do
           支払い方法
           = icon 'fas', 'chevron-right'
       %li

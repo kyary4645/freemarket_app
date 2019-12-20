@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       get "tab2"
       get "tab3"
       get "logout"
+      get "payment"
     end
   end
   

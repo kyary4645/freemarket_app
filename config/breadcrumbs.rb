@@ -46,3 +46,9 @@ crumb :"/users/index/logout" do
   link "ログアウト", logout_user_path(current_user.id)
   parent :users
 end
+
+# # 支払い方法
+crumb :"/users/index/payment" do
+  link "支払い方法", payment_user_path(current_user.id)
+  parent :users
+end
