@@ -3,7 +3,7 @@ class PurchaseController < ApplicationController
   
   def show
     if @credit.present?
-      Payjp.api_key = Rails.application.credentials.payjp_secret_key
+      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
       customer = Payjp::Customer.retrieve(@credit.customer_id)
       # 取得した顧客がもつカードのうち、DB内のcard_idと紐付くものを取得
       # カード情報を表示させるために代入
@@ -11,10 +11,12 @@ class PurchaseController < ApplicationController
       # カード会社のロゴ
       @credit_brand = @credit_information.brand
     end
+    
+    
   end
 
   def pay
-    Payjp.api_key = Rails.application.credentials.payjp_secret_key
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: @item.price,             # 金額
       customer: @credit.customer_id,   # 顧客情報
