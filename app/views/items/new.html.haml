@@ -14,8 +14,6 @@
           %label
             
             .item-image-drop
-              %p
-                
               = f.file_field :image, class:"item-image-drop-default" 
       .item-sell
         .item-sell-name
@@ -50,7 +48,7 @@
                   %li.icon-bottom.is-hidden2
                     =f.select :category3, ["---", "Tシャツ/カットソー(半袖/袖なし)", "Tシャツ/カットソー(七分/長袖)", "シャツ/ブラウス(半袖/袖なし)", "シャツ/ブラウス(七分/長袖)", "ポロシャツ", "キャミソール", "タンクトップ", "ホルターネック", "ニット/セーター", "チュニック", "カーディガン/ボレロ", "アンサンブレ", "ベスト/ジレ", "パーカー", "トレーナー/スウェット", "ベアトップ/チューブトップ", "ジャージ", "その他"]
             .item-sell-clearfix-box-type
-              %h5.item-size.is-hidden3
+              %label.item-size.is-hidden3
                 サイズ
                 %span.item-image-upload-require.is-hidden3
                   必須
@@ -78,8 +76,9 @@
                   = f.select :status, [["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]],{prompt:"選択してください"},{class:"select-default"}
 
       .item-sell.detail
-        %h3.item-image-upload-character 配送について
-        %a.form-question{href: "", target: "_blank"} ?
+        %h3.item-image-upload-character 配送について 
+        = link_to "#" do
+          %i.fas.fa-question-circle
         .item-sell-clearfix-box
           .item-sell-clearfix-box-money
             %label
@@ -90,8 +89,8 @@
               .item-sell-clearfix-box-wrap
                 %i.icon-bottom
                 = f.select :derivery_fee, [["送料込み(出品者負担)"],["着払い(購入者負担)"]],{prompt:"選択してください"},{class:"select-default"}
-          .item-sell-clearfix-box-money
-            %h5.delivery-method.is-hidden4
+          .item-sell-clearfix-box-money1
+            %label.delivery-method.is-hidden4
               配送料の方法
               %span.item-image-upload-require.is-hidden4
                 必須
@@ -107,7 +106,6 @@
                   必須
               .item-sell-clearfix-box-wrap
                 %i.icon-bottom
-              
                 = f.collection_select :prefecture_id, Prefecture.all, :name, :name, include_blank: "-------" 
           .item-sell-clearfix-box
             .item-sell-clearfix-box-street
@@ -120,8 +118,12 @@
                   %i.icon-bottom
                   = f.select :derivery_estimated,[["１〜２日で発送"],["２〜３日で発送"],["４〜７日で発送"]],{prompt:"選択してください"},{class:"select-default"}
       .item-sell.money
-        %h3.item-image-upload-character 販売価格(300~9,999,999)
-        %a.form-question{href: "", target: "_blank"} ?
+        %h3.item-image-upload-character 
+        販売価格
+        %br
+        (300~9,999,999)
+        = link_to "#" do
+          %i.fas.fa-question-circle.question
         .item-sell-form-box
           %ul.item-sell-price
             .item-sell-form-group
@@ -138,26 +140,26 @@
                 販売手数料（10%）
                 %span.haifun -
             .clearfix.bold
-              .l-right
+              .l-right1
                 販売利益
                 %span.underber _
-        .modal{role: "dialog", tabindex: "-1"}
-          .modem-inner
-        .sell-content.sell-btn-box
+      .modal{role: "dialog", tabindex: "-1"}
+        .modem-inner
+      .sell-content.sell-btn-box
+        = link_to "#" do
+          > 禁止されている出品
+        = succeed "\u3092\u5FC5\u305A\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002" do
           = link_to "#" do
-            > 禁止されている出品
-          = succeed "\u3092\u5FC5\u305A\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002" do
-            = link_to "#" do
-              行為
-          = succeed "\u306F\u72AF\u7F6A\u3067\u3042\u308A\u51E6\u7F70\u3055\u308C\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002" do
-            = link_to "#" do
-              偽ブランドの販売
-          = succeed "\u306B\u540C\u610F\u3057\u305F\u3053\u3068\u306B\u306A\u308A\u307E\u3059\u3002" do
-            = link_to "#" do
-              加盟店規約
-        .botton
-          = f.submit "出品する", class:"syuppin-botton"
-          = link_to :back do
-            .back-botton もどる
+            行為
+        = succeed "\u306F\u72AF\u7F6A\u3067\u3042\u308A\u51E6\u7F70\u3055\u308C\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002" do
+          = link_to "#" do
+            偽ブランドの販売
+        = succeed "\u306B\u540C\u610F\u3057\u305F\u3053\u3068\u306B\u306A\u308A\u307E\u3059\u3002" do
+          = link_to "#" do
+            加盟店規約
+      .botton
+        = f.submit "出品する", class:"syuppin-botton"
+        = link_to :back do
+          .back-botton もどる
 
 = render partial: "signup/sign_up_footer"            

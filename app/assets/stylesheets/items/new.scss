@@ -5,12 +5,12 @@
     padding: 32px 16px;
     text-align: center;
     border-bottom: solid 2px $whitesmoke;
-    font-weight: 600;
+    font-weight: bold;
   }
   .item-content {
-      width: 700px;
-      background-color: $white;
-      margin: 10px auto;
+    width: 700px;
+    background-color: $white;
+    margin: 10px auto;
   }
   .item-image-upload {
     padding: 40px;
@@ -22,21 +22,37 @@
     background-color: $white;
     font-size: 16px;
     display: inline-block;
+    font-weight: bold;
   }
 
+  label {
+    font-weight: bold;
+  }
+
+.item-sell-clearfix-box-wrap {
+  margin: 8px 0 0 0;
+}
+
+.item-sell-clearfix-box-money1 {
+  margin-top: 40px;
+}
 
   .item-image-upload-require {
     color: $white;
     background-color: $red;
     position: relative;
-    bottom: 3px;
     font-size: 12px;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: bold;
   }
   .brand_color{
     background-color: #cccccc;
   }
   p {
     font-size: 14px;
+    margin: 8px 0 0 0;
   }
   input{
     font-size: 14px;
@@ -51,6 +67,7 @@
     background-color: $whitesmoke;
     border-style:dashed;
     border-color: $grey;
+    margin-top: 16px;
     border-width:1px;
     text-align: center;
     position: relative;
@@ -65,7 +82,6 @@
   }
   .item-sell {
     padding: 40px;
-    font-weight: bold;
     border-bottom: 1px solid $light_grey2;
   }
   .item-sell-name {
@@ -76,15 +92,21 @@
     width: 620px;
     text-align: left;
     padding: 0 10px;
+    margin: 8px 0 0 0;
+    padding: 10px 16px 8px;
+
   }
   .item-sell-text-default {
     height: 154px;
     width: 620px;
     text-align: left;
     padding: 10px;
+    margin: 8px 0 0 0;
   }
   .detail{
     border-bottom: 1px solid $light_grey2;
+    display: flex;
+    justify-content: space-between;
   }
   
   .select-default,
@@ -101,12 +123,27 @@
     margin: 0;
     font-weight: normal;
   }
+
+  .item-sell-detail {
+    position: absolute;
+  }
+
+  .fa-question-circle {
+    position: relative;
+    left: -50px;
+    width: 14px;
+    height: 14px;
+    color: $blue;
+  }
+
+  .icon-bottom{
+    margin: 8px 0 0 0;
+  }
   .item-sell-clearfix-box-type{
     margin: 40px 0 0 0;
   }
   .item-sell-clearfix-box-street{
     margin: 40px 0 0 0;
-    font-weight: bold;
     }
   .l-right-sell-price-input{
     position: relative;
@@ -131,12 +168,13 @@
     padding: 20px 0;
     width: 400px;
     font-weight: normal;
+    
   }
   .haifun{
     position: relative;
     left:250px;
   }
-  .l-right{
+  .l-right1 {
     border-top:1px solid $grey;
     padding: 20px 0;
     width: 400px;
@@ -145,7 +183,6 @@
   .underber{
     position: relative;
     left:325px;
-    font-weight: bold;
   }
   .sell-content{
     padding: 40px;
@@ -189,5 +226,10 @@
   }
   a {
     text-decoration: none;
+  }
+
+  .money {
+    display: flex;
+    justify-content: space-between;
   }
 }
