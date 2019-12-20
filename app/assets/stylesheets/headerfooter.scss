@@ -213,67 +213,67 @@ aside {
 /* ----------------------------- */
 .footerbg {
   width: 100vw;
-}
+    .footer {
+      background-color: #222222;
+      height: 387px;
+      padding: 0 20px 10px;
+    }
+    
+    .adm {
+      margin-left:500px;
+    }
+    
+    .footer_navi {
+      display: flex;
+      height: 296px;
+      padding-left: 300px;
+    }
+    
+    .description, .description1 {
+      margin: 18px 0 0;
+      padding: 0 40px 0 0;
+      color: $white;
+    }
+    
+    .description1 {
+      margin-top: 42px;
+    }
+    
+    
+    .description_list {
+      margin: 16px 0 0;
+    }
+    
+    .description_list a:hover {
+      text-decoration: underline;
+    }
+    
+    
+    .fa-twitter, .fa-facebook-square {
+      color: $white;
+      margin: 30px 20px 0 0;
+    }
+    
+    .footer_bottom {
+      height: 31px;
+      margin: 30px 0 20px 300px;
+      box-sizing: border-box;
+    }
+    
+    #footer_icon {
+      width: 124px;
+      height: 31px;
+      color: $white;
+    }
+    
+    .copy_right {
+      height: 12px;
+      color: $white;
+      line-height: 12px;
+      width: 765px;
+      padding: 0 0 0 15px;
+      display: inline-block;
+      text-align: center;
+  }
 
-.footer {
-  background-color: #222222;
-  height: 387px;
-  padding: 0 20px 10px;
-}
-
-.adm {
-  margin-left:500px;
-}
-
-.footer_navi {
-  display: flex;
-  height: 296px;
-  padding-left: 300px;
-}
-
-.description, .description1 {
-  margin: 18px 0 0;
-  padding: 0 40px 0 0;
-  color: $white;
-}
-
-.description1 {
-  margin-top: 42px;
-}
-
-
-.description_list {
-  margin: 16px 0 0;
-}
-
-.description_list a:hover {
-  text-decoration: underline;
-}
-
-
-.fa-twitter, .fa-facebook-square {
-  color: $white;
-  margin: 30px 20px 0 0;
-}
-
-.footer_bottom {
-  height: 31px;
-  margin: 30px 0 20px 300px;
-  box-sizing: border-box;
-}
-
-#footer_icon {
-  width: 124px;
-  height: 31px;
-  color: $white;
-}
-
-.copy_right {
-  height: 12px;
-  color: $white;
-  line-height: 12px;
-  width: 765px;
-  padding: 0 0 0 15px;
-  display: inline-block;
-  text-align: center;
 }
