@@ -6,7 +6,7 @@ end
 
 # # マイページ
 crumb :users do
-  link "マイページ", user_path(current_user.id)
+  link "#{current_user.nickname}さんのマイページ", user_path(current_user.id)
   parent :root
 end
 
@@ -44,5 +44,11 @@ end
 # # ログアウト
 crumb :"/users/index/logout" do
   link "ログアウト", logout_user_path(current_user.id)
+  parent :users
+end
+
+# # 支払い方法
+crumb :"/users/index/payment" do
+  link "支払い方法", payment_user_path(current_user.id)
   parent :users
 end

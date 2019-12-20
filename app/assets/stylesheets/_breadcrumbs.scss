@@ -1,6 +1,14 @@
 .breadcrumbs{
   padding: 0 210px;
   background-color: $white;
-  
-
+  font-weight: 600;
+  font-size: 14px;
+  height: 38px;
+  line-height: 38px;
+  a{
+    color: black;
+  }
+  a:hover{
+    color: red;
+  }
 }

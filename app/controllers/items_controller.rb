@@ -13,18 +13,18 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to root_path
+      redirect_to root_path, notice: "出品完了やで！！！"
     else 
-      render :new, notice: '保存できませんでした'
+      render :new, alert: '出品できませんでした'
     end
   end
 
 
   def destroy
     if @item.destroy
-      redirect_to root_path if user_signed_in? && current_user.id == @item.user_id 
+      redirect_to root_path, notice: "削除しました" if user_signed_in? && current_user.id == @item.user_id 
     else
-      render :new, notice: "削除しました"
+      render :new, alert: "削除できませんでした"
     end
   end  
 
@@ -36,9 +36,9 @@ class ItemsController < ApplicationController
 
     
     if @item.update(item_params)
-      redirect_to root_path if user_signed_in? && current_user.id == @item.user_id
+      redirect_to root_path, notice: "編集完了したで" if user_signed_in? && current_user.id == @item.user_id
     else  
-      render :edit, notice: "編集しました"
+      render :edit, alert: "編集できませんでした"
     end
     
 
