@@ -6,9 +6,9 @@
     .item-detail-main.clearfix
       .item-detail-photo
         = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-main'
-        .item-detail-photo-sub
-          = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-sub'
-          = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-sub'
+        -# .item-detail-photo-sub
+        -#   = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-sub'
+        -#   = image_tag "#{@item.image}", alt: '商品紹介', class: 'photo-sub'
       %table.item-detail-table
         %tbody
           %tr
@@ -110,20 +110,20 @@
     %ul.social-media-boxes
       %li.social-media-box.facebook
         = link_to '#', class: 'social-icon' do
-          = icon('fab', 'facebook-square')
+          %i.fab.fa-facebook-square.fa-3x
       %li.social-media-box.twitter
         = link_to '#', class: 'social-icon' do
-          = icon('fab', 'twitter')
+          %i.fab.fa-twitter-square.fa-3x
       %li.social-media-box.pinterest
         = link_to '#', class: 'social-icon' do
-          = icon('fab', 'pinterest')
+          %i.fab.fa-pinterest-square.fa-3x
   .item-image-box
     .user-item-box.clearfix
       %h2.item-box-head
         = link_to "#", class: 'item-box-head' do
           = @item.user.nickname
-      .item-box
-        - @items.each do |item|
+      - @items.each do |item|
+        .item-box
           = link_to '#', class: 'item-box-link' do
             = image_tag "#{item.image}", alt: '商品説明', class: 'item-box-photo'
             .item-box-body

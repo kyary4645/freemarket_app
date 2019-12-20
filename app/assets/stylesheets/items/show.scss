@@ -211,33 +211,21 @@
     padding: 32px 0;
     .social-media-boxes {
       text-align: center;
-      .social-media-box {
-        width: 44px;
-        height: 44px;
-        border-radius: 4px;
-        line-height: 44px;
-        .social-icon {
-          color: $white;
-          padding: 10px;
-        }
       }
       .social-media-box:hover {
         opacity: 0.7;
       }
-      .facebook {
-        font-size: 26px;
-        background-color: #385185;
+      .fa-facebook-square {
+        color: #385185;
       }
-      .twitter {
-        font-size: 26px;
-        background-color: #5d9dc9;
+      .fa-twitter-square {
+        color: #5d9dc9;
       }
-      .pinterest {
-        font-size: 26px;
-        background-color: #aa262a;
+      .fa-pinterest-square {
+        color: #aa262a;
       }
     }
-  }
+  
   .item-image-box {
     margin: 0 auto;
     width: 690px;
