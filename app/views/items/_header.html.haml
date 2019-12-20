@@ -3,12 +3,18 @@
     .header-top
       = link_to root_path do
         = image_tag "fmarket_logo_red.svg", id: "freemarket_string", alt: "freemarket"
-      %form{action: "#"}
-        %div.search-field
-          %input.search_form{placeholder: "何をお探しですか？", type: "text"}/
+      = form_with(url: search_items_path, local: true, method: :get) do |f|
+        .search-field
+          = f.text_field :keyword, placeholder: "何をお探しですか？", class:"search_form"
           %button.search_btn
-            = link_to "#" do
-              %i.fas.fa-search
+            = f.submit class:"search-btn1"
+            %i.fas.fa-search
+
+        -# %div.search-field
+        -#   %input.search_form{placeholder: "何をお探しですか？", type: "text"}/
+        -#   %button.search_btn
+        -#     = link_to "#" do
+        -#       %i.fas.fa-search
     %nav.top_navi
       %ul.refarence
         %li.search_category
