@@ -14,18 +14,38 @@
             %li.tab.tab-C.is-active 売却済み
           .tab-content
             %ul.panel-group
-              %li.panel.tab-A
-                = image_tag "logo_gray.svg", class:"tab-logo"
-                %h5.panel-content
-                  出品中の商品がありません
+              %li.panel.tab-A.is-show
+                - @items.each do |item|
+                  .panel-container
+                    - if item.buyer_id.blank?
+                      = image_tag "#{item.image}", class:"panel-image"
+                      %p.panel-message
+                        = item.name
+                      = link_to edit_item_path(item.id), class: "pager-next" do
+                        %i.fas.fa-chevron-right
+                    - else 
+                      = image_tag "logo_gray.svg", class:"tab-logo"
+                      %h5.panel-content
+                        出品中の商品がありません
               %li.panel.tab-B 
                 = image_tag "logo_gray.svg", class:"tab-logo"
                 %h5.panel-content
                   取引中の商品がありません
-              %li.panel.tab-C.is-show 
-                = image_tag "logo_gray.svg", class:"tab-logo"
-                %h5.panel-content
-                  売却済の商品がありません
+              %li.panel.tab-C 
+                - @items.each do |item|
+                  .panel-container-c
+                    - if item.buyer_id.present?
+                      .image-text
+                        = image_tag "#{item.image}", class:"panel-image"
+                        %p.panel-message-item-name
+                          = item.name
+                      .next-page
+                        = link_to edit_item_path(item.id), class: "pager-next" do
+                          %i.fas.fa-chevron-right
+                    - else 
+                      = image_tag "logo_gray.svg", class:"tab-logo"
+                      %h5.panel-content
+                        売却済の商品がありません
       %ul.pager
         %li.pagers
           = link_to "#", class: "pager-prev" do
