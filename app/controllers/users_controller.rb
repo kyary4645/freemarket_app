@@ -34,6 +34,8 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
     @items = @user.items
+    @sell_items = @items.where(buyer_id: nil)
+    @bought_items = @items.where.not(buyer_id: nil)
   end
   
   def move_to_index

@@ -60,6 +60,9 @@
   .image-text {
     width: 100px;
     margin: 0;
+    .panel-message-item-name {
+      color: #000000;
+    }
   }
   .next-page {
     display: inline-block;
@@ -69,7 +72,7 @@
 .panel-container-c {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 10px;
+  padding: 10px;
   .image-text {
     width: 100px;
     .panel-message-item-name {
@@ -96,9 +99,6 @@
 }
 
 .is-show {
-  img {
-
-  }
   p {
     display: inline;
   }
@@ -141,7 +141,18 @@
   margin-left: 10px;
 }
 
+.panel.tab-A.is-show {
+  padding: 10px;
+  color: #000000;
+}
+
 .panel.tab-B.is-show {
   padding: 10px;
   color: #000000;
 }
+
+.panel.tab-C.is-show {
+  padding: 10px;
+  color: #000000;
+}
+
