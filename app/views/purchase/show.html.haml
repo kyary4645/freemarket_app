@@ -66,6 +66,7 @@
                 %span
                 = current_user.profile.first_name
         .buy__centerbox__buyinfo__buybutton
-          = form_tag(action: :pay, method: :post) do      -# Payアクションへ飛ばす
+          -# Payアクションへ飛ばす
+          = form_tag(action: :pay, method: :post) do
             %button.btn{type:"submit",class:"buy__centerbox__buyinfo__buybutton__red"} 購入する
 = render "signup/sign_up_footer"
