@@ -46,7 +46,7 @@
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
-                        = item.description
+                        = item.name
 
     #men.item-title
       %h3.item-title-men メンズ新着アイテム
@@ -66,7 +66,7 @@
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
-                        = item.description
+                        = item.name
 
     #appliance.item-title
       %h3.item-title-appliance 家電・スマホ・カメラ新着アイテム
@@ -86,7 +86,7 @@
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
-                        = item.description
+                        = item.name
 
     #toy.item-title
       %h3.item-title-toy おもちゃ・ホビー・グッズ新着アイテム
@@ -106,8 +106,7 @@
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
-                        = item.description
-          
+                        = item.name
   
   = render partial: "navs"
 = render "items/footer"
