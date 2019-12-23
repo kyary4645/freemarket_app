@@ -5,112 +5,82 @@
 
 |Column|Type|Options| 
 |------|----|-------| 
-|first_name|String|null: false| 
-|last_name|String|null: false| 
-|first_name_kana|String|null: false| 
-|last_name_kana|String|null: false| 
-|nickname|String|null: false| 
-|email|String|null: false, unique: true| 
-|image|String|
-|phone_number|string|null: true, unique: true| 
-|password|String|null: false| 
-|birthday|integer|null: false| 
+|nickname|string|null: false| 
+|email|string|null: false, unique: true|  
+|password|string|null: false| 
 
 ### Association 
 - has_many :items 
 - has_many :comments 
-- has_many :addresses
-
-
-## commentsテーブル 
-
-|Column|Type|Options| 
-|------|----|-------| 
-|text|text| 
-|user_id|integer|null: false, foreign_key: true| 
-|item_id|integer|null: false, foreign_key: true| 
-
-### Association 
-- belongs_to :user 
-- belongs_to :item 
-
+- has_one :prifiles
+- has_many :sns_credentials
 
 ## itemsテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
 |user_id|integer|null: false, foreign_key: true| 
-|size|String|null: false| 
+|name|string|null: false| 
+|size|string|null: false| 
 |status|string|null: false| 
 |derivery_fee|string|null: false| 
 |derivery_method|string|null: false| 
 |price|integer|null: false| 
 |derivery_estimated|string|null: false| 
 |description|text|null: false| 
-|category_id|integer|null: false, foreign_key: true| 
-|brand_id|text|null: false, foreign_key: true|
+|image|string|null: false| 
+|category1|text|null: false| 
+|category2|text|null: false| 
+|category3|text|null: false| 
+|brand|text|null: false|
+|prefecture_id|string|null: false| 
+|seller_id|integer| 
+
 
 ### Association 
-- has_many :images 
-- has_many :comments 
-- belongs_to :category
-- belongs_to :brand
+- belongs_to :user
 
-
-## categoriesテーブル 
+## profilesテーブル 
 
 |Column|Type|Options| 
 |------|----|-------| 
-|name|String|null: false| 
-
-### Association 
-- has_many :items
-
-
-## brandsテーブル 
-
-|Column|Type|Options| 
-|------|----|-------| 
-|name|String|null: false| 
-
-### Association 
-- has_many :items
-
-
-## imagesテーブル 
-
-|Column|Type|Options| 
-|------|----|-------| 
-|item_id|reference|null: false, foreign_key: true| 
-|url|String|null: false| 
-
-### Association 
-- belongs_to :item 
-
-
-<!-- ## creditsテーブル 
-
-|Column|Type|Options| 
-|------|----|-------| 
-|number|integer|null: false, unique: true| 
-|effective_date|integer|null: false| 
-|security_code|integer|null: false| 
-|user_id|reference|null: false, foreign_key: true| 
-
-### Association 
-- belongs_to :user  -->
-
-
-## addressesテーブル 
-
-|Column|Type|Options| 
-|------|----|-------| 
-|prefecture|String|null: false| 
-|city|String|null: false| 
+|first_name|string|null: false| 
+|last_name|string|null: false| 
+|first_name_kana|string|null: false| 
+|last_name_kana|string|null: false| 
+|image|string|
+|birth_year|string|null: false| 
+|birth_month|string|null: false| 
+|birth_day|string|null: false| 
+|prefecture|string|null: false| 
+|city|string|null: false| 
 |house_number|integer|null: false| 
 |zip_code|integer|null: false| 
-|building|String|null: true| 
+|building|string|null: true| 
+|phone_number|string||
 |user_id|reference|null: false, foreign_key: true| 
 
 ### Association 
 - belongs_to :user  
+
+## creditsテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|user_id|references|null: false| 
+|customer_id|string|null: false|  
+|card_id|string|null: false| 
+
+### Association 
+- belongs_to :user
+
+## sns_credentialsテーブル 
+
+|Column|Type|Options| 
+|------|----|-------| 
+|user_id|references|null: false| 
+|uid|string|null: false|  
+|provider|string|null: false| 
+
+### Association 
+- belongs_to :user
