@@ -130,9 +130,9 @@
             = image_tag "#{item.image}", alt: '商品説明', class: 'item-box-photo'
             .item-box-body
               %h3.item-box-name
-                = item.description
+                = item.name
               .item-box-price
-                = item.price
+                = "¥ #{item.price}"
 
 
       -# .item-box

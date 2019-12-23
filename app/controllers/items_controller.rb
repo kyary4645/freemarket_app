@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show, :destroy, :update]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @items = Item.where(buyer_id: nil).includes(:user)
@@ -45,12 +45,12 @@ class ItemsController < ApplicationController
 
   def show
     @user = @item.user_id
-    @items = Item.where(user_id: @user)
+    @items = Item.where(user_id: @user, buyer_id: nil)
   end
 
 
   def search
-    @items = Item.search(params[:keyword])
+    @items = Item.search(params[:keyword]).where(buyer_id: nil)
   end
 
 
