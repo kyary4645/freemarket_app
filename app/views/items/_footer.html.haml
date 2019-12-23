@@ -1,10 +1,18 @@
 %footer.footerbg
-  #Exhibit
-    = link_to new_item_path do
-      .red_circle
-        .Exhibit 出品
-        %div
-          %i.fas.fa-camera.fa-4x 
+  - if user_signed_in?
+    #Exhibit
+      = link_to new_item_path do
+        .red_circle
+          .Exhibit 出品
+          %div
+            %i.fas.fa-camera.fa-4x 
+  - else
+    #Exhibit
+      = link_to new_user_session_path, data: {confirm: "ログインして下さい"} do
+        .red_circle
+          .Exhibit 出品
+          %div
+            %i.fas.fa-camera.fa-4x 
   .AD
     %aside.adm
       %div
