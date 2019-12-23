@@ -133,7 +133,7 @@
                 = item.name
               .item-box-price
                 ¥
-                = price
+                = item.price.to_s(:delimited, delimiter: ',')
 
 
       -# .item-box
