@@ -197,7 +197,6 @@ form{
 
 .purchase-content-shippings{
   padding: 32px 0;
-  border-bottom: 1px solid $whitesmoke;
 }
 
 .purchase-content-submit{
@@ -219,8 +218,19 @@ form{
   }
 }
 
-.buy_centerbox_buyinfo_buybutton {
-  
+.buy__centerbox__buyinfo__buybutton {
+  &__red {
+    display: block;
+    background-color: $red;
+    color: $white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: 0;
+  }
   button {
     margin: 0 auto;
     width: 343px;
