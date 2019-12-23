@@ -42,7 +42,8 @@
                 = link_to item_path(item.id) ,class:"product-image" do
                   .product-card
                     %span.product-price
-                      = "¥#{item.price}"
+                      ¥
+                      = item.price.to_s(:delimited, delimiter: ',')
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
@@ -62,7 +63,8 @@
                 = link_to item_path(item.id) ,class:"product-image" do
                   .product-card
                     %span.product-price
-                      = "¥#{item.price}"
+                      ¥
+                      = item.price.to_s(:delimited, delimiter: ',')
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
@@ -82,7 +84,8 @@
                 = link_to item_path(item.id) ,class:"product-image" do
                   .product-card
                     %span.product-price
-                      = "¥#{item.price}"
+                      ¥
+                      = item.price.to_s(:delimited, delimiter: ',')
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
@@ -102,7 +105,8 @@
                 = link_to item_path(item.id) ,class:"product-image" do
                   .product-card
                     %span.product-price
-                      = "¥#{item.price}"
+                      ¥
+                      = item.price.to_s(:delimited, delimiter: ',')
                     = image_tag "#{item.image}", class:"product-image-size", alt: "商品写真"
                     .product-description
                       %span
