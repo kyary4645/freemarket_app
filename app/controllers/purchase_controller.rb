@@ -25,14 +25,18 @@ class PurchaseController < ApplicationController
 
   def pay
     Payjp.api_key = Rails.application.credentials.payjp_secret_key
-    Payjp::Charge.create(
-      amount: @item.price,             # 金額
-      customer: @credit.customer_id,   # 顧客情報
-      currency: 'jpy'                  # 通貨
-    )
-    @item.buyer_id = current_user.id
-    @item.save
-    redirect_to done_item_purchase_path # 完了画面へ移動
+    if current_user.id != @item.user_id && @item.buyer_id == nil
+      Payjp::Charge.create(
+        amount: @item.price,             # 金額
+        customer: @credit.customer_id,   # 顧客情報
+        currency: 'jpy'                  # 通貨
+      )
+      @item.buyer_id = current_user.id
+      @item.save
+      redirect_to done_item_purchase_path # 完了画面へ移動
+    else
+      redirect_to root_path, alert: "Error"
+    end
   end
 
   def done
