@@ -2,23 +2,29 @@ class PurchaseController < ApplicationController
   before_action :set_credit, :set_item
 
   def show
-    if current_user.id != @item.user_id
-      if @credit.present?
-        Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
-        customer = Payjp::Customer.retrieve(@credit.customer_id)
-        # 取得した顧客がもつカードのうち、DB内のcard_idと紐付くものを取得
-        # カード情報を表示させるために代入
-        @credit_information = customer.cards.retrieve(@credit.card_id)
-        # カード会社のロゴ
-        @credit_brand = @credit_information.brand
+    if @item.user_id != current_user.id
+      if @item.buyer_id.blank?
+        if @credit.present?
+          Payjp.api_key = Rails.application.credentials.payjp_secret_key
+          customer = Payjp::Customer.retrieve(@credit.customer_id)
+          # 取得した顧客がもつカードのうち、DB内のcard_idと紐付くものを取得
+          # カード情報を表示させるために代入
+          @credit_information = customer.cards.retrieve(@credit.card_id)
+          # カード会社のロゴ
+          @credit_brand = @credit_information.brand
+        end
+      else
+        redirect_to root_path
+        return
       end
     else
-      redirect_to item_path(@item.id), alert: "Error"
+      redirect_to root_path
+      return
     end
   end
 
   def pay
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp.api_key = Rails.application.credentials.payjp_secret_key
     if current_user.id != @item.user_id && @item.buyer_id == nil
       Payjp::Charge.create(
         amount: @item.price,             # 金額

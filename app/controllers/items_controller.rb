@@ -21,10 +21,14 @@ class ItemsController < ApplicationController
 
 
   def destroy
-    if @item.destroy
-      redirect_to root_path, notice: "削除しました" if user_signed_in? && current_user.id == @item.user_id 
+    if @item.user_id == current_user.id
+      if @item.destroy
+        redirect_to root_path, notice: "削除しました" if user_signed_in? && current_user.id == @item.user_id 
+      else
+        render :new, alert: "削除できませんでした"
+      end
     else
-      render :new, alert: "削除できませんでした"
+      redirect_to root_path
     end
   end  
 
@@ -35,10 +39,14 @@ class ItemsController < ApplicationController
   end  
 
   def update
-    if @item.update(item_params)
-      redirect_to root_path, notice: "編集完了したで" if user_signed_in? && current_user.id == @item.user_id
-    else  
-      render :edit, alert: "編集できませんでした"
+    if @item.user_id == current_user.id
+      if @item.update(item_params)
+        redirect_to root_path, notice: "編集完了したで" if user_signed_in? && current_user.id == @item.user_id
+      else  
+        render :edit, alert: "編集できませんでした"
+      end
+    else
+      redirect_to root_path
     end
   end
 
